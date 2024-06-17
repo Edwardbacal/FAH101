@@ -1534,6 +1534,9 @@ button {
   #ess {
     width: 100% !important;
   }
+  .mobbg {
+    background-repeat: repeat;
+  }
   
 }
 
