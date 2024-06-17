@@ -2,27 +2,27 @@ $('.padB').on("click", function() {
   $(this).next(".displayNone").slideToggle();
 });
 
-$('#ess').on("click", function() {
-  $("#journal").slideUp();
-  $("#essay").slideToggle();
-});
 
-$('#jour').on("click", function() {
-  $("#essay").slideUp();
-  
-  $("#journal").slideToggle();
-});
+// $('#menu').on("click", function(e) {
+//   e.preventDefault();
+//   $('#siteMenu').css("right", "0")
+//   $('#closeMenu').fadeIn();
+// });
 
-$('#menu').on("click", function(e) {
+$(document).on("click", "#menu", function(e){
   e.preventDefault();
   $('#siteMenu').css("right", "0")
   $('#closeMenu').fadeIn();
 });
 
+
+
 $('#closeMenu').on("click", function() {
   $('#siteMenu').css("right", "-150vw")
   $(this).fadeOut();
 });
+
+
 
 $('body').on("click", "a.closer", function() {
   $('#siteMenu').css("right", "-150vw")
@@ -35,11 +35,11 @@ $(document ).ready(function() {
 });
 
 
-$(".down").click(function() {
-  $('html, body').animate({
-    scrollTop: $(this).offset().top + 900
-  }, 400);
-});
+// $(".down").click(function() {
+//   $('html, body').animate({
+//     scrollTop: $(this).offset().top + 900
+//   }, 400);
+// });
 
 $(".row li i").click(function() {
   console.log('roight');
