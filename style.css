@@ -1537,6 +1537,26 @@ button {
   .mobbg {
     background-repeat: repeat;
   }
+
+.BG,
+.BG2 {
+  position: absolute; 
+  width: 100vw; 
+  height: 100vh; 
+  background-repeat: repeat;
+  z-index: 0;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: 800px !important;
+}
+
+.BG2 {
+  z-index: -1;
+  /* filter: saturate(0) contrast(1.5) brightness(1.5); */
+  opacity: 0.8;
+  animation: stretch 12s forwards;
+  /* filter: saturate(0) contrast(1.5) brightness(1.5); */
+}
   
 }
 
