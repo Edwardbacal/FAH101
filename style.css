@@ -1093,7 +1093,7 @@ padding: 0 1rem;
 }
 
 .img p {
-  background-color: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
+  background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
 }
 
 .inv .img p {
