@@ -1469,7 +1469,9 @@ button {
     margin: 3rem 0;
   }
   section,
-  header{
+  header,
+  .BG, 
+  .BG2 {
     padding: 6% 8%;
     background-size: 1200px;
   }
