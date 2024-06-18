@@ -1455,6 +1455,10 @@ button {
 @media (max-width: 475px) {
 
   ol li > a,
+  .readings {
+    width: 100%;
+    margin: .3rem 0 0 0  
+  }
 
   .closer {
     margin: 0 !important;
@@ -1502,6 +1506,10 @@ button {
   #jour,
   #ess {
     width: 100% !important;
+  }
+  section,
+  header{
+    padding: 2.5%;
   }
 }
 
