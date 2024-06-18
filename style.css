@@ -19,7 +19,7 @@ h5,
 h6,
 button {
   font-family: 'DM Serif Text', 'helvetica', 'sans-serif';
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.5;
   color: #195181;
   letter-spacing: 0;
@@ -885,7 +885,7 @@ section > ul {
 header,
 section {
   min-height: 100vh;
-  padding: 6% 10%;
+  padding: 20% 10%;
   position: relative;
 }
 
@@ -894,12 +894,8 @@ header {
   min-height: 100vh;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
-  /* background-repeat: no-repeat; */
+  background-position: center !important;
 }
-
-
-
 
 .title {
   width: 100%;
@@ -1187,7 +1183,7 @@ nav {
   padding: 0 calc(10% - 2rem);
   /* background: linear-gradient(180deg, #0000002b, #00000000); */
   background: linear-gradient(180deg, #11141f69, #00000000);
-  opacity: 0; animation: fadeIn .8s 2.7s ease-in forwards;
+  opacity: 0; animation: fadeIn .8s 2.6s ease-in forwards;
 }
 
 nav button {
@@ -1526,7 +1522,7 @@ button {
   }
   section,
   header{
-    padding: 5%;
+    padding: 20% 5%;
   }
   nav {
     padding: 0 calc(5% - 2rem);
@@ -1567,7 +1563,12 @@ button {
   }
   section,
   header{
-    padding: 2.5%;
+    padding: 20% 2.5%;
+  }
+  .igBox {
+    padding: 0 1.5rem;
+    width: 99%;
+    margin: 2rem auto;
   }
 }
 
@@ -1583,7 +1584,7 @@ button {
   }
   section,
   header{
-    padding: 5% 2%;
+    padding: 10vh 2%;
   }
   nav {
     padding: 0;
