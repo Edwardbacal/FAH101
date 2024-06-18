@@ -24,9 +24,37 @@ button {
   letter-spacing: 0;
 }
 
-button h2{
+#assignments h1,
+#assignments h2,
+#assignments h3,
+#assignments h4,
+#assignments h5 {
+  color: #593806;
+}
+
+#policies h1,
+#policies h2,
+#policies h3,
+#policies h4,
+#policies h5 {
+  color: #195a3c;
+}
+
+
+#assignments h1,
+#assignments h2,
+#assignments h3,
+#assignments h4,
+#assignments h5 {
+  color: #593806;
+}
+
+button h2,
+#assignments button h2,
+#policies button h2 {
   color: inherit;
 }
+
 
 
 nav button {
@@ -1090,16 +1118,14 @@ padding: 0 1rem;
 }
 
 .pad {
-  box-shadow: 0px 0px 3px #1c1c1c0a;
+  box-shadow: 0px 0px 3px #1c1c1c01;
 }
 
 .imgBox {
   margin: 2rem 0;
 }
 
-.padB {
-  box-shadow: 0px 0px 16px #1c1c1c12;
-}
+
 
 .spacer {
   display: block;
@@ -1303,6 +1329,9 @@ a[href="#"]:focus {
   align-items: center;
   justify-content: center;
   border: 1px solid #aeaeae;
+  background: #fff !important;
+  border: 1px solid #195181;
+  color: #195181;
 }
 
 .grid2 {
@@ -1316,8 +1345,19 @@ a[href="#"]:focus {
 .grid2 li a {
   display: flex;
   place-content: center;
+  align-items: center;
   margin: 0;
   width: 100%;
+  height: 100%;
+  background: #fff !important;
+  border: 1px solid #195181;
+  color: #195181;
+}
+
+.grid2 li a:hover,
+.grid2 li a:focus {
+  background: #195181 !important;
+  color: #fff;
 }
 
 
@@ -1352,7 +1392,38 @@ a[href="#"]:focus {
   margin: 0.3rem 0 0 2rem
 }
 
+.padB {
+  background: #195181;
+  color: #fff !important;
+}
 
+.padB:hover,
+.padB:focus {
+  background: #fff;
+  color: #195181 !important;
+}
+
+.padC {
+  background: #593806;
+  color: #fff !important;
+}
+
+.padC:hover,
+.padC:focus {
+  background: #fff;
+  color: #593806 !important;
+}
+
+.padD {
+  background: #195a3c;
+  color: #fff !important;
+}
+
+.padD:hover,
+.padD:focus {
+  background: #fff;
+  color: #195a3c !important;
+}
 
 button:hover,
 button:focus {
