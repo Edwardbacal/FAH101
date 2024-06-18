@@ -1,7 +1,6 @@
-$('.padB').on("click", function() {
-  $(this).next(".displayNone").slideToggle();
-});
-
+// $('.padB').on("click", function() {
+//   $(this).next(".displayNone").slideToggle();
+// });
 
 // $('#menu').on("click", function(e) {
 //   e.preventDefault();
@@ -9,7 +8,29 @@ $('.padB').on("click", function() {
 //   $('#closeMenu').fadeIn();
 // });
 
-$(document).on("click", "#menu", function(e){
+
+// home screen menus
+$('body').on("click touchstart", ".padB", function() {
+  $(this).next(".displayNone").slideToggle();
+});
+
+$('body').on("click touchstart", ".expander", function() {
+  $(".displayNone").slideDown()
+});
+
+$('body').on("click touchstart", ".collapser", function() {
+  $(".displayNone").slideUp()
+});
+
+
+// menu
+
+$(document ).ready(function() {
+  $("body").append(menu);
+});
+
+
+$(document).on("click touchstart", "#menu", function(e){
   e.preventDefault();
   $('#siteMenu').css("right", "0")
   $('#closeMenu').fadeIn();
@@ -17,22 +38,23 @@ $(document).on("click", "#menu", function(e){
 
 
 
-$('#closeMenu').on("click", function() {
+// $('#closeMenu').on("click", function() {
+//   $('#siteMenu').css("right", "-150vw")
+//   $(this).fadeOut();
+// });
+
+$('body').on("click touchstart", "#closeMenu", function() {
   $('#siteMenu').css("right", "-150vw")
   $(this).fadeOut();
 });
 
 
-
-$('body').on("click", "a.closer", function() {
+$('body').on("click touchstart", "a.closer", function() {
   $('#siteMenu').css("right", "-150vw")
   $('#closeMenu').fadeOut();
 });
 
 
-$(document ).ready(function() {
-  $("body").append(menu);
-});
 
 
 // $(".down").click(function() {
@@ -41,8 +63,21 @@ $(document ).ready(function() {
 //   }, 400);
 // });
 
+
+$(window).on('scroll', function() {
+  const y_scroll_pos = window.pageYOffset;
+  const scroll_pos_test = 700;             // set to whatever you want it to be
+
+  if(y_scroll_pos > scroll_pos_test) {
+    $(".down").css("bottom", "1rem");
+  }
+  else {
+    $(".down").css("bottom", "-2rem");
+  }
+});
+
+
 $(".row li i").click(function() {
-  console.log('roight');
   $(this).parents("ul").animate({
     scrollLeft: "+=1000px"
   }, 400);

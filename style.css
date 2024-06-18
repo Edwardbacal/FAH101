@@ -3,7 +3,8 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 html {
   font-family: 'Urbanist', 'helvetica', 'arial';
   font-size: 16px;
-  /* font-size: 24px; */
+  /* 24px for presenting */
+  /* font-size: 24px;*/
   font-weight: 500;
   color: #1c1c1c;
   scroll-behavior: smooth;
@@ -24,40 +25,21 @@ button {
   letter-spacing: 0;
 }
 
-#assignments h1,
-#assignments h2,
-#assignments h3,
-#assignments h4,
-#assignments h5 {
-  color: #593806;
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  width: auto;
 }
 
-#policies h1,
-#policies h2,
-#policies h3,
-#policies h4,
-#policies h5 {
-  color: #195a3c;
+h2,
+.padB {
+  margin: 1rem 0;
 }
 
 
-#assignments h1,
-#assignments h2,
-#assignments h3,
-#assignments h4,
-#assignments h5 {
-  color: #593806;
-}
-
-button h2,
-#assignments button h2,
-#policies button h2 {
-  color: inherit;
-}
-
-
-
-nav button {
+nav button,
+.expander,
+.collapser {
   font-family: 'Urbanist', 'helvetica', 'arial';
   font-weight: 900;
   text-transform: uppercase;
@@ -70,17 +52,6 @@ li {
   margin: 1rem 0;
   font-size: 1.2rem;
   font-weight: 500;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0;
-  width: auto;
-}
-
-h2,
-.padB {
-  margin: 1rem 0;
 }
 
 button h2,
@@ -1147,9 +1118,10 @@ li img {
 
 .down {
   position: fixed;
-  bottom: 1rem;
+  bottom: -2rem;
   right: 1rem;
   z-index: 99;
+  transition: .3s ease-out;
 }
 
 
@@ -1317,7 +1289,9 @@ a[href="#"]:focus {
   aspect-ratio: 1;
 }
 
-.gridGrid li a {
+.gridGrid li a,
+.collapser,
+.expander {
   margin: 0;
   padding: 2rem;
   width: 100%;
@@ -1332,6 +1306,15 @@ a[href="#"]:focus {
   background: #fff !important;
   border: 1px solid #195181;
   color: #195181;
+  transition: .15s;
+}
+
+.collapser,
+.expander {
+  font-size: .8rem;
+  padding: .8rem;
+  width: 40%;
+  margin: 2rem 5% 0 5%;
 }
 
 .grid2 {
@@ -1355,7 +1338,11 @@ a[href="#"]:focus {
 }
 
 .grid2 li a:hover,
-.grid2 li a:focus {
+.grid2 li a:focus,
+.collapser:hover,
+.collapser:focus,
+.expander:hover,
+.expander:focus {
   background: #195181 !important;
   color: #fff;
 }

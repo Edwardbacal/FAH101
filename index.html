@@ -14,6 +14,56 @@
   <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
   
   <style>
+    
+    .T1 {
+      font-size: 10vmax;
+      color: #fff;
+      text-shadow: 0px 8px 24px #000000d6;
+      opacity: 0;
+      animation: fadeIn 2s .1s ease-out forwards
+    }
+    
+    .T2 {
+      font-size: 6vmax;
+      text-shadow: 0px 6px 18px #00000076;
+      display: block;
+      color: #fff;
+      margin: 0;
+      opacity: 0;
+      animation: fadeIn 3s 1s ease-out forwards
+    }
+    
+    #assignments h1,
+    #assignments h2,
+    #assignments h3,
+    #assignments h4,
+    #assignments h5 {
+      color: #593806;
+    }
+    
+    #policies h1,
+    #policies h2,
+    #policies h3,
+    #policies h4,
+    #policies h5 {
+      color: #195a3c;
+    }
+    
+    
+    #assignments h1,
+    #assignments h2,
+    #assignments h3,
+    #assignments h4,
+    #assignments h5 {
+      color: #593806;
+    }
+    
+    button h2,
+    #assignments button h2,
+    #policies button h2 {
+      color: inherit;
+    }
+    
     .BG,
     .BG2 {
       position: absolute; 
@@ -29,10 +79,14 @@
     .BG2 {
       z-index: -10;
       opacity: 0.8;
-      animation: stretch 12s forwards;
+      animation: introFade 12s forwards;
     }
     
-    @keyframes stretch {
+    .displayNone {
+      padding: 0 3rem 2rem 3rem;
+    }
+    
+    @keyframes introFade {
       0% {
         filter: saturate(0) contrast(.5) brightness(1);
         opacity: 0.5;
@@ -47,7 +101,7 @@
       }
     }
     
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
       .mobbg {
         display: none;
       }
@@ -58,20 +112,26 @@
       #details {
         background-image: url(./assets/hero-m2.jpg) !important;
       }
-    }
-
-    @media (max-width: 400px) {
+    } */
+    
+    @media (max-width: 450px) {
       .mobbg {
         display: none;
       }
       .hero1 {
-        background-image: url(./assets/hero-m.jpg);
+        background-image: url(./assets/hero-phone.jpg);
         background-size: 625px;
       }
       #details {
-        background-image: url(./assets/hero-m2.jpg) !important;
+        background-image: url(./assets/hero-phone2.jpg) !important;
         background-size: 625px;
       }
+      .T1 {
+      text-shadow: 0px 4px 12px #000000d6;
+    }
+    .T2 {
+      text-shadow: 0px 3px 8px #00000076;
+    }
     }
   </style>
 </head>
@@ -82,11 +142,11 @@
   <header class="flex hero1" id="top">
     <nav class="flex"></nav>   
     
-    <div style="min-height: 24vmax">
-      <h1 style="font-size: 10vmax; color: #fff; text-shadow: 0px 8px 24px #000000d6; opacity: 0; animation: fadeIn 2s .1s ease-out forwards;">
+    <div style="min-height: 24vmax; padding: 0 2rem;">
+      <h1 class="T1">
         FAH 101
       </h1>
-      <h2 id="destination" style="font-size: 6vmax; text-shadow: 0px 6px 18px #00000076; display: block; color: #fff; margin: 0; opacity: 0; animation: fadeIn 3s 1s ease-out forwards">
+      <h2 id="destination" class="T2">
         <!-- Monuments of Art History -->
       </h2>
     </div>
@@ -118,8 +178,18 @@
           <p>
             Click on the headings below to learn more about the course. 
           </p>
+          
         </div>
       </div> 
+      
+      <div class="flex" style="width: 100%; padding: 1rem 3rem 0 3rem; justify-content: space-between;">
+        <button class="expander">
+          Expand all
+        </button>
+        <button class="collapser">
+          Collapse all
+        </button>
+      </div>
       
       <!-- WHERE AND WHEN -->
       <div class="pad" style="padding: 0; margin: 2rem 0;">
@@ -131,7 +201,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             This is an online-asynchronous course made up of twelve modular lessons plus six weekly tutorials.
           </p>
@@ -204,7 +274,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             This course was originally developed by Samantha Chang and is currently led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward personally designed and coded this website.
           </p>
@@ -253,7 +323,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             Monuments of Art History examines key works of art and architecture from antiquity to the present and from across the globe, with emphasis on the cultural roles art has played throughout history. This broad selection of artworks corresponds to subject areas taught by U of T’s Art History faculty, offering a preview of many 200-400 level courses you can take through the Department of Art History.
           </p>
@@ -352,7 +422,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             Active participation in tutorials, including completion of short activities, is essential to your success in the course. As such, each tutorial contributes to 3% of your final mark. 
           </p>
@@ -376,7 +446,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <h3>
             Summary
           </h3>
@@ -520,7 +590,7 @@
         </button>
         
         
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <h3>
             Summary
           </h3>
@@ -637,7 +707,7 @@
           +
         </h2>
       </button>
-      <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+      <div class="displayNone">
         <p>
           The exam will be 2 hours long, but will be designed to take roughly 90-110 minutes to complete.
         </p>
@@ -742,7 +812,7 @@
         </h2>
       </button>
       
-      <div class="displayNone" style="padding: 1rem 3rem;">
+      <div class="displayNone">
         <ul class="list">
           <li>
             Late assignments will be penalized <strong>1 mark per day</strong>, beginning 12:00 AM after the deadline.
@@ -791,7 +861,7 @@
           +
         </h2>
       </button>
-      <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+      <div class="displayNone">
         <p>
           You are welcome to discuss course matters with the teaching team by email. You may also speak with the instructor during office hours (by appointment over zoom) and speak to your TA during tutorials. To ensure your email makes it to us, please use your mail.utoronto.ca address and include “FAH101” in the subject line. Allow up to 48 hours for a reply.
         </p>
@@ -819,7 +889,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             All students are welcome in this course. I encourage you to address difficulties you may experience in the course and to take advantage of resources that may help you meet your learning needs. If you experience difficulties that affect your learning in the course and have a disability or believe you may have a disability, I encourage you to register with Accessibility Services HERE, which you can also contact at (416) 978-8060 or visit HERE.
           </p>
@@ -867,7 +937,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <h3>
             Equity, Diversity, and Inclusion
           </h3>
@@ -893,7 +963,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <p>
             Academic integrity is essential to the pursuit of learning and scholarship and ensuring that a degree from U of T is a strong signal of each student’s individual academic achievement. As a result, the University treats cases of cheating and plagiarism very seriously. The University’s Code of Behaviour on Academic Matters outlines the behaviours that constitute academic dishonesty and the processes for addressing academic offences. Potential offences include, but are not limited to the following:
           </p>
@@ -960,7 +1030,7 @@
             +
           </h2>
         </button>
-        <div class="displayNone" style="padding: 1rem 3rem 3rem 3rem ;">
+        <div class="displayNone">
           <h3>
             Art History Writing Lab
           </h3>
