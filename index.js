@@ -10,7 +10,7 @@
 
 
 // home screen menus
-$('body').on("click touchstart", ".padB", function() {
+$('body').on("click", ".padB", function() {
   $(this).next(".displayNone").slideToggle();
 });
 
