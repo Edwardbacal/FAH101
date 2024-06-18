@@ -53,9 +53,24 @@
       }
       .hero1 {
         background-image: url(./assets/hero-m.jpg);
+        background-size: cover;
       }
       #details {
         background-image: url(./assets/hero-m2.jpg) !important;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .mobbg {
+        display: none;
+      }
+      .hero1 {
+        background-image: url(./assets/hero-m.jpg);
+        background-size: 400px;
+      }
+      #details {
+        background-image: url(./assets/hero-m2.jpg) !important;
+        background-size: 400px;
       }
     }
   </style>
