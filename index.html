@@ -99,7 +99,7 @@
         opacity: 1;
       }
     }
-
+    
     nav {
       opacity: 0; 
       animation: fadeIn .8s 2.6s ease-in forwards;
@@ -153,6 +153,76 @@
       }
       
     }
+    
+    
+    #sched ul {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 1.5rem;
+      margin: 4% auto;
+    }
+    
+    .item {
+      height: 0 !important;
+      padding-bottom: 100%;
+      overflow: scroll;
+      border-radius: 2px;
+      background-size: 50%;
+      background-position: center;
+      overflow: scroll;
+      position: relative;
+      cursor: pointer;
+      -webkit-transition: .25s;
+      transition: .25s;
+      border: 1px solid #195181;
+    }
+
+    .nitem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100% !important;
+      background: #fff;
+    }
+    
+    .overlay {
+      height: 200%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      -webkit-transition: .25s;
+      transition: .25s;
+      mix-blend-mode: exclusion;
+      opacity: .5;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .item > div {
+      width: 100%;
+      background: url("./assets/diag.png");
+      background-size: 150%;
+      padding: 20px;
+      z-index: 1;
+      position: relative;
+    }
+    
+    .item h2 {
+      padding: .8rem;
+      margin: .8rem 0;
+      background: #fff;
+      width: auto;
+    }
+    .item h3 {
+      padding: .7rem;
+      margin: .7rem 0;
+      line-height: 1.5;
+      background: #fff;
+      width: auto;
+    }
+    
+
+    
   </style>
 </head>
 <body>
@@ -522,7 +592,6 @@
             Looking ahead, this essay will prepare you for assignment 2: by preparing you to identify the ways one artwork is visually constructed, you will be ready to discuss how those qualities connect and/or distinguish multiple artworks seen together.
           </p>
           
-          
           <h3>
             Things to consider
           </h3>
@@ -578,7 +647,7 @@
               Upload one file on Quercus (this assignment page) by Sunday, January 21, 11:59PM EST
             </li>
             <li>
-               Please use <a href="">this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
+              Please use <a href="">this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
             </li>
             <li>
               No word count
@@ -604,7 +673,6 @@
             +
           </h2>
         </button>
-        
         
         <div class="displayNone">
           <h3>
@@ -658,237 +726,238 @@
             <li>
               Try to include at least one book/periodical (two encyclopedia/reference entries will be worth less).
             </li>
-            <li> <strong class="em">
-              No websites!
-            </strong>
-            (you are still allowed to use scholarly articles/books/encyclopedia entries that are hosted online - resources such as Oxford Art Online or articles downloaded from research databases will count).
-            <br>
-            Other sources that do not count include news articles, museum labels, quercus pages, videos, etc.
-          </li>
-          <li>
-            2 bonus marks if you use physical periodicals or books for your citations. You can find these at the library! (the art library on the 6th floor of Sidney Smith, and Robarts are good starting places). Take a picture of the book/periodical, including the page you cited, and include that in your assignment to get credit (encyclopedias and reference books don't count toward bonus marks, nor do sources deemed not relevant to your essay).
-          </li>
-          <li>
-            We'll discuss the assignment in tutorials, with examples.
-          </li>
-        </ul>
-        
-        
-        <h3>
-          Things to consider
-        </h3>
-        <ul class="list">
-          <li>
-            Is the thesis clear? Is it specific and direct?
-          </li>
-          <li>
-            Have you used proper formatting, including titles of artworks (see the museum label example in section 1.3), and Chicago Style for citations.
-          </li>
-          <li>
-            You are welcome to include images (including close-up details) to support the formal analysis, but must include image captions.
-          </li>
-        </ul>
-        
-        <h3>
-          Submission details
-        </h3>
-        <ul class="list">
-          <li>
-            Upload one file on Quercus by Sunday, August 11, 11:59PM EST
-          </li>
-          <li>
-            No title page
-          </li>
-          <li>
-            No word count
-          </li>
-          <li>
-            DOC/DOCX/PDF file (we will not recognize files we can't open!)
-          </li>
-          <li>
-            Keep file size under 10mb
-          </li>
-        </ul>    
-        
+            <li> 
+              <strong class="em">
+                No websites!
+              </strong>
+              (you are still allowed to use scholarly articles/books/encyclopedia entries that are hosted online - resources such as Oxford Art Online or articles downloaded from research databases will count).
+              <br>
+              Other sources that do not count include news articles, museum labels, quercus pages, videos, etc.
+            </li>
+            <li>
+              2 bonus marks if you use physical periodicals or books for your citations. You can find these at the library! (the art library on the 6th floor of Sidney Smith, and Robarts are good starting places). Take a picture of the book/periodical, including the page you cited, and include that in your assignment to get credit (encyclopedias and reference books don't count toward bonus marks, nor do sources deemed not relevant to your essay).
+            </li>
+            <li>
+              We'll discuss the assignment in tutorials, with examples.
+            </li>
+          </ul>
+          
+          <h3>
+            Things to consider
+          </h3>
+          <ul class="list">
+            <li>
+              Is the thesis clear? Is it specific and direct?
+            </li>
+            <li>
+              Have you used proper formatting, including titles of artworks (see the museum label example in section 1.3), and Chicago Style for citations.
+            </li>
+            <li>
+              You are welcome to include images (including close-up details) to support the formal analysis, but must include image captions.
+            </li>
+          </ul>
+          
+          <h3>
+            Submission details
+          </h3>
+          <ul class="list">
+            <li>
+              Upload one file on Quercus by Sunday, August 11, 11:59PM EST
+            </li>
+            <li>
+              No title page
+            </li>
+            <li>
+              No word count
+            </li>
+            <li>
+              DOC/DOCX/PDF file (we will not recognize files we can't open!)
+            </li>
+            <li>
+              Keep file size under 10mb
+            </li>
+          </ul>    
+          
+        </div>
       </div>
-    </div>
-    
-    <!-- EXAM -->
-    <div class="pad" style="padding: 0;"> 
-      <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-        <h2>
-          Final exam (in-person) (35%) Date-TBD (ca. August 15-30)
-        </h2>
-        <h2 class="plus"> 
-          +
-        </h2>
-      </button>
-      <div class="displayNone">
-        <p>
-          The exam will be 2 hours long, but will be designed to take roughly 90-110 minutes to complete.
-        </p>
-        <p>
-          The exam has not yet been written, but will likely consist of essay questions: one short, one medium, and one long. You will be able to choose from a selection of questions.
-        </p>
-        <p>
-          Questions will focus on broad themes and ideas explored throughout the course. You will be expected to speak to these ideas about art in relation to specific examples from the course. This exam will not emphasis memorization or providing objective answers.
-        </p>
-        <p>
-          You will be allowed to bring in a study-sheet: this is one (and only one) page (8.5" x 11" or similar), which you can fill with handwritten notes (no print-outs). Pro-tip, making this sheet is a great way to study. No other aids are allowed.
-        </p>
-        <p>
-          The exam has not been scheduled yet. The faculty of arts and sciences schedule all exams, and I don't have any say on when and where it will take place. I just know it's during the exam period (August 15-30).
-        </p>
-        <p>
-          It's worth 35% of your final grade (The Faculty of Arts and Sciences requires first year courses have exams that are worth at least 1/3 of your grade).
-        </p>
-        
-        <h3>
-          Why do we have an in-person exam?
-        </h3>
-        <p>
-          Having an exam is an useful opportunity to reflect on the range of content and ideas explored throughout the course. While in-person exams are an imperfect way of evaluating learning, and not a format that's optimal for everyone, I've tried to adapt it so that people who need more time or may benefit from notes can complete it to the best of their abilities. More to the point, the reality is that it's currently essential to have an AI-proof evaluation where you practice writing in your own voice. I know that many people may be English language learners or not be strong writers, but I'm not looking for polished essay-style responses, so much as evidence of you communicating your own original thoughts about the course content.
-        </p>
-        
-        <h3>
-          What happens if I'm sick or unable to make it?
-        </h3>
-        
-        <p>
-          If you have a conflict (e.g. another exam at the same time) you can report it to the faculty registrar. More information is <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/final-exams/exam-conflicts" target="_blank">here</a>.
-        </p>
-        
-        <p>
-          If you are not able to be present for the exam, or miss it for any legitimate reason, you can contact the registrat to defer your exam. More information is <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/petitions/deferred-exams" target="_blank">here</a>.
-        </p>
-        
-        <p>
-          Please see this resource for information: https://sidneysmithcommons.artsci.utoronto.ca/i-cant-make-a-test-or-exam-what-do-i-do/
-        </p>
-        
-        
-        <div class="igBox">    
-          <h5>
-            The following is a heavily redacted preview of what the winter 2024 FAH101 exam looked like (this is not a guarantee of what to expect as the format and style of questions may change):
-          </h5>
-          
-          <p style="margin-top: 2rem;">
-            <strong>
-              1: Short questions (15 marks, approx. 10-15 mins)
-            </strong>
+      
+      <!-- EXAM -->
+      <div class="pad" style="padding: 0;"> 
+        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
+          <h2>
+            Final exam (in-person) (35%) Date-TBD (ca. August 15-30)
+          </h2>
+          <h2 class="plus"> 
+            +
+          </h2>
+        </button>
+        <div class="displayNone">
+          <p>
+            The exam will be 2 hours long, but will be designed to take roughly 90-110 minutes to complete.
           </p>
+          <p>
+            The exam has not yet been written, but will likely consist of essay questions: one short, one medium, and one long. You will be able to choose from a selection of questions.
+          </p>
+          <p>
+            Questions will focus on broad themes and ideas explored throughout the course. You will be expected to speak to these ideas about art in relation to specific examples from the course. This exam will not emphasis memorization or providing objective answers.
+          </p>
+          <p>
+            You will be allowed to bring in a study-sheet: this is one (and only one) page (8.5" x 11" or similar), which you can fill with handwritten notes (no print-outs). Pro-tip, making this sheet is a great way to study. No other aids are allowed.
+          </p>
+          <p>
+            The exam has not been scheduled yet. The faculty of arts and sciences schedule all exams, and I don't have any say on when and where it will take place. I just know it's during the exam period (August 15-30).
+          </p>
+          <p>
+            It's worth 35% of your final grade (The Faculty of Arts and Sciences requires first year courses have exams that are worth at least 1/3 of your grade).
+          </p>
+          
+          <h3>
+            Why do we have an in-person exam?
+          </h3>
+          <p>
+            Having an exam is an useful opportunity to reflect on the range of content and ideas explored throughout the course. While in-person exams are an imperfect way of evaluating learning, and not a format that's optimal for everyone, I've tried to adapt it so that people who need more time or may benefit from notes can complete it to the best of their abilities. More to the point, the reality is that it's currently essential to have an AI-proof evaluation where you practice writing in your own voice. I know that many people may be English language learners or not be strong writers, but I'm not looking for polished essay-style responses, so much as evidence of you communicating your own original thoughts about the course content.
+          </p>
+          
+          <h3>
+            What happens if I'm sick or unable to make it?
+          </h3>
+          
+          <p>
+            If you have a conflict (e.g. another exam at the same time) you can report it to the faculty registrar. More information is <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/final-exams/exam-conflicts" target="_blank">here</a>.
+          </p>
+          
+          <p>
+            If you are not able to be present for the exam, or miss it for any legitimate reason, you can contact the registrat to defer your exam. More information is <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/petitions/deferred-exams" target="_blank">here</a>.
+          </p>
+          
+          <p>
+            Please see this resource for information: https://sidneysmithcommons.artsci.utoronto.ca/i-cant-make-a-test-or-exam-what-do-i-do/
+          </p>
+          
+          
+          <div class="igBox">    
+            <h5>
+              The following is a heavily redacted preview of what the winter 2024 FAH101 exam looked like (this is not a guarantee of what to expect as the format and style of questions may change):
+            </h5>
+            
+            <p style="margin-top: 2rem;">
+              <strong>
+                1: Short questions (15 marks, approx. 10-15 mins)
+              </strong>
+            </p>
+            <ul class="list">
+              <li>
+                1A: Describe one work from this course that _ _ _ _ _ _ _ _. What _ _ _ _ _ _ _ _? ? What about it _ _ _ _ _ _ _ _? What did _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ?
+              </li>
+              <li>
+                1B: Given the _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _, have the ways _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _? How might you _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
+              </li>
+            </ul>
+            
+            <p style="margin-top: 2rem;">
+              <strong>
+                2. Medium-length questions (30 marks, approx. 25-35 mins)            
+              </strong>
+            </p>
+            <ul class="list">
+              <li>
+                2A: Compare an example of _ _ _ _ _ _ _ _ with an example of _ _ _ _ _ _ _ _ . What do these _ _ _ _ _ _ _ _ , and how do _ _ _ _ _ _ _ _? What _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
+              </li>
+              <li>
+                2B: Compare an example of _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  with an example of _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _). What do _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _? How _ _ _ _ _ _ _ _?
+              </li>
+            </ul>
+            
+            <p style="margin-top: 2rem;">
+              <strong>
+                3. Long Question (55 marks, approx. 50-60 mins)
+              </strong>
+            </p>
+            <ul class="list">
+              <li>
+                3A: Discuss at least 3 works that _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _. How do _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ? What do these examples _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ?
+              </li>
+              <li>
+                3B: Discuss at least 3 works that _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _. How _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ? How _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- LATE PENALTIES -->
+      <div class="pad" style="padding: 0; margin: 2rem 0;">
+        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
+          <h2>
+            Late penalties
+          </h2>
+          <h2 class="plus"> 
+            +
+          </h2>
+        </button>
+        
+        <div class="displayNone">
           <ul class="list">
             <li>
-              1A: Describe one work from this course that _ _ _ _ _ _ _ _. What _ _ _ _ _ _ _ _? ? What about it _ _ _ _ _ _ _ _? What did _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ?
+              Late assignments will be penalized <strong>1 mark per day</strong>, beginning 12:00 AM after the deadline.
             </li>
             <li>
-              1B: Given the _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _, have the ways _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _? How might you _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
-            </li>
-          </ul>
-          
-          <p style="margin-top: 2rem;">
-            <strong>
-              2. Medium-length questions (30 marks, approx. 25-35 mins)            
-            </strong>
-          </p>
-          <ul class="list">
-            <li>
-              2A: Compare an example of _ _ _ _ _ _ _ _ with an example of _ _ _ _ _ _ _ _ . What do these _ _ _ _ _ _ _ _ , and how do _ _ _ _ _ _ _ _? What _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
+              Assignments submitted after <strong>14 days</strong> will be marked on a pass-fail basis, whereby the maximum grade an assignment can receive is 50%.
             </li>
             <li>
-              2B: Compare an example of _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  with an example of _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _). What do _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _? How _ _ _ _ _ _ _ _?
-            </li>
-          </ul>
-          
-          <p style="margin-top: 2rem;">
-            <strong>
-              3. Long Question (55 marks, approx. 50-60 mins)
-            </strong>
-          </p>
-          <ul class="list">
-            <li>
-              3A: Discuss at least 3 works that _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _. How do _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ? What do these examples _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ?
+              Extensions will be allowed only in the case of extenuating circumstances (competing coursework does not count), and at the instructor’s discretion. Extensions cannot be requested within 48 hours of the deadline and cannot be granted retroactively.
             </li>
             <li>
-              3B: Discuss at least 3 works that _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _. How _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ? How _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _?
+              Late submissions are liable to be returned later and to receive less feedback.
             </li>
           </ul>
         </div>
-      </div>
-    </div>
-    
-    <!-- LAYE PENALTIES -->
-    <div class="pad" style="padding: 0; margin: 2rem 0;">
-      <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-        <h2>
-          Late penalties
-        </h2>
-        <h2 class="plus"> 
-          +
-        </h2>
-      </button>
-      
-      <div class="displayNone">
-        <ul class="list">
-          <li>
-            Late assignments will be penalized <strong>1 mark per day</strong>, beginning 12:00 AM after the deadline.
-          </li>
-          <li>
-            Assignments submitted after <strong>14 days</strong> will be marked on a pass-fail basis, whereby the maximum grade an assignment can receive is 50%.
-          </li>
-          <li>
-            Extensions will be allowed only in the case of extenuating circumstances (competing coursework does not count), and at the instructor’s discretion. Extensions cannot be requested within 48 hours of the deadline and cannot be granted retroactively.
-          </li>
-          <li>
-            Late submissions are liable to be returned later and to receive less feedback.
-          </li>
-        </ul>
-      </div>
-    </div>   
-    
-  </div>
-</header>
-
-<!-- POLICIES -->
-<header style="background-image: url(./assets/06/abaporu.jpg); background-position-x: 0;" id="policies">
-  <div class="flex" style="justify-content: flex-start; margin: 0 auto; padding: 4% 0;">
-    <!-- title -->
-    <div class="pad">
-      <h1>
-        Course Policies, Logistics, and Values
-      </h1>
-      
-      <p>
-        As undergraduates, you are expected to take responsibility for your performance in this course, which means respecting course policies and accepting the consequences of your actions. In the name of professionalism and ethics, the teaching team cannot bend the rules or give preferential treatment to individuals – no one is entitled to an easy grade or free pass. However, in serving diverse learning styles and needs,we are here to help you do your best work and encourage you to address difficulties you may experience in the course. We also understand unexpected crises can impact your course performance, and encourage you to address these issues <em>as soon as possible</em> with both the teaching team and your college registrar (we cannot grant accomodations retroactively).
-      </p>
-      
-      <p>
-        You are also expected to treat your colleagues and the teaching team with courtesy and respect!
-      </p>
+      </div>   
       
     </div>
-    
-    <div class="pad" style="padding: 0; margin: 2rem 0;"> 
-      <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-        <h2>
-          Communication
-        </h2>
-        <h2 class="plus"> 
-          +
-        </h2>
-      </button>
-      <div class="displayNone">
+  </header>
+  
+  <!-- POLICIES -->
+  <header style="background-image: url(./assets/06/abaporu.jpg); background-position-x: 0;" id="policies">
+    <div class="flex" style="justify-content: flex-start; margin: 0 auto; padding: 4% 0;">
+      <!-- title -->
+      <div class="pad">
+        <h1>
+          Course Policies, Logistics, and Values
+        </h1>
+        
         <p>
-          You are welcome to discuss course matters with the teaching team by email. You may also speak with the instructor during office hours (by appointment over zoom) and speak to your TA during tutorials. To ensure your email makes it to us, please use your mail.utoronto.ca address and include “FAH101” in the subject line. Allow up to 48 hours for a reply.
+          As undergraduates, you are expected to take responsibility for your performance in this course, which means respecting course policies and accepting the consequences of your actions. In the name of professionalism and ethics, the teaching team cannot bend the rules or give preferential treatment to individuals – no one is entitled to an easy grade or free pass. However, in serving diverse learning styles and needs,we are here to help you do your best work and encourage you to address difficulties you may experience in the course. We also understand unexpected crises can impact your course performance, and encourage you to address these issues <em>as soon as possible</em> with both the teaching team and your college registrar (we cannot grant accomodations retroactively).
         </p>
+        
         <p>
-          The teaching team cannot respond to assessment queries within 24 hours of the deadline, or requests to review your assignment before you submit it. If you intend to contest a grade, please wait at least 48 hours before contacting me, and include a short description - in your own words - of your concern.
+          You are also expected to treat your colleagues and the teaching team with courtesy and respect!
         </p>
-        <p>
-          Please keep emails concise and professional (you don’t need to apologize for contacting instructors, that’s part of our job! However, avoid sending messages that AI-generated or that try to use flattery or persuasion for your personal advantage! 
-        </p>  
-        <p>
-          You are expected to regularly check your email and course announcements for important updates about the course. Please also consult the syllabus and course site if you have questions <span class="em">(the teaching team is not obliged to reply to emails about anything that is already clearly stated in course documents). 
+        
+      </div>
+      
+      <div class="pad" style="padding: 0; margin: 2rem 0;"> 
+        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
+          <h2>
+            Communication
+          </h2>
+          <h2 class="plus"> 
+            +
+          </h2>
+        </button>
+        <div class="displayNone">
+          <p>
+            You are welcome to discuss course matters with the teaching team by email. You may also speak with the instructor during office hours (by appointment over zoom) and speak to your TA during tutorials. To ensure your email makes it to us, please use your mail.utoronto.ca address and include “FAH101” in the subject line. Allow up to 48 hours for a reply.
+          </p>
+          <p>
+            The teaching team cannot respond to assessment queries within 24 hours of the deadline, or requests to review your assignment before you submit it. If you intend to contest a grade, please wait at least 48 hours before contacting me, and include a short description - in your own words - of your concern.
+          </p>
+          <p>
+            Please keep emails concise and professional (you don’t need to apologize for contacting instructors, that’s part of our job! However, avoid sending messages that AI-generated or that try to use flattery or persuasion for your personal advantage! 
+          </p>  
+          <p>
+            You are expected to regularly check your email and course announcements for important updates about the course. Please also consult the syllabus and course site if you have questions 
+            <span class="em">(the teaching team is not obliged to reply to emails about anything that is already clearly stated in course documents).</span>
           </p>
           <p>
             If you cannot make it to a scheduled office hours, you have up to two hours to cancel the appointment or else will be penalized one mark.
@@ -942,8 +1011,7 @@
           
         </div>
       </div>
-      
-      
+         
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
         <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
           <h2>
@@ -1089,12 +1157,11 @@
         </div>
       </div>
     </div>
-    
   </header>
   
   
-  <!-- SCHEDULE -->
-  <section id="schedule">
+  <!-- SCHEDULE straight -->
+  <!-- <section id="schedule">
     
     <h1>
       Schedule
@@ -1108,7 +1175,7 @@
         </h3>
         <a href="1.1.html">
           <h4>
-          Hello! And Meet the Teaching Team
+            Hello! And Meet the Teaching Team
           </h4>
         </a>
         <a href="1.2.html">
@@ -1305,30 +1372,124 @@
         </div>
       </li>
     </ol>
-  </section>
+  </section> -->
+  
+  <!-- SCHED grid -->
+  <section id="sched" style="background: url(./assets/diagonal.png);">
+    <h1>
+      Schedule
+    </h1>
+    <ul class="grid">
+      
+      <li class="nitem">
+        <div>
+          <h2>July 2</h2>
+        </div>
+      </li>
+
+      <li class="item" id="ESA" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <div class="header">
+          <h2>Hello!</h2>
+          <h3>
+            Welcome to the course
+          </h3>
+          <h3>
+            Meet the Teaching Team
+          </h3>
+        </div>
+        <span class="overlay" style="background: #195181;"></span>
+      </li>
+      
+      
+      <li class="item" id="tvtv">
+        <div class="header">
+          <h3>Alternative Convention: Top Value Television's Four More Years</h3>
+          <h3>Art Museum at University of Toronto</h3>
+          <h3>September 8, 2021 – October 9, 2021</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li class="item" id="plastic">
+        <div class="header">
+          <h3>Plastic Heart: Surface All the Way Through</h3>
+          <h3>Art Museum at University of Toronto</h3>
+          <h3>September 8, 2021 – November 20, 2021</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li class="item" id="blockbuster">
+        <div class="header">
+          <h3>ANDY WARHOL AT THE AGO</h3>
+          <h3>JEAN PAUL RIOPELLE AT THE MBA, MONTREAL</h3>
+          <h3>summer 2021</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li class="item" id="stevenson">
+        <div class="header">
+          <h3>SARAH STEVENSON: BEFORE THE STORM</h3>
+          <h3>JEANETTE JOHNS:  OF THINGS AS THEY HAPPEN TO BE</h3>
+          <h3>fonderie darling: april 22 - august 22, 2021</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li id="munich">
+        <div class="header">
+          <h3>COMING SOON</h3>
+          <h3>- - -</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li id="smoke">
+        <div class="header">
+          <h3>COMING SOON</h3>
+          <h3>- - -</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+      <li id="cafe">
+        <div class="header">
+          <h3>COMING SOON</h3>
+          <h3>- - -</h3>
+        </div>
+        <span class="overlay"></span>
+      </li>
+      
+    </ul>
+  </div>
   
   
-  <!-- <button id="closeMenu">
-    Close
-  </button>
-   -->
   
-  
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-  <script src="index.js"></script>
+</section>
+
+
+<!-- <button id="closeMenu">
+  Close
+</button>
+-->
+
+
+<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+<script src="index.js"></script>
 </body>
 </html>
 
 <a class="down" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
 
 <script>
+  // h2 typing effect
+  
+  // delay
   setTimeout(doSomething, 800);
   
-  const elem = document.querySelector('#drop');
-  
-  
+  // animation  
   function doSomething() {
-    
     function printLetterByLetter(destination, message, speed){
       var i = 0;
       var interval = setInterval(function(){
@@ -1339,9 +1500,16 @@
         }
       }, speed);
     }
-    
     printLetterByLetter("destination", "Monuments of Art History", 80);
   }
   
-  
+  $("#sched li").on({
+    mouseenter: function () {
+      $(this).find('.overlay').css({opacity: "0"});
+    },
+    mouseleave: function () {
+      $('.overlay').css({opacity: ".5"});
+      $('#sched li').animate({scrollTop:0}, 300);
+    }
+  });
 </script>
