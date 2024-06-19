@@ -27,6 +27,7 @@ $('body').on("click touchstart", ".collapser", function() {
 
 $(document ).ready(function() {
   $("body").append(menu);
+  $("body").append(closeB);
 });
 
 
@@ -89,7 +90,7 @@ const menu = `
 
 
 <h2 style="margin-top: 3.5rem;">
-FAH347: Cubism and Related Movements
+FAH101: Monuments of Art History
 </h2>
 <ol class="grid2">
 <li class="padB">
@@ -205,20 +206,23 @@ $('.defs > i').on("click", function() {
 
 
 
+
+
 // Modular Header
 
 $( document ).ready(function() {
   $("nav").append(nav);
+
 });
 
 const nav = `
 <button>
-<a href="#details" tabindex="1" class="hide">
-About
+<a href="index.html">
+Home
 </a>
 </button>
 <button>
-<a href="#assignments" tabindex="1" class="hide">
+<a href="index.html#assignments" tabindex="1" class="hide">
 Assignments
 </a>
 </button>
@@ -233,4 +237,9 @@ Site menu
 </a>
 </button>
 `
+
+const closeB = `
+<button style="position: absolute; top: 1rem; right: 1rem; padding: 1rem; z-index: 100; display: none;" id="closeMenu">
+Close
+</button>`
 
