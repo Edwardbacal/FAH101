@@ -100,26 +100,10 @@ Home
 </h4>
 </a>
 </li>
-
-
-<li class="padB">
-<a class="closer" href="index.html#details">
-<h4>
-Details
-</h4>
-</a>
-</li>
 <li class="padB">
 <a class="closer" href="index.html#assignments">
 <h4>
 Assignments
-</h4>
-</a>
-</li>
-<li class="padB">
-<a class="closer" href="index.html#schedule">
-<h4>
-Schedule
 </h4>
 </a>
 </li>
@@ -128,45 +112,212 @@ Schedule
 <h3>
 Jump to class
 </h3>
-<ol class="gridGrid" style="margin-bottom: 8rem">
-<li><a href="01.html">
-1
-</a></li>
-<li><a href="02.html">
-2
-</a></li>
-<li><a href="03.html">
-3
-</a></li>
-<li><a href="04.html">
-4
-</a></li>
-<li><a href="05.html">
-5
-</a></li>
-<li><a href="06.html">
-6
-</a></li>
-<li><a href="07.html">
-7
-</a></li>
-<li><a href="08.html">
-8
-</a></li>
-<li><a href="09.html">
-9
-</a></li>
-<li><a href="botar.html">
-10
-</a></li>
-<li><a href="11.html">
-11
-</a></li>
-<li><a href="12.html">
-12
-</a></li>
+
+<ol class="sched">
+<li>
+  <h3>
+    <span>1</span>
+    July 2
+  </h3>
+  <a href="1.1.html">
+    <h4>
+      Hello! And Meet the Teaching Team
+    </h4>
+  </a>
+  <a href="1.2.html">
+    <h4>
+      Skills: Taking Notes in Art History
+    </h4>
+  </a>
+  <a href="1.3.html">
+    <h4>
+      Monument: The Ajanta Caves
+    </h4>
+  </a>
+  <div class="readings">
+    <h5>
+      Key dates
+    </h5>
+    <p>
+      <strong>
+        July 1:
+      </strong>
+      Civic holiday (university closed)
+    </p>
+  </div>
+</li>
+
+<li>
+  <h3>
+    <span>2</span>July 8
+  </h3>
+  <a href="#">
+    <h4>
+      Skills: Describing Art Objects and Analyzing Formal Elements
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monument: The Great Mosque of Damascus
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: Qingming Festival and The Great Wave off Kanagawa
+    </h4>
+  </a>
+  <div class="readings">
+    <h5>
+      Key dates
+    </h5>
+    <p>
+      <strong>
+        July 8:
+      </strong>
+      Last day to enrol in S courses
+    </p>
+    <p>
+      <strong>
+        July 9:
+      </strong>
+      First day to select a Credit/No-Credit (CR/NCR) option for S courses
+    </p>
+  </div>
+</li>
+
+<li id="c3">
+  <h3>
+    <span>3</span>July 15
+  </h3>
+  <a href="#">
+    <h4>
+      Skills: Identifying and Evaluating Research Sources
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: The Ghent Altarpiece and Altar de los Reyes
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: Series of Eight Figures and Abaporú
+    </h4>
+  </a>
+  <div class="readings">
+    <h5>
+      Key dates
+    </h5>
+    <p>
+      <strong>
+        July 21:
+      </strong>
+      Assignment 1: Sketch with formal analysis due
+    </p>
+  </div>
+</li>
+
+<li>
+  <h3>
+    <span>4</span>July 22
+  </h3>
+  <a href="#">
+    <h4>
+      Skills: Comparing and Contrasting Art Objects
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: Tā Moko and Māori Portraits 
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: Painted Buffalo Robe and Ethiopia: Comparing and Contrasting Art Objects
+    </h4>
+  </a>
+</li>
+
+<li>
+  <h3>
+    <span>5</span>
+    July 29
+  </h3>
+  <a href="#">
+    <h4>
+      Monuments: Birthday and Creation of Birds
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: Rebellious Silence and Paradise Camp
+    </h4>
+  </a>
+  <div class="readings">
+    <h5>
+      Key dates
+    </h5>
+    <p>
+      <strong>
+        July 29:
+      </strong>
+      Last day to drop course
+    </p>
+  </div>
+</li>
+
+<li>
+  <h3>
+    <span>6</span>August 6
+  </h3>
+  <a href="#">
+    <h4>
+      Skills: Exploring Art History Methodologies for Further Studies
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monuments: End of Empire and Mama Ray
+    </h4>
+  </a>
+  <a href="#">
+    <h4>
+      Monument: Art on view in Toronto
+    </h4>
+  </a>
+  <div class="readings">
+    <h5>
+      Key dates
+    </h5>
+    <p>
+      <strong>
+        August 5:
+      </strong>
+      Civic holiday (university closed)
+    </p>
+    <p>
+      <strong>
+        August 12:
+      </strong>
+      Last day of classes
+    </p>
+    <p>
+      <strong>
+        August 13:
+      </strong>
+      Deadline to request Late Withdrawal (LWD) at College Registrar's Office <br>
+      Last day to add or remove a CR/NCR option in S and Y courses
+    </p>
+    <p>
+      <strong>
+        August 30:
+      </strong>
+      Last day to submit a petition in S and Y courses <br>
+      Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
+    </p>
+  </div>
+</li>
 </ol>
-</header>
 `
 // flipcards
 

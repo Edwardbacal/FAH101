@@ -8,29 +8,11 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
   <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
-  
   <style>
-    .T1 {
-      font-size: 10vmax;
-      color: #fff;
-      text-shadow: 0 .1vmax 2.5vmax #00000091;
-      opacity: 0;
-      animation: fadeIn 2s .1s ease-out forwards
-    }
-    
-    .T2 {
-      font-size: 6vmax;
-      text-shadow: 0 .1vmax 2vmax #00000091;
-      display: block;
-      color: #fff;
-      margin: 0;
-      opacity: 0;
-      animation: fadeIn 3s .5s ease-in forwards
-    }
     
     #assignments h1,
     #assignments h2,
@@ -57,29 +39,6 @@
       color: #593806;
     }
     
-    button h2,
-    #assignments button h2,
-    #policies button h2 {
-      color: inherit;
-    }
-    
-    .BG,
-    .BG2 {
-      position: absolute; 
-      width: 100vw; 
-      height: 100vh; 
-      background-repeat: no-repeat !important;
-      z-index: -9;
-      background-attachment: fixed !important;
-      background-position: center !important;
-      background-size: cover !important;
-    }
-    
-    .BG2 {
-      z-index: -10;
-      opacity: 0.8;
-      animation: introFade 12s forwards;
-    }
     
     .displayNone {
       padding: 0 3rem 2rem 3rem;
@@ -105,59 +64,16 @@
       animation: fadeIn .8s 2.6s ease-in forwards;
     }
     
-    /* @media (max-width: 768px) {
-      .mobbg {
-        display: none;
-      }
-      .hero1 {
-        background-image: url(./assets/hero-m.jpg);
-        background-size: cover;
-      }
-      #details {
-        background-image: url(./assets/hero-m2.jpg) !important;
-      }
-    } */
-    
-    @media (max-width: 450px) {
-      .mobbg {
-        display: none;
-      }
-      header {
-        width: 100vw;
-        min-height: 100vh;
-        background-size: contain;
-      }
-      .hero1 {
-        background-image: url(./assets/hero-phone.jpg);
-        background-size: 625px;
-      }
-      #details {
-        background-image: url(./assets/hero-phone2.jpg) !important;
-        background-size: 625px;
-      }
-      .T12 {
-        min-height: 46vmax !important;
-      }
-      .T1 {
-        text-shadow: 0px 1px 12px #00000052;
-      }
-      .T2 {
-        text-shadow: 0px 1px 8px #00000032;
-      }
-      .displayNone {
-        padding: 0 1.5rem 1rem 1.5rem;
-      }
-      .padB,
-      .pad {
-        padding: 1rem 1.5rem;
-      }
-      
+    .exco {
+      width: 100%;
+      padding: 1rem 1.5rem 0 1.5rem;
+      justify-content: space-between;
     }
     
     
     #sched ul {
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 4%;
       margin: 4% auto;
     }
     
@@ -173,15 +89,21 @@
       cursor: pointer;
       -webkit-transition: .25s;
       transition: .25s;
-      border: 1px solid #195181;
+      width: 100%;
     }
-
+    
+    @media (max-width: 781px) {
+      .item {
+        overflow: hidden;
+      }
+    }
     .nitem {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100% !important;
       background: #fff;
+      padding: 2rem;
     }
     
     .overlay {
@@ -192,7 +114,7 @@
       left: 0px;
       -webkit-transition: .25s;
       transition: .25s;
-      mix-blend-mode: exclusion;
+      mix-blend-mode: hard-light;
       opacity: .5;
       overflow: hidden;
       pointer-events: none;
@@ -205,6 +127,8 @@
       padding: 20px;
       z-index: 1;
       position: relative;
+      display: block;
+      text-decoration: none;
     }
     
     .item h2 {
@@ -225,20 +149,17 @@
     
   </style>
 </head>
-<body>
-  
-  
+<body>  
   <!-- HERO -->
   <header class="flex hero1" id="top" style="padding: 0 5%;">
-    <nav class="flex"></nav>   
-    
+    <nav class="flex"><!-- dynamically added --></nav>   
     <div class="T12" style="min-height: 24vmax;">
-      <h1 class="T1">
+      <h1>
         FAH 101
+        <span id="destination" class="T2">
+          <!-- Monuments of Art History -->
+        </span>
       </h1>
-      <h2 id="destination" class="T2">
-        <!-- Monuments of Art History -->
-      </h2>
     </div>
     
     <!-- Background -->
@@ -250,29 +171,31 @@
   
   
   <!-- DETAILS -->
-  <header style="background-image: url(./assets/04/Hokusai-Great-Wave.jpg);" id="details">   
-    <div class="flex" style="padding: 4% 0; justify-content: flex-start; margin: 0 auto;">
+  <section style="background-image: url(./assets/04/Hokusai-Great-Wave.jpg);" id="details">   
+    <div>
       <div class="pad">
-        <h1 style="padding: 1rem 0 0 0">
-          Welcome to Monuments of Art History! <span style="font-size: 1.2rem; display: inline;">(July/August 2024)</span>
-        </h1>
+        <h2>
+          Welcome to Monuments of Art History! 
+          <span>
+            (July/August 2024)
+          </span>
+        </h2>
         
         <!-- ANNOUNCEMENTS -->
-        <div class="igBox">
-          <h2>
+        <div class="dashedBox">
+          <h3>
             Announcements
-          </h2>
+          </h3>
           <p>
             Welcome to the course! This site features all the <em>content</em> for the course, including weekly modules, course information, and assignment details. The rest is available on <a href="https://q.utoronto.ca/courses/346676" target="_blank">Quercus.</a>
           </p>
           <p>
             Click on the headings below to learn more about the course. 
           </p>
-          
         </div>
       </div> 
       
-      <div class="flex" style="width: 100%; padding: 1rem 3rem 0 3rem; justify-content: space-between;">
+      <div class="flex exco">
         <button class="expander">
           Expand all
         </button>
@@ -283,27 +206,27 @@
       
       <!-- WHERE AND WHEN -->
       <div class="pad" style="padding: 0; margin: 2rem 0;">
-        <button class="pad padB" style="width: 100%; text-align: left;">
-          <h2>
+        <button class="padB">
+          <h3>
             What does this course consist of? Where and when does it take place?
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
             This is an online-asynchronous course made up of twelve modular lessons plus six weekly tutorials.
           </p>
-          <h3>
+          <h4>
             Modules
-          </h3>
+          </h4>
           <p>
             In place of lectures, this course features online modules (lessons made up of short videos, texts, and images) which explore art objects and develop art historical skills. Two modules will be posted on Quercus each Monday. You can work through them on your own time but should aim to complete them before that week’s tutorial.
           </p>
-          <h3>
+          <h4>
             Tutorials
-          </h3>
+          </h4>
           <p>
             Tutorials are a mandatory part of this course and occur each week. There, you will discuss course content, practice key art historical skills, and collaborate on activities with classmates. Attendance and completion of activities make up 15% of your final grade.
           </p>
@@ -319,60 +242,73 @@
             Neither the instructor nor TAs can alter your tutorial enrolments. 
           </p>
           
-          <h3>
+          <h4>
             Tutorial sections
-          </h3>
+          </h4>
           <ul class="grid">
-            <li class="igBox">
+            <li class="dashedBox">
               <strong>
                 TUT0101: 	
               </strong>
               Wednesday, 4-5 PM, WI
             </li>
-            <li class="igBox">
+            <li class="dashedBox">
               <strong>
                 TUT5101: 	
               </strong>
               Wednesday, 5-6 PM, WI
             </li>
-            <li class="igBox">
+            <li class="dashedBox">
               <strong>
                 TUT5201: 	
               </strong>
               Wednesday, 6-7 PM, WI
             </li>
-            <li class="igBox">
+            <li class="dashedBox">
               <strong>
                 TUT5301: 	
               </strong>
               Wednesday, 7-8 PM, WI
             </li>
           </ul>
-          
+          <hr>
+          <cite>
+            <strong>Distribution requirements:</strong>  Humanities 
+          </cite>
+          <cite>
+            <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) 
+          </cite>
+          <cite>
+            <strong>Exclusion:</strong> FAH101H5
+          </cite>
         </div>    
       </div>
       
       <!-- TEAM -->
       <div class="pad" style="padding: 0;">
-        <button class="pad padB" style="width: 100%; text-align: left;">
-          <h2>
-            Who teaches this course and where do I reach them?
-          </h2>
-          <h2 class="plus"> 
+        <button class="padB">
+          <h3>
+            Who teaches this course and how do I contact them?
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
-            This course was originally developed by Samantha Chang and is currently led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward personally designed and coded this website.
+            This course is led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward designed and coded this website himself. Course content is based off the FAH101 course developed by Samantha Chang; her efforts in creating it are much appreciated.
           </p>
           <p>
             Throughout the semester, you will primarily be in contact with one of our teaching assistants, who are responsible for leading tutorials and grading assignments.
           </p>
           
-          <h3>
+          <p>
+            
+          </p>
+          
+          <h4>
             Course Instructor
-          </h3>
+          </h4>
           <p>
             Edward Bacal: edward.bacal@mail.utoronto.ca
           </p>
@@ -380,14 +316,14 @@
             Office hours by appointment. You can schedule a 15-minute meeting     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
             <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardbacal'});return false;">here</a> or by email.
           </p>
-          <h3>
+          <h4>
             Teaching Assistants
-          </h3>
-          <!-- <ul class="list">
+          </h4>
+          <ul class="list">
             <li>
-              Ashley Raghubir: ashley.raghubir@mail.utoronto.ca
+              Marina Dumont-Gauthier: marina.dumontgauthier@mail.utoronto.ca
             </li>
-          </ul> -->
+          </ul>
           
           <cite>
             <strong>
@@ -397,19 +333,19 @@
           </cite>
           <p>
             Learn more about the team HERE.
-          </p>
+          </p>    
         </div>    
       </div>
       
       <!-- ABOUT -->
       <div class="pad" style="padding: 0; margin: 2rem 0;" id="description">
-        <button class="pad padB" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             What is this course about?
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -421,28 +357,23 @@
           <p>
             No previous knowledge of art or architecture is required.
           </p>
-          <cite>
-            <strong>Distribution requirements:</strong>  Humanities <br>
-            <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) <br>
-            <strong>Exclusion:</strong> FAH101H5
-          </cite>
         </div>
       </div>
       
       <!-- GOALS -->
       <div class="pad" style="padding: 0;">
-        <button class="pad padB" style="width: 100%; text-align: left;">
-          <h2>
+        <button class="padB">
+          <h3>
             What skills will I gain from course?
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
-          <h3>
+          <h4>
             After successfully completing this course, you should be able to:
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Identify select monuments of art and understand how they fit into their historical period and context.
@@ -466,20 +397,20 @@
         </div>
       </div>
     </div>
-  </header>
+  </section>
   
   <!-- ASSIGNMENTS -->
-  <header style="background-image: url(./assets/09/CreacionDeLasAves.jpg); background-position-x: 0;">
-    <div class="flex" id="assignments" style="justify-content: flex-start; margin: 0 auto; padding: 4% 0;">
+  <section style="background-image: url(./assets/09/CreacionDeLasAves.jpg); background-position-x: 0;">
+    <div id="assignments">
       <!-- title -->
       <div class="pad">
-        <h1 style="padding: 1rem 0 0 0">
+        <h2>
           Assignments and Evaluation
-        </h1>
-        <div class="igBox">
-          <h2>
+        </h2>
+        <div class="dashedBox">
+          <h4>
             What do I have to do for this course?
-          </h2>
+          </h4>
           <p>
             To successfully complete this course, you will have to
           </p>  
@@ -502,13 +433,13 @@
       
       <!-- TUTS -->
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
-        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-          <h2>
-            Tutorial attendance and participation (15%) 
-          </h2>
-          <h2 class="plus"> 
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
+            Tutorial attendance and participation <span>worth 15%, </span>
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -526,18 +457,18 @@
       <!-- ASS 1 -->
       <div class="pad" style="padding: 0; ">
         
-        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-          <h2>
-            Assignment 1: Sketch with formal analysis (20%) Due Sunday, July 21, 11:59 PM
-          </h2>
-          <h2 class="plus"> 
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
+            Assignment 1: Sketch with formal analysis <span>worth 20%, due Sunday, July 21, 11:59 PM</span>
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
-          <h3>
+          <h4>
             Summary
-          </h3>
+          </h4>
           <p>
             This is the first of two assignments in which you will engage with one art object, chosen from the options provided below. It consists of two parts: a sketch with annotations and a written analysis.
           </p>
@@ -553,9 +484,9 @@
             Next, you will write a 600-700 word formal analysis of your chosen artwork. Here you will take what you noted in making your sketch and translate your observations into a cohesive essay, applying the skills you will learn in Module 3 and practice in tutorials.
           </p>
           
-          <h3>
+          <h4>
             Objectives
-          </h3>
+          </h4>
           
           <h5>
             The sketch is meant for you to practice close engagement with art by doing the following:
@@ -592,9 +523,9 @@
             Looking ahead, this essay will prepare you for assignment 2: by preparing you to identify the ways one artwork is visually constructed, you will be ready to discuss how those qualities connect and/or distinguish multiple artworks seen together.
           </p>
           
-          <h3>
+          <h4>
             Things to consider
-          </h3>
+          </h4>
           <h5>
             For the sketch:
           </h5>
@@ -624,9 +555,9 @@
             </li>
           </ul>
           
-          <h3>
+          <h4>
             Additional instructions
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Sketches can be created physically on paper or digitally in a drawing/painting app. The sketch is to be created from scratch by you and cannot be compiled from digital graphics or photographs. Annotations should engage with the sketch directly and can be handwritten or typed.
@@ -639,9 +570,9 @@
             </li>
           </ul>
           
-          <h3>
+          <h4>
             Submission details
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Upload one file on Quercus (this assignment page) by Sunday, January 21, 11:59PM EST
@@ -665,19 +596,19 @@
       <!-- ASS 2 -->
       <div class="pad" style="padding: 0; margin: 2rem 0;">
         
-        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-          <h2>
-            Assignment 2: Compare and contrast analysis (30%) Due Sunday, August 11, 11:59 PM
-          </h2>
-          <h2 class="plus"> 
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
+            Assignment 2: Compare and contrast analysis <span>worth 30%, due Sunday, August 11, 11:59 PM</span>
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         
         <div class="displayNone">
-          <h3>
+          <h4>
             Summary
-          </h3>
+          </h4>
           <p>
             This assignment builds on your sketch and formal analysis by comparing your chosen artwork (the same one from assignment 1) with one of the "monuments" from class (options are listed below) in order to analyze and interpret the differences/similarities between them. Whereas assignment 1 asked you to visually examine one art object in isolation, this assignment asks you to re-examine that work in relation to another, and to offer explanations—backed by references—that substantiate your observations.
           </p>
@@ -688,9 +619,9 @@
             Word count: 900-1100 words (including citations and bibliography).
           </p>
           
-          <h3>
+          <h4>
             Objectives
-          </h3>
+          </h4>
           
           <h5>
             This assignment is meant to demonstrate the following skills:
@@ -710,9 +641,9 @@
             </li>
           </ul>
           
-          <h3>
+          <h4>
             Citation instructions        
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Citations can be made with footnotes, endnotes, or in-text, as long as you're consistent and follow Chicago Manual of Style guidelines.
@@ -742,9 +673,9 @@
             </li>
           </ul>
           
-          <h3>
+          <h4>
             Things to consider
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Is the thesis clear? Is it specific and direct?
@@ -757,9 +688,9 @@
             </li>
           </ul>
           
-          <h3>
+          <h4>
             Submission details
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               Upload one file on Quercus by Sunday, August 11, 11:59PM EST
@@ -783,13 +714,13 @@
       
       <!-- EXAM -->
       <div class="pad" style="padding: 0;"> 
-        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-          <h2>
-            Final exam (in-person) (35%) Date-TBD (ca. August 15-30)
-          </h2>
-          <h2 class="plus"> 
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
+            Final exam (in-person) <span>worth 35%, Date-TBD (ca. August 15-30)</span>
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -811,16 +742,16 @@
             It's worth 35% of your final grade (The Faculty of Arts and Sciences requires first year courses have exams that are worth at least 1/3 of your grade).
           </p>
           
-          <h3>
+          <h4>
             Why do we have an in-person exam?
-          </h3>
+          </h4>
           <p>
             Having an exam is an useful opportunity to reflect on the range of content and ideas explored throughout the course. While in-person exams are an imperfect way of evaluating learning, and not a format that's optimal for everyone, I've tried to adapt it so that people who need more time or may benefit from notes can complete it to the best of their abilities. More to the point, the reality is that it's currently essential to have an AI-proof evaluation where you practice writing in your own voice. I know that many people may be English language learners or not be strong writers, but I'm not looking for polished essay-style responses, so much as evidence of you communicating your own original thoughts about the course content.
           </p>
           
-          <h3>
+          <h4>
             What happens if I'm sick or unable to make it?
-          </h3>
+          </h4>
           
           <p>
             If you have a conflict (e.g. another exam at the same time) you can report it to the faculty registrar. More information is <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/final-exams/exam-conflicts" target="_blank">here</a>.
@@ -835,7 +766,7 @@
           </p>
           
           
-          <div class="igBox">    
+          <div class="dashedBox">    
             <h5>
               The following is a heavily redacted preview of what the winter 2024 FAH101 exam looked like (this is not a guarantee of what to expect as the format and style of questions may change):
             </h5>
@@ -887,13 +818,13 @@
       
       <!-- LATE PENALTIES -->
       <div class="pad" style="padding: 0; margin: 2rem 0;">
-        <button class="pad padB padC" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Late penalties
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         
         <div class="displayNone">
@@ -915,16 +846,16 @@
       </div>   
       
     </div>
-  </header>
+  </section>
   
   <!-- POLICIES -->
-  <header style="background-image: url(./assets/06/abaporu.jpg); background-position-x: 0;" id="policies">
-    <div class="flex" style="justify-content: flex-start; margin: 0 auto; padding: 4% 0;">
+  <section style="background-image: url(./assets/06/abaporu.jpg); background-position-x: 0;" id="policies">
+    <div>
       <!-- title -->
-      <div class="pad">
-        <h1>
+      <div class="pad" id="policies">
+        <h2>
           Course Policies, Logistics, and Values
-        </h1>
+        </h2>
         
         <p>
           As undergraduates, you are expected to take responsibility for your performance in this course, which means respecting course policies and accepting the consequences of your actions. In the name of professionalism and ethics, the teaching team cannot bend the rules or give preferential treatment to individuals – no one is entitled to an easy grade or free pass. However, in serving diverse learning styles and needs,we are here to help you do your best work and encourage you to address difficulties you may experience in the course. We also understand unexpected crises can impact your course performance, and encourage you to address these issues <em>as soon as possible</em> with both the teaching team and your college registrar (we cannot grant accomodations retroactively).
@@ -937,13 +868,13 @@
       </div>
       
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
-        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Communication
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -966,13 +897,13 @@
       </div>
       
       <div class="pad" style="padding: 0;"> 
-        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Accessibility and Academic Accommodations
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -988,9 +919,9 @@
             If you are experiencing serious personal or medical crises that are preventing you from completing course requirements, please contact your registrar as soon as possible — it is crucial to address such issues before assignment deadlines. We cannot provide retroactive accommodations after classes end. 
           </p>
           
-          <h3>
+          <h4>
             Helpful Resources:
-          </h3>
+          </h4>
           <ul class="list">
             <li>
               The Academic Success Centre provides services such as academic mentoring and appointments with learning strategists.
@@ -1011,27 +942,27 @@
           
         </div>
       </div>
-         
+      
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
-        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Conduct
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
-          <h3>
+          <h4>
             Equity, Diversity, and Inclusion
-          </h3>
+          </h4>
           <p>
             In our course, we work in the context of a university committed to principles and programs for equity, diversity, and inclusion (EDI). Please refer to the University’s Statement on Equity, Diversity, and Excellence (2006). If you have any concerns about EDI in our course, please get in touch with me (Edward), and we will address the concerns together.
           </p>
           
-          <h3>
+          <h4>
             Our Learning Environment  
-          </h3>
+          </h4>
           <p>
             Our learning environment (including Quercus) is a shared space, which means we should be mindful and respectful of our colleagues, As we explore the histories and objects of different spaces and places, be sensitive to our various cultural and linguistic backgrounds, as well as different political and religious beliefs. I encourage students to challenge and be challenged by ideas — exposure to other views and opinions is part of the learning experience — but not without respecting such differences. If disagreements arise, try to offer constructive feedback and avoid prescriptive language. We will work together to create an environment of constructive dialogue, inclusiveness, and mutual respect. We are all in this together. 
           </p>
@@ -1039,13 +970,13 @@
       </div>
       
       <div class="pad" style="padding: 0;"> 
-        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Academic Integrity
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
           <p>
@@ -1086,16 +1017,16 @@
           </ul>
           
           
-          <h3>
+          <h4>
             Using Artificial Intelligence Tools  
-          </h3>
+          </h4>
           <p>
             Do not use generative artificial intelligence tools and apps to complete and/or support the completion of assignments in this course. The teaching team is interested in reading your observations, analyses, and insights. Your sketches demonstrate your careful looking and are not assessed on artistic skills. Using generative AI in this course will be considered an academic offence relating to the use of unauthorized aids. Thank you for helping us promote and maintain a productive learning community.
           </p>
           
-          <h3>
+          <h4>
             Textual Similarity Detection Tool 
-          </h3>
+          </h4>
           <p>
             Assessments are submitted electronically through Quercus. Normally, students will be required to submit their course essays to the University’s plagiarism detection tool for a review of textual similarity and detection of possible plagiarism. In doing so, students will allow their essays to be included as source documents in the tool’s reference database, where they will be used solely for the purpose of detecting plagiarism. The terms that apply to the University’s use of this tool are described on the Centre for Teaching Support & Innovation website (https://uoft.me/pdt-faq). 
           </p>
@@ -1106,92 +1037,74 @@
       </div>
       
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
-        <button class="pad padB padD" style="width: 100%; text-align: left; position: relative;">
-          <h2>
+        <button class="padB" style="width: 100%; text-align: left; position: relative;">
+          <h3>
             Academic Resources
-          </h2>
-          <h2 class="plus"> 
+          </h3>
+          <h3 class="plus"> 
             +
-          </h2>
+          </h3>
         </button>
         <div class="displayNone">
-          <h3>
+          <h4>
             Art History Writing Lab
-          </h3>
+          </h4>
           <p>
             The Art History writing lab, led by Dr. Colin Murray, offers workshops and one-on-one tutoring sessions to help students develop ideas, write, and edit art history papers. For more information, visit the Art History Writing Lab webpage. Dr. Murray is very helpful and insightful! 
           </p>
-          <h3>
+          <h4>
             University Writing Centres
-          </h3>
+          </h4>
           <p>
             The fourteen writing centres at U of T provide individual consultations with trained writing instructors and group teaching in workshops and courses. There’s no charge for this instruction—it’s part of your academic program. The mandate of writing centres is to help you develop writing skills as you progress through your studies. All the undergraduate colleges have writing centres for their students. Visit the Writing at the University of Toronto website for more information. The English Language Learning program also provides various offerings.
           </p>
           <p>
             More than sixty advice files on all aspects of academic writing are available on the “Advice on Academic Writing” page. Visit the “Using Sources” page for advice on how not to plagiarize, documentation format, and methods of integrating sources. 
           </p>
-          <h3>
+          <h4>
             Chicago Manual of Style
-          </h3>
+          </h4>
           <p>
             Footnotes and bibliography entries for this course follow the Chicago Manual of Style (CMoS). A Quick Guide is available publicly online.
           </p>
-          <h3>
+          <h4>
             Library Resources
-          </h3>
+          </h4>
           <p>
             The Ask Chat with a Librarian virtual chat service remains open. Library staff can help you with library-related questions and research right away. Our very own Christine Clemens is currently steward of the Art History library (filling in for Margaret English, whom you may encounter in the future). The Art History Research Guide also provides advice, useful tools, and links to the best resources for art history research. 
           </p>
-          <h3>
+          <h4>
             Oxford Art Online
-          </h3>
+          </h4>
           <p>
             Oxford Art Online offers access to the most authoritative, inclusive, and easily searchable online art resources available today. Users can simultaneously search Oxford’s acclaimed art reference works, which are listed individually below: the Benezit Dictionary of Artists, the Encyclopedia of Aesthetics, The Oxford Companion to Western Art, and The Concise Oxford Dictionary of Art Terms, as well as many specially commissioned articles and bibliographies available exclusively online. 
           </p>
-          <h3>
+          <h4>
             Online Museums and Exhibitions
-          </h3>
+          </h4>
           <p>
             Over 2,000 museums and galleries offer virtual tours and online collections via Google’s Art & Culture pages. Have fun exploring!
           </p>
         </div>
       </div>
     </div>
-  </header>
-  
-  
-  <!-- SCHEDULE straight -->
-  <!-- <section id="schedule">
-    
-    <h1>
-      Schedule
-    </h1>
-    
-    <ol class="sched">
-      <li>
-        <h3>
-          <span>1</span>
-          July 2
-        </h3>
-        <a href="1.1.html">
+  </section>
+  å
+  <!-- SCHED grid -->
+  <section id="sched" style="background: url(./assets/diagonal.png); background-size: 200px;">
+    <div class="pad">
+      <h2>
+        Schedule
+      </h2>
+    </div>
+    <ul class="grid">
+      
+      <li class="nitem">
+        <div>
+          <h2>July 2</h2>
           <h4>
-            Hello! And Meet the Teaching Team
-          </h4>
-        </a>
-        <a href="1.2.html">
-          <h4>
-            Skills: Taking Notes in Art History
-          </h4>
-        </a>
-        <a href="1.3.html">
-          <h4>
-            Monument: The Ajanta Caves
-          </h4>
-        </a>
-        <div class="readings">
-          <h5>
             Key dates
-          </h5>
+          </h4>
           <p>
             <strong>
               July 1:
@@ -1201,195 +1114,8 @@
         </div>
       </li>
       
-      <li>
-        <h3>
-          <span>2</span>July 8
-        </h3>
-        <a href="#">
-          <h4>
-            Skills: Describing Art Objects and Analyzing Formal Elements
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monument: The Great Mosque of Damascus
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: Qingming Festival and The Great Wave off Kanagawa
-          </h4>
-        </a>
-        <div class="readings">
-          <h5>
-            Key dates
-          </h5>
-          <p>
-            <strong>
-              July 8:
-            </strong>
-            Last day to enrol in S courses
-          </p>
-          <p>
-            <strong>
-              July 9:
-            </strong>
-            First day to select a Credit/No-Credit (CR/NCR) option for S courses
-          </p>
-        </div>
-      </li>
-      
-      <li id="c3">
-        <h3>
-          <span>3</span>July 15
-        </h3>
-        <a href="#">
-          <h4>
-            Skills: Identifying and Evaluating Research Sources
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: The Ghent Altarpiece and Altar de los Reyes
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: Series of Eight Figures and Abaporú
-          </h4>
-        </a>
-        <div class="readings">
-          <h5>
-            Key dates
-          </h5>
-          <p>
-            <strong>
-              July 21:
-            </strong>
-            Assignment 1: Sketch with formal analysis due
-          </p>
-        </div>
-      </li>
-      
-      <li>
-        <h3>
-          <span>4</span>July 22
-        </h3>
-        <a href="#">
-          <h4>
-            Skills: Comparing and Contrasting Art Objects
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: Tā Moko and Māori Portraits 
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: Painted Buffalo Robe and Ethiopia: Comparing and Contrasting Art Objects
-          </h4>
-        </a>
-      </li>
-      
-      <li>
-        <h3>
-          <span>5</span>
-          July 29
-        </h3>
-        <a href="#">
-          <h4>
-            Monuments: Birthday and Creation of Birds
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: Rebellious Silence and Paradise Camp
-          </h4>
-        </a>
-        <div class="readings">
-          <h5>
-            Key dates
-          </h5>
-          <p>
-            <strong>
-              July 29:
-            </strong>
-            Last day to drop course
-          </p>
-        </div>
-      </li>
-      
-      <li>
-        <h3>
-          <span>6</span>August 6
-        </h3>
-        <a href="#">
-          <h4>
-            Skills: Exploring Art History Methodologies for Further Studies
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monuments: End of Empire and Mama Ray
-          </h4>
-        </a>
-        <a href="#">
-          <h4>
-            Monument: Art on view in Toronto
-          </h4>
-        </a>
-        <div class="readings">
-          <h5>
-            Key dates
-          </h5>
-          <p>
-            <strong>
-              August 5:
-            </strong>
-            Civic holiday (university closed)
-          </p>
-          <p>
-            <strong>
-              August 12:
-            </strong>
-            Last day of classes
-          </p>
-          <p>
-            <strong>
-              August 13:
-            </strong>
-            Deadline to request Late Withdrawal (LWD) at College Registrar's Office <br>
-            Last day to add or remove a CR/NCR option in S and Y courses
-          </p>
-          <p>
-            <strong>
-              August 30:
-            </strong>
-            Last day to submit a petition in S and Y courses <br>
-            Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
-          </p>
-        </div>
-      </li>
-    </ol>
-  </section> -->
-  
-  <!-- SCHED grid -->
-  <section id="sched" style="background: url(./assets/diagonal.png);">
-    <h1>
-      Schedule
-    </h1>
-    <ul class="grid">
-      
-      <li class="nitem">
+      <a href="1.1.html" class="item" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
         <div>
-          <h2>July 2</h2>
-        </div>
-      </li>
-
-      <li class="item" id="ESA" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
-        <div class="header">
-          <h2>Hello!</h2>
           <h3>
             Welcome to the course
           </h3>
@@ -1398,89 +1124,34 @@
           </h3>
         </div>
         <span class="overlay" style="background: #195181;"></span>
-      </li>
+      </a>    
       
-      
-      <li class="item" id="tvtv">
-        <div class="header">
-          <h3>Alternative Convention: Top Value Television's Four More Years</h3>
-          <h3>Art Museum at University of Toronto</h3>
-          <h3>September 8, 2021 – October 9, 2021</h3>
+      <a href="#" class="item" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <div>
+          <h3>
+            Welcome to the course
+          </h3>
+          <h3>
+            Meet the Teaching Team
+          </h3>
         </div>
-        <span class="overlay"></span>
-      </li>
+        <span class="overlay" style="background: #195181;"></span>
+      </a>    
       
-      <li class="item" id="plastic">
-        <div class="header">
-          <h3>Plastic Heart: Surface All the Way Through</h3>
-          <h3>Art Museum at University of Toronto</h3>
-          <h3>September 8, 2021 – November 20, 2021</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
-      
-      <li class="item" id="blockbuster">
-        <div class="header">
-          <h3>ANDY WARHOL AT THE AGO</h3>
-          <h3>JEAN PAUL RIOPELLE AT THE MBA, MONTREAL</h3>
-          <h3>summer 2021</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
-      
-      <li class="item" id="stevenson">
-        <div class="header">
-          <h3>SARAH STEVENSON: BEFORE THE STORM</h3>
-          <h3>JEANETTE JOHNS:  OF THINGS AS THEY HAPPEN TO BE</h3>
-          <h3>fonderie darling: april 22 - august 22, 2021</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
-      
-      <li id="munich">
-        <div class="header">
-          <h3>COMING SOON</h3>
-          <h3>- - -</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
-      
-      <li id="smoke">
-        <div class="header">
-          <h3>COMING SOON</h3>
-          <h3>- - -</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
-      
-      <li id="cafe">
-        <div class="header">
-          <h3>COMING SOON</h3>
-          <h3>- - -</h3>
-        </div>
-        <span class="overlay"></span>
-      </li>
       
     </ul>
   </div>
-  
-  
-  
 </section>
-
-
-<!-- <button id="closeMenu">
-  Close
-</button>
--->
 
 
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 <script src="index.js"></script>
-</body>
-</html>
 
+</body>
+
+</html>
 <a class="down" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
+
 
 <script>
   // h2 typing effect
@@ -1503,13 +1174,13 @@
     printLetterByLetter("destination", "Monuments of Art History", 80);
   }
   
-  $("#sched li").on({
+  $("#sched a").on({
     mouseenter: function () {
       $(this).find('.overlay').css({opacity: "0"});
     },
     mouseleave: function () {
       $('.overlay').css({opacity: ".5"});
-      $('#sched li').animate({scrollTop:0}, 300);
+      $('#sched a').animate({scrollTop:0}, 300);
     }
   });
 </script>
