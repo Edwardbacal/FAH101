@@ -89,11 +89,16 @@ h6 {
 }
 
 p,
-li {
+li,
+button {
   line-height: 1.5;
   margin: 1rem 0;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+nav button {
+  margin: 0;
 }
 
 a {
@@ -120,20 +125,64 @@ button h4 {
   margin: 0;
 }
 
-nav button,
-.expander,
-.collapser {
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
 hr {
   border: 0;
   border-top: 2px dashed #195181;
   margin: 3rem 0;
 }
 
+/* Layout */
+
+header,
+section,
+.BG,
+.BG2 {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  padding: 16% 10%;
+  position: relative;
+  justify-content: flex-start; 
+  margin: 0 auto;
+}
+
+.BG,
+.BG2 {
+  position: absolute; 
+  z-index: -9;
+  padding: 0;
+}
+.BG2 {
+  z-index: -10;
+  opacity: 0.8;
+  animation: introFade 12s forwards;
+}
+
+section > div
+header > div,
+.inv > div {
+  max-width: 1440px !important;
+  margin: auto;
+}
+
+.inv {
+  max-width: none;
+}
+.inv a {
+  color: #ffefaa;
+}
+
+
+header > ul,
+section > div,
+section > ul {
+  width: 100%;
+  margin: auto;
+}
 
 
 /* LISTS */
@@ -166,20 +215,25 @@ ol li a:first-of-type{
 
 
 
-ol li h3 span {
-  color: #fff;
-  background-color: #195181;
-  border-radius: 100%;
-  height: 2rem;
-  width: 2rem;
-  min-width: 2rem;
-  border-radius: 100%;
+ol li h3 span,
+#sched a h3,
+#sched h2 span {
+  border-radius: 100% !important;
   margin: 0 1rem 0 0;
-  font-size: 1.2rem;
   line-height: 1;
+}
+
+#sched h2 {
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+
+#sched h2 span {
+  background-color: #195181;
+  color: #fff;
+  font-size: inherit;
+  width: 3rem;
+  height: 3rem;
 }
 
 ol li h3 {
@@ -237,16 +291,6 @@ ol li h3 {
 }
 
 
-.note .iconGrid li,
-.note .iconGridCols li,
-.video .iconGrid li,
-.video .iconGridCols li {
-  background: url('./assets/generic/diagonalFaintP.png');
-  box-shadow: -1px 2px 1px #F7ECE1;
-  background-size: 500px;
-}
-
-
 
 /* placed here for cascade reasons */
 li {
@@ -281,7 +325,9 @@ header,
 .img,
 .img div,
 ol li h3,
-ol li h3 span {
+ol li h3 span,
+.gridGrid li a,
+#sched h2 span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -291,17 +337,6 @@ ol li h3 span {
 .flexCol {
   flex-direction: column;
 }
-.TF p {
-  padding-top: 4rem;
-  margin-top: 3rem;
-  border-top: 3px dotted #72ADD1;
-  max-width: 900px;
-}
-.TF p:first-of-type {
-  padding-top: 0;
-  border: none;
-}
-
 
 
 
@@ -328,19 +363,17 @@ blockquote > div {
 
 
 
-/* VIDEO */
+/* Buttons */
 
 .CTA,
 .flowButton {
-  color: #1c1c1c;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #195181;
   border-radius: 1px;
   padding: 1rem 1.5rem;
   margin: 2rem 0;
-  transition: .1s;
+  transition: .15s;
   background: transparent;
-  cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -348,12 +381,14 @@ blockquote > div {
   line-height: 1.5;
   background: #fff;
 }
+
+
 .CTA:hover,
 .CTA:focus,
 .flowButton:hover,
 .flowButton:focus {
   color: #fff;
-  background: #1c1c1c;
+  background: #195181;
 }
 
 .inv .flowButton:hover,
@@ -483,56 +518,9 @@ blockquote > div {
 }
 
 
-header,
-section,
-.BG,
-.BG2 {
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  min-height: 100vh;
-  padding: 16% 10%;
-  position: relative;
-  justify-content: flex-start; 
-  margin: 0 auto;
-}
-
-.BG,
-.BG2 {
-  position: absolute; 
-  z-index: -9;
-  padding: 0;
-}
-.BG2 {
-  z-index: -10;
-  opacity: 0.8;
-  animation: introFade 12s forwards;
-}
-
-section > div
-header > div,
-.inv > div {
-  max-width: 1440px !important;
-  margin: auto;
-}
-
-.inv {
-  max-width: none;
-}
-.inv a {
-  color: #ffefaa;
-}
 
 
-header > ul,
-section > div,
-section > ul {
-  width: 100%;
-  margin: auto;
-}
+
 
 
 
@@ -897,13 +885,15 @@ ol li > a:focus {
 }
 
 a[href="#"] {
-  pointer-events: none;
-  background: #fff;
-  color: #195181;
+  cursor: default !important;
+  filter: saturate(.2);
 }
 
 .sched a[href="#"] {
   border: 1px dashed #195181;
+  background: #fff;
+  color: #195181 !important;
+  filter: saturate(1);
 }
 
 a[target="_blank"]::after {    
@@ -939,34 +929,9 @@ a[href="#"]:focus {
   aspect-ratio: 1;
 }
 
-.gridGrid li a,
-.collapser,
-.expander {
-  margin: 0;
-  padding: 2rem;
-  width: 100%;
-  min-width: 6rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #aeaeae;
-  background: #fff !important;
-  border: 1px solid #195181;
-  color: #195181;
-  transition: .15s;
-}
 
-.collapser,
-.expander {
-  font-size: 1rem;
-  padding: .8rem;
-  width: calc(50% - 3rem);
-  margin: 2rem 1.5rem 0 1.5rem;
-  height: 100%;
-}
+
+
 
 .grid2 {
   width: 100%;
@@ -986,21 +951,6 @@ a[href="#"]:focus {
   background: #fff !important;
   color: #195181;
 }
-
-.grid2 li a:hover,
-.grid2 li a:focus,
-.collapser:hover,
-.collapser:focus,
-.expander:hover,
-.expander:focus {
-  background: #195181 !important;
-  color: #fff;
-}
-
-
-
-
-
 
 .pad,
 .padd,
@@ -1201,7 +1151,7 @@ button {
     padding: 1rem 1.5rem;
   }
   .exco {
-    padding: 1rem 0 0 0;
+    margin: 2rem 1.5rem 1.5rem 1.5rem !important;
   }
 
   .grid,
@@ -1226,7 +1176,6 @@ button {
     margin: 2rem auto;
   }
 }
-
 
 @media only screen and (max-width: 350px) {
   ol li h4 {
