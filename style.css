@@ -232,6 +232,7 @@ ol li h3 span,
   background-color: #195181;
   color: #fff;
   font-size: inherit;
+  font-weight: inherit;
   width: 3rem;
   height: 3rem;
 }
@@ -437,14 +438,6 @@ blockquote > div {
   }
 }
 
-@keyframes colourShift {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
-}
 
 @keyframes flash {
   0% {
@@ -455,9 +448,18 @@ blockquote > div {
   }
 }
 
+@keyframes BGshift {
+  0% {
+    background-position-x: 0%
+  }
+  100% {
+    background-position-x: 100%
+  }
+}
+
 
 .em {
-  animation: flash .5s ease-in alternate-reverse infinite;
+  animation: flash .5s ease-in alternate infinite;
 }
 
 @keyframes spin {
@@ -481,47 +483,6 @@ blockquote > div {
     opacity: 1;
   }
 }
-
-
-@keyframes fade {
-  0% {
-    opacity: .5;
-    filter: saturate(0)
-    ;
-  }
-  20% {
-    opacity: 1;
-    filter: saturate(1)
-  }
-  60% {
-    opacity: 1;
-    filter: saturate(1)
-  }
-  80% {
-    opacity: .5;
-    filter: saturate(.1)
-  }
-  100% {
-    opacity: .5;
-    filter: saturate(.1)
-  }
-}
-.fade1 {
-  opacity: .5;
-  filter: saturate(0);
-  animation: fade 8s linear infinite;
-}
-.fade2 {
-  opacity: .5;
-  filter: saturate(0);
-  animation: fade 8s linear 4s infinite;
-}
-
-
-
-
-
-
 
 
 .title {
@@ -910,12 +871,6 @@ a[target="_blank"]::after {
   color: #195181;
 }
 
-/* a[href="#"]:hover,
-a[href="#"]:focus {
-  background: inherit;
-  color: inherit;
-  cursor: default;
-} */
 
 .gridGrid {
   display: grid;
@@ -1070,6 +1025,13 @@ button {
   .BG2 {
     background-attachment: scroll;
   }
+  .shiftR,
+  .shiftL {
+    animation: BGshift alternate infinite;
+  }
+  .shiftL {
+    animation-direction: alternate-reverse;
+  }
 }
 
 
@@ -1107,7 +1069,9 @@ button {
     margin: 3rem 0;
   }
   section,
-  header,
+  header {
+    padding: 16% calc(8% - 2rem);
+  }
   nav {
     padding: 0 calc(8% - 2rem);
   }
