@@ -74,9 +74,9 @@ Quercus
 </li>
 </ol>
 
-<h3>
+<h4>
 Jump to class
-</h3>
+</h4>
 
 <ol class="sched">
 <li>
@@ -84,21 +84,19 @@ Jump to class
 <span>1</span>
 July 2
 </h3>
+
 <a href="1.1.html">
 <h4>
-Hello! And Meet the Teaching Team
+1.1 Welcome / Skills: Thinking and working <em>Art Historically</em>
 </h4>
 </a>
-<a href="1.2.html">
+
+<a href="#">
 <h4>
-Skills: Taking Notes in Art History
+1.2 Monument: The Ajanta Caves
 </h4>
 </a>
-<a href="1.3.html">
-<h4>
-Monument: The Ajanta Caves
-</h4>
-</a>
+
 <div class="readings">
 <h5>
 Key dates
@@ -114,23 +112,34 @@ Civic holiday (university closed)
 
 <li>
 <h3>
-<span>2</span>July 8
+<span>2</span>
+July 8
 </h3>
+
 <a href="#">
 <h4>
-Skills: Describing Art Objects and Analyzing Formal Elements
+2.1 Skills: Describing art objects and analyzing formal elements
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monument: The Great Mosque of Damascus
+2.2 Monument: The Great Mosque of Damascus
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: Qingming Festival and The Great Wave off Kanagawa
+2.3 Monument: Qingming Festival and The Great Wave off Kanagawa
 </h4>
 </a>
+
+<a href="#">
+<h4>
+2.4 Monument: The Great Wave off Kanagawa
+</h4>
+</a>
+
 <div class="readings">
 <h5>
 Key dates
@@ -154,21 +163,37 @@ First day to select a Credit/No-Credit (CR/NCR) option for S courses
 <h3>
 <span>3</span>July 15
 </h3>
+
 <a href="#">
 <h4>
-Skills: Identifying and Evaluating Research Sources
+3.1 Skills: Identifying and evaluating research sources
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: The Ghent Altarpiece and Altar de los Reyes
+3.2 Monument: The Ghent Altarpiece
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: Series of Eight Figures and Abaporú
+3.3 Monument: Altar de los Reyes
 </h4>
 </a>
+
+<a href="#">
+<h4>
+3.4 Monument: Series of Eight Figures
+</h4>
+</a>
+
+<a href="#">
+<h4>
+3.5 Monument: Abaporú
+</h4>
+</a>
+
 <div class="readings">
 <h5>
 Key dates
@@ -186,38 +211,64 @@ Assignment 1: Sketch with formal analysis due
 <h3>
 <span>4</span>July 22
 </h3>
+
 <a href="#">
 <h4>
-Skills: Comparing and Contrasting Art Objects
+4.1 Skills: Comparing and contrasting art objects
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: Tā Moko and Māori Portraits 
+4.2 Monuments: Tā Moko and Māori Portraits 
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: Painted Buffalo Robe and Ethiopia: Comparing and Contrasting Art Objects
+4.3 Monument: Painted Buffalo Robe
+</h4>
+</a>
+
+
+<a href="#">
+<h4>
+4.4 Monument: Ethiopia
 </h4>
 </a>
 </li>
+
 
 <li>
 <h3>
 <span>5</span>
 July 29
 </h3>
+
 <a href="#">
 <h4>
-Monuments: Birthday and Creation of Birds
+5.1 Monument: Birthday
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: Rebellious Silence and Paradise Camp
+5.2 Monument: Creation of Birds
 </h4>
 </a>
+
+<a href="#">
+<h4>
+5.3 Monument: Rebellious Silence
+</h4>
+</a>
+
+<a href="#">
+<h4>
+5.4 Monument: Paradise Camp
+</h4>
+</a>
+
 <div class="readings">
 <h5>
 Key dates
@@ -235,21 +286,31 @@ Last day to drop course
 <h3>
 <span>6</span>August 6
 </h3>
+
 <a href="#">
 <h4>
-Skills: Exploring Art History Methodologies for Further Studies
+6.1 Skills: Exploring Art History's methodologies
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monuments: End of Empire and Mama Ray
+6.2 Monument: End of Empire
 </h4>
 </a>
+
 <a href="#">
 <h4>
-Monument: Art on view in Toronto
+6.3 Monument: Mama Ray
 </h4>
 </a>
+
+<a href="#">
+<h4>
+6.4 Monument: TBD!
+</h4>
+</a>
+
 <div class="readings">
 <h5>
 Key dates
@@ -286,8 +347,8 @@ Last day for instructors to accept late term work without needing to submit a pe
 `
 
 const closeB = `
-<button style="position: absolute; top: 1rem; right: 1rem; padding: 1rem; z-index: 100; display: none;" id="closeMenu">
-Close
+<button id="closeMenu" class="CTA">
+X
 </button>`
 
 
@@ -332,15 +393,15 @@ $(".row li i").click(function() {
 
 // flipcards
 
-$('.flipCard').on("click", function() {
-  $(this).children('.flip').css("transform", "rotateY(90deg)");
-  $(this).children('.unFlip').css("transform", "rotateY(0deg)");
-});
+// $('.flipCard').on("click", function() {
+//   $(this).children('.flip').css("transform", "rotateY(90deg)");
+//   $(this).children('.unFlip').css("transform", "rotateY(0deg)");
+// });
 
-$('.TFbutton').on("click", function() {
-  // $(this).fadeOut();
-  $(this).next(".displayNone").slideToggle();
-});
+// $('.TFbutton').on("click", function() {
+//   // $(this).fadeOut();
+//   $(this).next(".displayNone").slideToggle();
+// });
 
 $('.transcriptButton').on("click", function() {
   $(this).next(".displayNone").slideToggle();
@@ -350,16 +411,6 @@ $('.transcriptButton').on("click", function() {
 
 // definition boxes
 
-$('.flowButton').on("click", function() {
-  const factor = $(this).attr("id");
-  $(this).parent().next(".mapBox").empty();
-  for (let name in tabDescription) {
-    if  (factor === name) {
-      $(this).parent().next(".mapBox").append((tabDescription[name]));
-      $(this).parent().next(".mapBox").slideDown(400);
-    }
-  }
-});
 
 $('.defs > i').on("click", function() {
   console.log('x');
@@ -389,7 +440,7 @@ Assignments
 </a>
 </button>
 <button>
-<a href="#schedule" tabindex="1" class="hide">
+<a href="index.html#sched" tabindex="1" class="hide">
 Schedule
 </a>
 </button>

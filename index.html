@@ -78,13 +78,47 @@
       padding-bottom: 100%;
       overflow: scroll;
       border-radius: 2px;
-      background-size: 50%;
-      background-position: center;
-      overflow: scroll;
+      background-size: cover !important;
+      background-position: center !important;
+      overflow: scroll !important;
       position: relative;
       cursor: pointer;
       transition: .25s;
       width: 100%;
+      text-decoration: none !important;
+    }
+    #sched a > div {
+      width: 100%;
+      background: url("./assets/diag.png");
+      background-size: 150%;
+      padding: 20px;
+      z-index: 1;
+      position: relative;
+      display: block;
+      text-decoration: none;
+    }
+    
+    #sched a[href="#"] .overlay {
+      background: #0034ff;
+      
+    }
+    
+    #sched a h3 {
+      background: #fff;
+      color: #195181;
+      height: 3.5rem;
+      width: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 1.5rem 0;
+    }
+    #sched a h4 {
+      padding: .7rem;
+      margin: .7rem 0;
+      line-height: 1.5;
+      background: #fff;
+      width: auto;
     }
     
     #sched li {
@@ -105,11 +139,7 @@
       margin: 0 0 .5rem 0;
     }
     
-    @media (max-width: 800px) {
-      .item {
-        overflow: hidden;
-      }
-    }
+    
     
     .overlay {
       height: 200%;
@@ -124,37 +154,23 @@
       pointer-events: none;
     }
     
-    #sched a {
-      text-decoration: none !important;
+    
+    
+    
+    @media (max-width: 800px) {
+      .item {
+        overflow: hidden;
+      }
+      #sched a {
+        overflow: hidden !important;
+      }
     }
     
-    #sched a > div {
-      width: 100%;
-      background: url("./assets/diag.png");
-      background-size: 150%;
-      padding: 20px;
-      z-index: 1;
-      position: relative;
-      display: block;
-      text-decoration: none;
-    }
-    
-    #sched a h3 {
-      background: #fff;
-      color: #195181;
-      height: 3.5rem;
-      width: 3.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 0 1.5rem 0;
-    }
-    #sched a h4 {
-      padding: .7rem;
-      margin: .7rem 0;
-      line-height: 1.5;
-      background: #fff;
-      width: auto;
+    @media (max-width: 450px) {
+      section,
+      header{
+        padding: 20% 2.5% 20% 0;
+      }
     }
   </style>
 </head>
@@ -173,16 +189,19 @@
     
     <!-- Background -->
     <span class="BG mobbg shiftR" style="background: linear-gradient(110deg, rgb(11, 25, 47), rgb(16, 12, 28)); mix-blend-mode: hard-light; height: 100vh;"></span>
-    <span class="BG2 mobbg shiftR" style="background-image: url(./assets/04/Hokusai-Great-Wave.jpg);">
+    <span class="BG2 mobbg shiftR" style="background-image: url(./assets/02/Hokusai-Great-Wave.jpg);">
     </span>
     
   </header>
   
   
   <!-- DETAILS -->
-  <section style="background-image: url(./assets/04/Hokusai-Great-Wave.jpg); animation-duration: 220s;" id="details" class="shiftR">   
+  <section style="background-image: url(./assets/02/Hokusai-Great-Wave.jpg); animation-duration: 260s;" id="details" class="shiftR">   
     <div>
       <div class="pad">
+        <li>
+          Please use <a href="" class="download" download>this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
+        </li>
         <h2>
           Welcome to Monuments of Art History! 
           <span>
@@ -244,7 +263,7 @@
               Please enrol in a tutorial section on ACORN and attend only that section - students are not allowed to swap between tutorials. 
             </li>
           </ul>
-          <p class="em">
+          <p>
             <strong>
               Note:
             </strong>
@@ -255,6 +274,18 @@
             Tutorial sections
           </h4>
           <ul class="grid">
+            <li class="dashedBox">
+              <strong>
+                TUT0201: 	
+              </strong>
+              Tuesday, 1-2 PM, OISE
+            </li>
+            <li class="dashedBox">
+              <strong>
+                TUT5301: 	
+              </strong>
+              Tuesday, 2-3 PM, OISE
+            </li>
             <li class="dashedBox">
               <strong>
                 TUT0101: 	
@@ -279,6 +310,7 @@
               </strong>
               Wednesday, 7-8 PM, WI
             </li>
+    
           </ul>
           <hr>
           <cite>
@@ -413,7 +445,7 @@
   </section>
   
   <!-- ASSIGNMENTS -->
-  <section style="background-image: url(./assets/09/CreacionDeLasAves.jpg); animation-duration: 60s;" class="shiftL">
+  <section style="background-image: url(./assets/09/CreacionDeLasAves.jpg); animation-duration: 160s;" class="shiftL">
     <div id="assignments">
       <!-- title -->
       <div class="pad">
@@ -421,7 +453,7 @@
           Assignments and Evaluation
         </h2>
         <div class="dashedBox">
-          <h4>
+          <h4 style="margin-top: .5rem;">
             What do I have to do for this course?
           </h4>
           <p>
@@ -573,6 +605,9 @@
           </h4>
           <ul class="list">
             <li>
+              Write on only one work from the options listed below 
+            </li>
+            <li>
               Sketches can be created physically on paper or digitally in a drawing/painting app. The sketch is to be created from scratch by you and cannot be compiled from digital graphics or photographs. Annotations should engage with the sketch directly and can be handwritten or typed.
             </li>
             <li>
@@ -588,11 +623,11 @@
           </h4>
           <ul class="list">
             <li>
-              Upload one file on Quercus (this assignment page) by Sunday, January 21, 11:59PM EST
+              Upload one file on Quercus by Sunday, January 21, 11:59PM EST
             </li>
-            <li>
-              Please use <a href="">this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
-            </li>
+            <!-- <li>
+              Please use <a href="" class="download" target="_blank" >this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
+            </li> -->
             <li>
               No word count
             </li>
@@ -862,22 +897,19 @@
   </section>
   
   <!-- POLICIES -->
-  <section style="background-image: url(./assets/06/abaporu.jpg); animation-duration: 120s;" id="policies" class="shiftR">
+  <section style="background-image: url(./assets/03/3.5.jpg); animation-duration: 180s;" id="policies" class="shiftR">
     <div>
       <!-- title -->
       <div class="pad" id="policies">
         <h2>
           Course Policies, Logistics, and Values
         </h2>
-        
         <p>
-          As undergraduates, you are expected to take responsibility for your performance in this course, which means respecting course policies and accepting the consequences of your actions. In the name of professionalism and ethics, the teaching team cannot bend the rules or give preferential treatment to individuals – no one is entitled to an easy grade or free pass. However, in serving diverse learning styles and needs,we are here to help you do your best work and encourage you to address difficulties you may experience in the course. We also understand unexpected crises can impact your course performance, and encourage you to address these issues <em>as soon as possible</em> with both the teaching team and your college registrar (we cannot grant accomodations retroactively).
+          The teaching team is here to support you in doing your best work, in ways that are fair and equitable. That means ensuring everyone has the opportunity to successfully complete this course, despite different learning styles and needs. Likewise, the university has resources to assist students of all abilities.
         </p>
-        
         <p>
-          You are also expected to treat your colleagues and the teaching team with courtesy and respect!
+          As undergraduates, you are expected to take responsibility for your performance in this course, which means respecting course policies and accepting the consequences of not doing so. In the name of professionalism and ethics, the teaching team cannot bend the rules or give preferential treatment to individuals (just a friendly reminder that no one is entitled to an easy grade or free pass). However, we are here to help you and encourage you to address difficulties you may experience in the course. We also understand unexpected crises can impact your course performance, and encourage you to address these issues <em>as soon as possible</em> with both the teaching team and your college registrar (we cannot grant accomodations retroactively).
         </p>
-        
       </div>
       
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
@@ -894,17 +926,20 @@
             You are welcome to discuss course matters with the teaching team by email. You may also speak with the instructor during office hours (by appointment over zoom) and speak to your TA during tutorials. To ensure your email makes it to us, please use your mail.utoronto.ca address and include “FAH101” in the subject line. Allow up to 48 hours for a reply.
           </p>
           <p>
-            The teaching team cannot respond to assessment queries within 24 hours of the deadline, or requests to review your assignment before you submit it. If you intend to contest a grade, please wait at least 48 hours before contacting me, and include a short description - in your own words - of your concern.
+            The teaching team cannot respond to assignment queries within 24 hours of the deadline, or requests to review your assignment before you submit it. If you intend to contest a grade, please wait at least a full day before contacting me and include a short description - in your own words - of your concern.
           </p>
           <p>
-            Please keep emails concise and professional (you don’t need to apologize for contacting instructors, that’s part of our job! However, avoid sending messages that AI-generated or that try to use flattery or persuasion for your personal advantage! 
+            Please keep emails concise and professional (you don’t need to apologize for contacting instructors, that’s part of our job! However, avoid sending messages that are AI-generated or that try to use flattery or persuasion for your personal advantage! 
           </p>  
           <p>
             You are expected to regularly check your email and course announcements for important updates about the course. Please also consult the syllabus and course site if you have questions 
             <span class="em">(the teaching team is not obliged to reply to emails about anything that is already clearly stated in course documents).</span>
           </p>
           <p>
-            If you cannot make it to a scheduled office hours, you have up to two hours to cancel the appointment or else will be penalized one mark.
+            <strong>
+              Note:
+            </strong>
+            If you cannot make it to a scheduled office hours appointment, you have up to two hours to cancel the appointment; no-shows will be penalized one mark.
           </p>
         </div>
       </div>
@@ -1109,9 +1144,11 @@
       <h2>
         Schedule
       </h2>
+      <p>
+        Weekly modules will be made available each Monday.
+      </p>
     </div>
     <ul class="grid">
-      
       <li>
         <div>
           <h2>
@@ -1132,20 +1169,20 @@
         </div>
       </li>
       
-      <a href="1.1.html" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+      <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
         <div>
           <h3>1.1</h3>
           <h4>
             Welcome to the course
           </h4>
           <h4>
-            Skills: Taking Notes in Art History
+            Skills: Thinking and working <em>Art Historically</em>
           </h4>
         </div>
         <span class="overlay" style="background: #195181;"></span>
       </a>    
       
-      <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+      <a href="#" style="background: url(./assets/01/1.2.jpg);">
         <div>
           <h3>
             1.2
@@ -1154,7 +1191,7 @@
             Monument: The Ajanta Caves (India)
           </h4>
         </div>
-        <span class="overlay" style="background: #195181;"></span>
+        <span class="overlay"></span>
       </a>    
       
       <li>
@@ -1180,17 +1217,17 @@
           </div>
         </li>
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/2.1);">
           <div>
             <h3>2.1</h3>
             <h4>
               Skills: Describing art objects and analyzing formal elements
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/2.2.jpg);">
           <div>
             <h3>
               2.2
@@ -1199,10 +1236,10 @@
               Monument: The Great Mosque of Damascus (Syria)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/2.3.jpg);">
           <div>
             <h3>
               2.3
@@ -1212,10 +1249,10 @@
             </h4>
             
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               2.4
@@ -1224,7 +1261,7 @@
               Monument: Katsushika Hokusai's <em>The Great Wave off Kanagawa</em> (Japan)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
         <li>
@@ -1248,19 +1285,19 @@
         </li>
         
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url();">
           <div>
             <h3>
               3.1
             </h3>
             <h4>
-              Skills: Evaluating research sources
+              Skills: Identifying and evaluating research sources
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>  
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/03/3.2.jpg);">
           <div>
             <h3>
               3.2
@@ -1269,10 +1306,10 @@
               Monument: Jan van Eyck's <em>Ghent Altarpiece</em> (Belgium)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/03/3.3.PNG);">
           <div>
             <h3>
               3.3
@@ -1281,10 +1318,10 @@
               Monument: <em>Altar de los Reyes</em> (Mexico) 
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/03/3.4.jpg);">
           <div>
             <h3>
               3.4
@@ -1293,10 +1330,10 @@
               Monument: Albert Eckhout's <em>Series of Eight Figures</em> (Netherlands/Brazil)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/03/3.5.jpg);">
           <div>
             <h3>
               3.5
@@ -1305,7 +1342,7 @@
               Monument: Tarsila do Amaral's <em>Abaporú</em> (Brazil)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>    
         
         <li>
@@ -1319,19 +1356,19 @@
           </div>
         </li> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/);">
           <div>
             <h3>
               4.1
             </h3>
             <h4>
-              Skills: Comparing and Contrasting Art Objects
+              Skills: Comparing and contrasting art objects
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/04/4.2.jpg);">
           <div>
             <h3>
               4.2
@@ -1340,10 +1377,10 @@
               Monuments: Gottfried Lindauer's <em>Tā Moko</em> and Māori Portraits (New Zealand [Aotearoa])
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               4.3
@@ -1352,10 +1389,10 @@
               Monuments: Two Guns (Sarcee)'s <em>Painted Buffalo Robe</em>
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               4.4
@@ -1364,7 +1401,7 @@
               Monument: Hanna Ryggen's <em>Ethiopia</em> (Norway)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
         <li>
@@ -1387,7 +1424,7 @@
           </div>
         </li> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               5.1
@@ -1396,10 +1433,10 @@
               Skills: Comparing and Contrasting Art Objects
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               5.2
@@ -1408,10 +1445,10 @@
               Monument: Dorothea Tanning's <em>Birthday</em> (US)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               5.3
@@ -1420,10 +1457,10 @@
               Monument: Remedios Varo's <em>Creation of Birds</em> (Mexico)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               5.4
@@ -1432,10 +1469,10 @@
               Monument: Yuki Kihara's <em>Paradise Camp</em> (Samoa)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               5.4
@@ -1444,7 +1481,7 @@
               Monument: Yuki Kihara's <em>Paradise Camp</em> (Samoa)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a>   
         
         <li>
@@ -1473,19 +1510,19 @@
           </div>
         </li> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               6.1
             </h3>
             <h4>
-              Skills: Exploring art history's methodologies
+              Skills: Exploring Art History's methodologies
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               6.2
@@ -1494,10 +1531,10 @@
               Monument: Yinka Shonibare's <em>End of Empire</em> (Nigeria/UK)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               6.3
@@ -1506,10 +1543,10 @@
               Monument: Wangechi Mutu's <em>Mama Ray</em> (Kenya/US)
             </h4>
           </div>
-          <span class="overlay" style="background: #195181;"></span>
+          <span class="overlay"></span>
         </a> 
         
-        <a href="#" style="background: url(./assets/04/Hokusai-Great-Wave.jpg);">
+        <a href="#" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
           <div>
             <h3>
               6.4
@@ -1518,7 +1555,7 @@
               Monument: TBD!
             </h4>
           </div>
-          <span class="overlay" style="background: #000;"></span>
+          <span class="overlay"span>
         </a> 
         
         <li>
@@ -1547,15 +1584,7 @@
               Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
             </p>
           </div>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
+        </li>       
       </ul>
     </div>
   </section>
