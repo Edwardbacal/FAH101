@@ -703,7 +703,7 @@ blockquote > div {
 
 .img img,
 li img{
-  height: 100%;
+  /* height: 100%; */
   max-height: 75vh;
   max-width: 100%;
   margin: 0 auto;
