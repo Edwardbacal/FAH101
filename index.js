@@ -16,6 +16,7 @@ $('body').on("click touchstart", ".collapser", function() {
 $(document ).ready(function() {
   $("body").append(menu);
   $("body").append(closeB);
+  $("nav").append(nav);
 });
 
 $(document).on("click touchstart", "#menu", function(e){
@@ -422,12 +423,6 @@ $('.defs > i').on("click", function() {
 
 
 // Modular Header
-
-$( document ).ready(function() {
-  $("nav").append(nav);
-  
-});
-
 const nav = `
 <button>
 <a href="index.html">
@@ -450,6 +445,5 @@ Site menu
 </a>
 </button>
 `
-
 
 

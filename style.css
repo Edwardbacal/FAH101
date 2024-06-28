@@ -118,7 +118,7 @@ nav button {
 
 a {
   color: #3656c9;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 cite {
@@ -203,7 +203,6 @@ header > div,
   max-width: 1440px !important;
   margin: auto;
 }
-
 
 
 .video {
@@ -295,7 +294,7 @@ ul {
   list-style: circle !important;
 }
 .pseudoLi {
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
 }
 ol {
   padding: 0;
@@ -449,7 +448,7 @@ li {
   list-style: disc;
 }
 
-.list li a {
+.TOC li a {
   display: block;
   text-decoration: none;
 }
@@ -554,7 +553,8 @@ blockquote > div {
 
 .hotButts {
   position: relative;
-  
+  height: 100%;
+  width: 100%;
 }
 
 .hotButts button {
@@ -635,13 +635,17 @@ blockquote > div {
   }
 }
 
+.em {
+  animation: flash .5s alternate ease infinite;
+  transition: .2s;
+}
 
 @keyframes flash {
   0% {
-    opacity: 1
+    color: #000;
   }
   100% {
-    opacity: .6
+    color: #6a0040;
   }
 }
 
@@ -655,9 +659,7 @@ blockquote > div {
 }
 
 
-.em {
-  animation: flash .5s ease-in alternate infinite;
-}
+
 
 @keyframes spin {
   0% {
@@ -693,6 +695,12 @@ blockquote > div {
   height: auto;
 }
 
+img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 75vh;
+  max-width: 100%;
+}
 
 .img {
   width: 100%;
@@ -703,11 +711,84 @@ blockquote > div {
 
 .img img,
 li img{
-  /* height: 100%; */
-  max-height: 75vh;
-  max-width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
+}
+
+.img div {
+  position: relative;
+}
+
+.imgBox li,
+.imgRow li {
+  background:linear-gradient(to top, rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0) 100px), url('./assets/diagonal2.png');
+  background-size: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  object-fit: contain;
+}
+.imgBox p,
+.img p,
+.imgRow {
+  background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin: 0;
+  width: 100%;
+  filter: drop-shadow(0px 0px 1px #fff);
+}
+
+
+.img p {
+  background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
+}
+
+.inv .img p,
+.inv .imgBox p,
+.inv .imgRow,
+.inv .imgBox li,
+.inv .imgRow li {
+  background: linear-gradient(180deg, #19518100, rgba(25, 81, 129, 0.7)), url('./assets/diagonal2.png');
+  background-size: 320px;
+}
+
+.inv .img p,
+.inv .imgBox p {
+  background: linear-gradient(180deg, #19508100, rgba(25, 81, 129, 0.7));
+  filter: none;
+  /* background-size: 320px; */
+}
+
+.inv .imgBox h5 {
+  width: 100%;
+  text-align: center;
+  background: #195181;
+  padding: 1.2rem 0;
+  margin: 0;
+}
+
+.img .imgBox {
+  margin: 0 1rem;
+}
+
+.pad {
+  box-shadow: 0px 0px 3px #19518101;
+}
+
+.imgBox {
+  margin: 2rem 0;
+}
+li img {
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+.vert {
+  margin: auto;
+  max-width: 30vmax;
 }
 
 iframe {
@@ -715,9 +796,7 @@ iframe {
   height: 75vmin;
 }
 
-.img div {
-  position: relative;
-}
+
 
 .hoverCap {
   position: absolute !important;
@@ -810,53 +889,7 @@ iframe {
 
 
 
-.imgBox li,
-.imgRow li {
-  background:linear-gradient(to top, rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0) 100px), url('./assets/diagonal2.png');
-  background-size: 320px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.imgBox p,
-.img p,
-.imgRow {
-  background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
-  padding: 1rem;
-  font-size: 1.1rem;
-  margin: 0;
-  width: 100%;
-  filter: drop-shadow(0px 0px 1px #fff);
-}
 
-
-.img p {
-  background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
-}
-
-.inv .img p,
-.inv .imgBox p,
-.inv .imgRow,
-.inv .imgBox li,
-.inv .imgRow li {
-  background: linear-gradient(180deg, #19518100, rgba(25, 81, 129, 0.7)), url('./assets/diagonal2.png');
-  background-size: 320px;
-}
-
-.inv .img p,
-.inv .imgBox p {
-  background: linear-gradient(180deg, #19508100, rgba(25, 81, 129, 0.7));
-  filter: none;
-  /* background-size: 320px; */
-}
-
-.inv .imgBox h5 {
-  width: 100%;
-  text-align: center;
-  background: #195181;
-  padding: 1.2rem 0;
-  margin: 0;
-}
 
 
 .inv .row {
@@ -875,17 +908,6 @@ iframe {
 
 
 
-.img .imgBox {
-  margin: 0 1rem;
-}
-
-.pad {
-  box-shadow: 0px 0px 3px #19518101;
-}
-
-.imgBox {
-  margin: 2rem 0;
-}
 
 
 
@@ -894,15 +916,6 @@ iframe {
   width: 100%;
 }
 
-li img {
-  padding: 0;
-  margin: 0 auto;
-}
-
-.vert {
-  margin: auto;
-  max-width: 30vmax;
-}
 
 
 
@@ -1083,6 +1096,7 @@ a[href="#"] {
   cursor: default !important;
   cursor: not-allowed !important;
   /* filter: saturate(.2); */
+  word-wrap: break-word;
 }
 
 .sched a[href="#"] {
