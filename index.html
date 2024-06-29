@@ -138,9 +138,7 @@
       font-size: 1.1rem;
       margin: 0 0 .5rem 0;
     }
-    
-    
-    
+  
     .overlay {
       height: 200%;
       width: 100%;
@@ -153,9 +151,6 @@
       overflow: hidden;
       pointer-events: none;
     }
-    
-    
-    
     
     @media (max-width: 800px) {
       .item {
@@ -183,7 +178,7 @@
 <body>  
   <!-- HERO -->
   <header class="flex hero1" id="top" style="padding: 0 5%;">
-    <nav class="flex"><!-- dynamically added --></nav>   
+    <nav class="flex" id="nav"><!-- dynamically added --></nav>   
     <div class="T12" style="min-height: 24vmax;">
       <h1>
         FAH 101
@@ -202,7 +197,7 @@
   
   
   <!-- DETAILS -->
-  <section style="background-image: url(./assets/02/Hokusai-Great-Wave.jpg); animation-duration: 260s;" id="details" class="shiftR">   
+  <section style="background-image: url(./assets/02/Hokusai-Great-Wave.jpg); animation-duration: 500s;" id="details" class="shiftR">   
     <div>
       <div class="pad">
     
@@ -416,7 +411,7 @@
           </h3>
         </button>
         <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
-          <h4>
+          <h4 style="margin: 1.6rem 0;">
             After successfully completing this course, you should be able to:
           </h4>
           <ul class="list">
@@ -445,7 +440,7 @@
   </section>
   
   <!-- ASSIGNMENTS -->
-  <section style="background-image: url(./assets/05/5.3.jpg); animation-duration: 160s;" class="shiftL">
+  <section style="background-image: url(./assets/05/5.3.jpg); animation-duration: 400s;" class="shiftL">
     <div id="assignments">
       <!-- title -->
       <div class="pad">
@@ -453,7 +448,7 @@
           Assignments and Evaluation
         </h2>
         <div class="dashedBox">
-          <h4 style="margin-top: .5rem;">
+          <h4>
             What do I have to do for this course?
           </h4>
           <p>
@@ -480,7 +475,7 @@
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Tutorial attendance and participation <span>worth 15%, </span>
+            Tutorial Attendance and Participation <span>worth 15%, </span>
           </h3>
           <h3 class="plus"> 
             +
@@ -512,25 +507,26 @@
         
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Assignment 1: Sketch with formal analysis <span>worth 20%, due Sunday, July 21, 11:59 PM</span>
+            Assignment 1: Annotated Sketch + Formal Analysis <span>worth 20%, due Sunday, July 21, 11:59 PM</span>
           </h3>
           <h3 class="plus"> 
             +
           </h3>
         </button>
         <div class="displayNone">
-          <h4>
+          <h4 style="margin: 1.6rem 0;">
             Summary
           </h4>
           <p>
-            This is the first of two assignments in which you will engage with one art object, chosen from the options provided below (coming soon!). It consists of two parts: a sketch with annotations and a written analysis.
+            This is the first of two assignments in which you will engage with one art object, chosen from the options provided below (coming soon!). It consists of two parts: a sketch with notes and a written analysis.
           </p>
           <p>
-            To start, select the object you feel most compelled to analyze and visit it in person. While there, create a sketch that, to the best of your abilities, depicts the object as it impresses you.
+            To start, select the object you feel most compelled to analyze and visit it in person. While there, create a sketch that, to the best of your abilities, depicts the object as it impresses you. As part of your sketch, include notes and/or diagrams that explain / highlight your observations about the art object.   
+            
           </p>
           <p>
             <strong>Note:</strong>
-            You will not be graded on the artistic quality of the sketch. The sketch can look terrible and you can still get an A+, what matters is how you demonstrate close engagement with the object through the way you record your visual observations on the page.
+            You will not be graded on the artistic quality of the sketch. The sketch can look terrible and you can still get an A. What matters is how you demonstrate close engagement with the object through the way you record your visual observations on the page.
           </p>
           
           <p>
@@ -631,11 +627,11 @@
           </h4>
           <ul class="list">
             <li>
-              Upload one file on Quercus by Sunday, January 21, 11:59PM EST
+              Upload one file on Quercus by Sunday, July 21, 11:59PM EST
             </li>
-            <!-- <li>
-              Please use <a href="" class="download" target="_blank" >this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
-            </li> -->
+            <li>
+              Please use <a href="./assets/FAH101H1S_SketchAndAnalysis_Template_(YourNameGoesHere).docx" class="download" download>this cover page template <i class="fa-solid fa-file-arrow-down"></i></a>
+            </li>
             <li>
               No word count
             </li>
@@ -654,7 +650,7 @@
         
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Assignment 2: Compare and contrast analysis <span>worth 30%, due Sunday, August 11, 11:59 PM</span>
+            Assignment 2: Compare and Contrast Analysis <span>worth 30%, due Sunday, August 11, 11:59 PM</span>
           </h3>
           <h3 class="plus"> 
             +
@@ -662,7 +658,7 @@
         </button>
         
         <div class="displayNone">
-          <h4>
+          <h4 style="margin: 1.6rem 0;">
             Summary
           </h4>
           <p>
@@ -772,7 +768,7 @@
       <div class="pad" style="padding: 0;"> 
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Final exam (in-person) <span>worth 35%, Date-TBD (ca. August 15-30)</span>
+            Final Exam (in-person) <span>worth 35%, Date-TBD (ca. August 15-30)</span>
           </h3>
           <h3 class="plus"> 
             +
@@ -876,7 +872,7 @@
       <div class="pad" style="padding: 0; margin: 2rem 0;">
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Late penalties
+            Late Penalties
           </h3>
           <h3 class="plus"> 
             +
@@ -905,7 +901,7 @@
   </section>
   
   <!-- POLICIES -->
-  <section style="background-image: url(./assets/03/3.5.jpg); animation-duration: 180s;" id="policies" class="shiftR">
+  <section style="background-image: url(./assets/03/3.5.jpg); animation-duration: 350s;" id="policies" class="shiftR">
     <div>
       <!-- title -->
       <div class="pad" id="policies">
@@ -1007,7 +1003,7 @@
           </h3>
         </button>
         <div class="displayNone">
-          <h4>
+          <h4 style="margin: 1.6rem 0;">
             Equity, Diversity, and Inclusion
           </h4>
           <p>
@@ -1100,7 +1096,7 @@
           </h3>
         </button>
         <div class="displayNone">
-          <h4>
+          <h4 style="margin: 1.6rem 0;">
             Art History Writing Lab
           </h4>
           <p>
@@ -1289,7 +1285,7 @@
               <strong>
                 July 21:
               </strong>
-              Assignment 1: Sketch with formal analysis due
+              Assignment 1: Annotated sketch + formal analysis due
             </p>
           </div>
         </li>
@@ -1568,7 +1564,7 @@
           <span class="overlay"span>
         </a> 
         
-        <li>
+        <li class="gridDub">
           <div>
             <h5>
               Key dates

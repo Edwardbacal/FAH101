@@ -16,7 +16,7 @@ $('body').on("click touchstart", ".collapser", function() {
 $(document ).ready(function() {
   $("body").append(menu);
   $("body").append(closeB);
-  $("nav").append(nav);
+  $("#nav").append(nav);
 });
 
 $(document).on("click touchstart", "#menu", function(e){
