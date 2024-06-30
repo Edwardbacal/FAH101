@@ -33,6 +33,10 @@
       opacity: 0; 
       animation: fadeIn .8s 2.6s ease-in forwards;
     }
+
+    .mobileNav {
+      top: -3rem;
+    }
     
     .exco {
       justify-content: space-between; margin: 2rem 3rem 0 3rem;
@@ -179,6 +183,7 @@
   <!-- HERO -->
   <header class="flex hero1" id="top" style="padding: 0 5%;">
     <nav class="flex" id="nav"><!-- dynamically added --></nav>   
+
     <div class="T12" style="min-height: 24vmax;">
       <h1>
         FAH 101
@@ -518,7 +523,7 @@
             Summary
           </h4>
           <p>
-            This is the first of two assignments in which you will engage with one art object, chosen from the options provided below (coming soon!). It consists of two parts: a sketch with notes and a written analysis.
+            This is the first of two assignments in which you will engage with one art object, chosen from <a href="1.1.html#6">one (1) of the options presented here</a>. It consists of two parts: a sketch with notes and a written analysis.
           </p>
           <p>
             To start, select the object you feel most compelled to analyze and visit it in person. While there, create a sketch that, to the best of your abilities, depicts the object as it impresses you. As part of your sketch, include notes and/or diagrams that explain / highlight your observations about the art object.   
@@ -1186,7 +1191,7 @@
         <span class="overlay" style="background: #195181;"></span>
       </a>    
       
-      <a href="#" style="background: url(./assets/01/1.2.jpg);">
+      <a href="1.2.html" style="background: url(./assets/01/1.2.jpg);">
         <div>
           <h3>
             1.2
@@ -1599,6 +1604,18 @@
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
   <script src="index.js"></script>
   <script>
+    $(window).on('scroll', function() {
+  const y_scroll_pos = window.pageYOffset;
+  const scroll_pos_test = 700;             // set to whatever you want it to be
+  
+  if(y_scroll_pos > scroll_pos_test) {
+    $(".mobileNav").css("top", "0");
+  }
+  else {
+    $(".mobileNav").css("top", "-3rem");
+  }
+});
+
     // h2 typing effect
     
     // delay
@@ -1628,10 +1645,10 @@
         $('#sched a').animate({scrollTop:0}, 300);
       }
     });
+
+    
   </script>
 </body>
 
 </html>
-<a class="down" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
-
-
+<a class="down hide" href="#top"><i class="fa-solid fa-circle-up"></i></a> 

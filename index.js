@@ -17,6 +17,7 @@ $(document ).ready(function() {
   $("body").append(menu);
   $("body").append(closeB);
   $("#nav").append(nav);
+  $("#nav").append(mobileNav);
 });
 
 $(document).on("click touchstart", "#menu", function(e){
@@ -92,7 +93,7 @@ July 2
 </h4>
 </a>
 
-<a href="#">
+<a href="1.2.html">
 <h4>
 1.2 Monument: The Ajanta Caves
 </h4>
@@ -424,26 +425,46 @@ $('.defs > i').on("click", function() {
 
 // Modular Header
 const nav = `
+<div class="hide">
 <button>
 <a href="index.html">
 Home
 </a>
 </button>
+
 <button>
-<a href="index.html#assignments" tabindex="1" class="hide">
+<a href="index.html#assignments" tabindex="1">
 Assignments
 </a>
 </button>
+
 <button>
-<a href="index.html#sched" tabindex="1" class="hide">
+<a href="index.html#sched" tabindex="1">
 Schedule
 </a>
+</button>
+
+<button id="menu">
+<a href="" tabindex="1">
+Site menu
+</a>
+</button>
+</div>
+`;
+
+const mobileNav = `
+<div class="mobileNav">
+<button>
+  <a href="#top">
+    Back to top
+  </a>
 </button>
 <button id="menu">
 <a href="" tabindex="1">
 Site menu
 </a>
 </button>
+</div>
 `
 
 
