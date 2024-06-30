@@ -14,6 +14,18 @@
   <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
   
   <style>
+    .grid {
+      gap: 4rem;
+    }
+    .grid li {
+      padding: 0 1.5rem 1.5rem 0;
+      border: .5rem;
+      border-style: none inset inset none;
+      box-shadow: 5px 5px 12px #bdbdbd1a;
+      hyphens: auto;
+      border-color: #eee #faeaff #ecd2f4 #fff;
+    }
+
     .gridCols,
     .pad {
       margin-bottom: 4rem;
@@ -34,6 +46,13 @@
     
     .boxList li {
       margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .imgBox {
+      padding: 2rem !important;
+      margin: 0 0 4rem 0 !important;
+      }
     }
   </style>
 </head>
@@ -82,6 +101,13 @@
         <a href="#4">
           <h5>
             Explore the Ajanta Caves on Google Arts & Culture 
+          </h5>
+        </a>
+      </li>
+      <li>
+        <a href="#5">
+          <h5>
+            Further Consideration: Ajanta Caves on Oxford Bibliographies
           </h5>
         </a>
       </li>
@@ -303,7 +329,7 @@
         <cite>
           (Highlighted scenes are explained in the <a title="Behl - Ajanta Cave 1 (1998).pdf" href="./assets/01/Behl - Ajanta Cave 1 (1998).pdf" target="_blank">Cave 1 chapter.</a>)
         </cite>
-        <ul class="grid list" style="gap: 4rem; margin-top: 4rem;">
+        <ul class="grid" style="margin-top: 4rem;">
           <li>
             <span class="highlight">Sibi Jataka</span> (on the front wall, close up to the left of the main entrance).
           </li>
@@ -380,7 +406,7 @@
         <h5 style="margin: 4rem 0 1rem 0;" class="flex">
           Inside the Ajanta Caves:
         </h5>
-        <ul class="boxList" style="gap: 1rem;">
+        <ul class="boxList gridGrid" >
           <li>
             <a href="https://artsandculture.google.com/streetview/ajanta-caves/pQH62KxODVTBaw?hl=en&sv_lng=75.7023124790403&sv_lat=20.55253788109826&sv_h=40&sv_p=0&sv_pid=xMyxS9pYpToAAAQWjI_u-Q&sv_z=1" target="_blank" rel="noopener">Cave 1</a>
           </li>
@@ -445,9 +471,9 @@
     <i class="fa-solid fa-chevron-down"></i>
   </a>
   </section>
-  <section id="5">
+  <section >
     <div>
-  <h3>
+  <h3 id="5">
     Further Consideration: Ajanta Caves on Oxford Bibliographies
   </h3> 
   <p>

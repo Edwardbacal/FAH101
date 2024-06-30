@@ -110,6 +110,7 @@ button {
 section > div > p,
 .video .displayNone {
   text-align: justify;
+  
 }
 
 nav button {
@@ -262,6 +263,7 @@ header > div,
   background: #fff;
   padding: 1rem 2rem;
   text-align: justify;
+  hyphens: auto;
   margin: 6rem 0 2rem 0;
 }
 
@@ -290,7 +292,7 @@ header > div,
   max-width: none;
 } */
 .inv a {
-  color: #ffefaa;
+  color: #faeaff;
 }
 
 
@@ -493,9 +495,12 @@ li {
   text-decoration: none;
 }
 
-.list li a:hover, 
-.list li a:focus {
-  font-style: italic;
+/* .list li h5 {
+  font-size: inherit;
+} */
+header li a:hover, 
+header li a:focus {
+  font-style: italic !important;
 }
 
 
@@ -1255,7 +1260,7 @@ a[target="_blank"]::after {
 
 .gridGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 3rem 2rem;
 }
 
@@ -1470,6 +1475,9 @@ button {
   .thirdR {
     margin-right: -2rem;
   }
+  .gridCols {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 475px) {
@@ -1512,7 +1520,7 @@ button {
   .grid,
   .gridCols {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2rem !important;
     height: 100%;
     max-width: 1440px;
   }
@@ -1535,6 +1543,7 @@ button {
     width: 100%;
     margin: -4rem 0 2rem 0; 
     float: none;
+    min-width: auto;
   }
 }
 
