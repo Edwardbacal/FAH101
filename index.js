@@ -439,7 +439,7 @@ Assignments
 </button>
 
 <button>
-<a href="index.html#sched" tabindex="1">
+<a href="index.html#schedAnc" tabindex="1">
 Schedule
 </a>
 </button>
