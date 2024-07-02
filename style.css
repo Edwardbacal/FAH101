@@ -528,7 +528,8 @@ ol li h3 span,
 .boxList li,
 .third,
 .thirdR,
-.chev {
+.chev,
+flowButton2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
