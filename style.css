@@ -391,6 +391,15 @@ hr {
   width: 100%;
 } 
 
+.pinkBox li {
+  padding: 0 1.5rem 1.5rem 0;
+  border: .5rem;
+  border-style: none inset inset none;
+  box-shadow: 5px 5px 12px #bdbdbd1a;
+  hyphens: auto;
+  border-color: #eee #faeaff #ecd2f4 #fff;
+}
+
 hr {
   border: 0;
   border-top: 2px dashed #7d7d7d;
