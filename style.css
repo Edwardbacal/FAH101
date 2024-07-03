@@ -352,7 +352,7 @@ ol li a:first-of-type{
 
 
 ol li h3 span,
-.sched h3 span,
+.sched span,
 #sched a h3,
 #sched h2 span {
   border-radius: 100% !important;
@@ -366,7 +366,7 @@ ol li h3 span,
 }
 
 #sched h2 span,
-.sched h3 span {
+.sched span {
   background-color: #195181;
   color: #fff;
   font-size: inherit;
@@ -530,6 +530,8 @@ section,
 header,
 .img,
 .img div,
+.sched span,
+.sched span,
 ol li h3,
 ol li h3 span,
 .gridGrid li a,
@@ -538,7 +540,7 @@ ol li h3 span,
 .third,
 .thirdR,
 .chev,
-flowButton2 {
+.flowButton2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -855,6 +857,10 @@ li img{
   background: linear-gradient(180deg, #fff0, rgba(255, 255, 255, 0.77));
 }
 
+.marg div > .img {
+  background: #fff;
+}
+
 .inv .img p,
 .inv .imgBox p,
 .inv .imgRow,
@@ -908,8 +914,11 @@ iframe {
 }
 
 
-
 .hoverCap {
+  position: relative;
+}
+
+.hoverCap span {
   position: absolute !important;
   height: 100%;
   padding: 2rem;
@@ -923,10 +932,24 @@ iframe {
   left: 0;
   overflow: scroll;
   z-index: 2;
+  transition: .15s;
+
 }
 
-.hoverCap:hover,
-.hoverCap:focus {
+.hoverCap span p { 
+  color: #195181 !important;
+}
+
+.inv .hoverCap span {
+  background-color: #195081f0;
+}
+.inv .hoverCap span p { 
+  color: #fff !important;
+}
+
+
+.hoverCap span:hover,
+.hoverCap span:focus {
   opacity: 1;
 }
 
@@ -945,7 +968,7 @@ iframe {
 }
 
 
-.hoverCap p {
+.hoverCap span p {
   height: auto;
   padding: 0 !important;
   color: #195181;
@@ -960,8 +983,13 @@ iframe {
   overflow: scroll;
   background-image: url("./assets/diagonal2.png");
   background-size: 320px;  
-  width: 100%;
-  padding: 5%;
+  /* width: 100%; */
+  padding: 4rem;
+  margin: 4rem -4rem;
+}
+
+.inv .row {
+  background-image: url("./assets/diagonal.png");
 }
 
 .row li {
@@ -972,6 +1000,7 @@ iframe {
   align-items: flex-start;
   background-color: #fff;
 }
+
 .row li p,
 .row li h4 {
   padding: 0 1rem;
@@ -981,6 +1010,14 @@ iframe {
   width: auto;
   max-height: 75vh;
   max-width: 75vw;
+  object-fit: scale-down;
+  height: auto;
+}
+
+.row > i {
+  margin: auto 8vw; 
+  background: transparent;
+  font-size: 2rem;
 }
 
 .row p {
@@ -998,13 +1035,22 @@ iframe {
   width: 40vw;
 }
 
+.inv .row p {
+  color: #195181;
+}
 
 
 
-
-
-.inv .row {
-  color: #195181 !important;
+.inv .row li {
+  background-color: #195181;
+}
+.inv .row p {
+  color: #fff;
+  filter: none;
+}
+.inv .row i {
+  background: #195181;
+  border-radius: 100%;
 }
 
 
@@ -1540,6 +1586,10 @@ button {
   }
   .gridCols {
     grid-template-columns: 1fr;
+  }
+  .row {
+    margin: 4rem 0;
+    padding: 2rem;
   }
 }
 

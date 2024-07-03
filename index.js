@@ -380,15 +380,8 @@ $(window).on('scroll', function() {
     $(".down").css("bottom", "1rem");
   }
   else {
-    $(".down").css("bottom", "-2rem");
+    $(".down").css("bottom", "-2rem",);
   }
-});
-
-
-$(".row li i").click(function() {
-  $(this).parents("ul").animate({
-    scrollLeft: "+=1000px"
-  }, 400);
 });
 
 
