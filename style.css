@@ -14,13 +14,60 @@ html {
 *,
 button {
   font-family: 'Urbanist', 'helvetica', 'arial';
+  transition: .15s;
 }
 
 .inv .pad *,
 .inv .secTitle,
-.inv .secTitle h2  {
+.inv .secTitle h2,
+.flowButton,
+.grid2 li a  {
   color: #195181;
 }
+
+ol li > a,
+.endNav a {
+  color: #fff;
+  background: #195181;
+}
+
+.endNavInv a {
+  color: #fff;
+  background: #195181;
+}
+
+.CTA:hover,
+.CTA:focus,
+.flowButton:hover,
+.flowButton:focus,
+.flowButton2:hover,
+.flowButton2:focus,
+.transcriptButton:hover,
+.transcriptButton:focus,
+.endNavInv a:hover,
+.endNavInv a:focus,
+.inv,
+.third,
+.thirdR,
+.footnote,
+footer {
+  color: #fff !important;
+  background: #195181 !important;
+}
+
+.inv .third,
+.inv .thirdR,
+.footnote:hover,
+.footnote:focus,
+footer span,
+.endNav a:hover,
+.endNav a:focus {
+  color: #195181 !important;
+  background: #fff !important;
+}
+
+
+
 
 .hand * {
   font-family: "Playwrite NZ";
@@ -117,8 +164,9 @@ nav button {
   margin: 0;
 }
 
-a {
-  color: #3656c9;
+a,
+.inv .secTitle a {
+  color: #2bb585;
   /* font-weight: 700; */
 }
 
@@ -151,6 +199,8 @@ button h4 {
 }
 
 
+
+
 /* Layout */
 
 body {
@@ -172,9 +222,6 @@ body {
 .marg .boxList li {
   background: #fff;
 }
-
-
-
 
 
 header,
@@ -233,6 +280,10 @@ header > div,
   padding: 1rem 1rem 1rem 2rem;
   display: inline-block;
   margin: 0 0 2rem -2rem;
+}
+
+.video > .pad {
+  margin: 2rem 0;
 }
 
 .video .displayNone {
@@ -495,6 +546,8 @@ hr {
 
 
 
+
+
 /* placed here for cascade reasons */
 li {
   list-style: none;
@@ -609,17 +662,8 @@ a button {
   color: #195181;
 }
 
-.CTA:hover,
-.CTA:focus,
-.flowButton:hover,
-.flowButton:focus,
-.flowButton2:hover,
-.flowButton2:focus,
-.transcriptButton:hover,
-.transcriptButton:focus {
-  color: #fff;
-  background: #195181;
-}
+
+
 
 .inv .flowButton,
 .inv .flowButton2 {
@@ -631,6 +675,9 @@ a button {
   animation: border 1s ease-in alternate infinite; 
 }
 
+.flowButton * {
+  color: inherit;
+} 
 
 @keyframes border2 {
   0% {
@@ -649,6 +696,46 @@ a button {
     border-color: #19508140;
   }
 }
+
+footer {
+  position: fixed;
+  bottom: -50vh;
+  padding: 2rem 4rem 2rem 2rem;
+  margin: 0;
+  transition: .5s;
+  width: 100%;
+}
+
+.footnote,
+footer span {
+  font-size: .8rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  max-width: 1.3rem;
+  max-height: 1.3rem;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0 0 .5rem .25rem;
+  display: inline-block;
+  border: 1px solid #195181; 
+}
+
+footer span {
+  padding: .2rem;
+  margin: 0 1rem 1rem 0;
+  float: left;
+  border: none;
+}
+
+footer button {
+  font-size: 1rem !important;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  margin: 0;
+}
+
+
 
 .hotButts {
   position: relative;
@@ -1106,9 +1193,9 @@ iframe {
 } */
 
 .inv .chev {
+  color: #fff !important;
   background: #195181 !important;
   border: 2px solid #fff;
-  color: #fff !important;
 }
 
 
@@ -1237,8 +1324,6 @@ nav button:focus {
 .endNav a,
 .endNavInv a {
   width: 100%;
-  color: #195181;
-  background: #fff;
   text-decoration: none;
   text-align: center;
   padding: 1.5rem;
@@ -1246,10 +1331,6 @@ nav button:focus {
   display: block;
 }
 
-.endNavInv a {
-  color: #fff;
-  background: #195181;
-}
 
 
 .readings {
@@ -1287,8 +1368,6 @@ ol li > a {
   text-decoration: none;
   padding: 1.3rem;
   margin: 0 -1.3rem .3rem 200px;
-  color: #fff;
-  background: #195181;
 }
 
 ol li > a h4 {
@@ -1471,8 +1550,8 @@ button:hover,
 button:focus,
 .closer:hover,
 .closer:focus,
-.endNav a:hover,
-.endNav a:focus {
+.endNavInv a:hover,
+.endNavInv a:focus {
   background: #195181 !important;
   color: #fff !important;
 }
@@ -1489,22 +1568,11 @@ button {
   position: relative;
 }
 
-
-
-.inv,
-.third,
-.thirdR {
-  color: #fff;
-  background: #195181;
-  border: none !important;
+.extraMarg {
+  margin: 4rem -4rem;
+  width: auto;
+  padding: 4rem;
 }
-
-.inv .third,
-.inv .thirdR {
-  color: #195181;
-  background: #fff;
-}
-
 
 .inv i,
 .inv h2,
@@ -1587,7 +1655,8 @@ button {
   .gridCols {
     grid-template-columns: 1fr;
   }
-  .row {
+  .row,
+  .extraMarg {
     margin: 4rem 0;
     padding: 2rem;
   }

@@ -44,6 +44,10 @@ $("a[href='#']").click(function() {
   return false;
 });
 
+$('body').on("click touchstart", "footer button", function() {
+  $('footer').css("bottom", "-50vh")
+});
+
 
 
 const menu = `
@@ -118,25 +122,25 @@ Civic holiday (university closed)
 July 8
 </h3>
 
-<a href="#">
+<a href="2.1.html">
 <h4>
 2.1 Skills: Describing art objects and analyzing formal elements
 </h4>
 </a>
 
-<a href="#">
+<a href="2.2.html">
 <h4>
 2.2 Monument: The Great Mosque of Damascus
 </h4>
 </a>
 
-<a href="#">
+<a href="2.3.html">
 <h4>
 2.3 Monument: Qingming Festival and The Great Wave off Kanagawa
 </h4>
 </a>
 
-<a href="#">
+<a href="2.4.html">
 <h4>
 2.4 Monument: The Great Wave off Kanagawa
 </h4>
