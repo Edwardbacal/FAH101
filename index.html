@@ -12,7 +12,8 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
   <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
-  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+
   <style>
     @keyframes introFade {
       0% {
@@ -73,8 +74,9 @@
     
     
     #sched ul {
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-columns: repeat( auto-fit, minmax(19rem, 1fr) );
       margin: 2rem 0;
+      aspect-ratio: 1 !important;
     }
     
     #sched a {
@@ -129,9 +131,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100% !important;
       background: #fff;
+    }
+    
+    #sched li div {
       padding: 2rem;
+      width: 100%;
+      /* padding: 2rem 2rem calc(100% - 2rem) 2rem;
+      height: 0;
+      overflow: scroll; */
     }
     
     #sched h5 {
@@ -156,10 +164,39 @@
       pointer-events: none;
     }
     
-    @media (max-width: 800px) {
-      .item {
-        overflow: hidden;
-      }
+    #tutorial a,
+    #tutorial li {
+      height: auto !important;
+      width: auto;
+      display: block;
+      margin: 1rem 0;
+      padding: 0;
+    }
+    
+    #tutorial a {
+      display: inline;
+    }
+    
+    .marg li {
+      margin: 0;
+    }
+    
+    .displayNoon {
+      padding: 0 .5rem;
+    }
+    
+    .displayNoon p {
+      font-size: 1.1rem;
+    }
+    
+    .announceButton {
+      text-align: left;
+      width: 100%;
+      border: 1px solid #195181;
+      margin: 0 0 1rem 0;
+    }
+    
+    @media (max-width: 749px) {
       #sched a {
         overflow: hidden !important;
       }
@@ -204,7 +241,7 @@
   <!-- DETAILS -->
   <section style="background-image: url(./assets/02/Hokusai-Great-Wave.jpg); animation-duration: 500s;" id="details" class="shiftR">   
     <div>
-      <div class="pad">
+      <div class="pad" style="padding-bottom: 0">
         
         <h2>
           Welcome to Monuments of Art History! 
@@ -214,263 +251,313 @@
         </h2>
         
         <!-- ANNOUNCEMENTS -->
-
-          <p>
-            Welcome to the course! This site features all the <em>content</em> for the course, including weekly modules, course information, and assignment details. The rest is available on <a href="https://q.utoronto.ca/courses/346676" target="_blank">Quercus.</a>
-          </p>
-          <p>
-            A print-friendly PDF of the course syllabus is available here to <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" download>download <i class="fa-solid fa-file-arrow-down"></i></a> or <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" target="_blank">view <i class="fa-solid fa-file-arrow-down"></i></a>.
-          </p>
-          <p>
-            Click on the headings below to learn more about the course. 
-          </p>
-          <h3>
-            Announcements
-          </h3>
-          <div class="dashedBox">
-            <h5>
-              July 1: Hello and welcome! (classes and tutorials start Tuesday!)
-            </h5>
-            <p>
-              Hi! 👋
-            </p>
-            <p>
-              I'm writing to welcome everyone to FAH101 - Monuments of Art History which begins tomorrow (Tuesday July 2).
-            </p>
-            
-          </p>
-          <p>
-            The first tutorials start this Tuesday/Wednesday too! So please ensure you've registered for a tutorial section on ACORN.
-          </p>
+        
+        <p>
+          Welcome to the course! This site features all the <em>content</em> for the course, including weekly modules, course information, and assignment details. The rest is available on <a href="https://q.utoronto.ca/courses/346676" target="_blank">Quercus.</a>
         </p>
         <p>
-          If you haven't already, please take some time to look through the course syllabus, to familiarize yourselves with the nature of and guidelines for this course <a href="1.1.html#2">(a video walkthrough of the syllabus is available here</a>). Information about assignments and the first week's content is now live. This semester is going to zoom by, so I encourage you to get a good start!
+          A print-friendly PDF of the course syllabus is available here to <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" download>download <i class="fa-solid fa-file-arrow-down"></i></a> or <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" target="_blank">view <i class="fa-solid fa-file-arrow-down"></i></a>.
         </p>
-        <p>  
-          Enjoy the rest of your long weekend! 
+        <p>
+          Click on the headings below to learn more about the course. 
+        </p>
+        <h3>
+          Announcements
+        </h3>
+        <div class="inv" style="margin: 1rem -1.5rem 0 -1.5rem; padding: 1.5rem">
+          <p>
+            Hi everyone! Welcome to Week 2 There's a lot to cover, including formal analysis skills (these are crucial for your first assignment), Syrian mosques, Chinese handscrolls, and Japanese prints. 
+          </p>
+          <ul class="list">
+          <li>
+            PDFs of tutorial slides can be found <a href="#tutorial">at the end of this page</a> - look out for them each week.
+          </li>
+          <li>
+            A friendly reminder to visit <a href="1.1.html#6">one of these art works</a> for your assingment and to work on your sketch, if you haven't already. You'll be hearing more about the second part of the first assignment in this week's tutorial. 
+          </li>
+        </ul>
+        </div>
+        <div class="marg" style="margin: 1rem -3rem 0 -3rem; padding: 1.5rem">
+          <ul class="pad" style="padding: 1.5rem;">
+            <h5>
+              Previous announcements
+              <cite style="display: inline;">
+                Click to open/close
+              </cite>
+            </h5>
+            <li>
+              <button class="announceButton">
+                July 2: Tutorials - corrections and changes (For Tutoral sections 5301 and 0301)
+              </button>
+              <div class="displayNoon">
+                <p>
+                  Hi everyone,
+                </p>
+                <p>
+                  First, a correction:
+                </p>
+                <p>
+                  There was a mistake on the course site, which listed TUT5301 twice, which meant TUT0301 was not stated, and that the tutorial discussion board for TUT0301 was not shared (it is now available). If you were confused about the location of the tutorial (Tuesday 2-3PM in OISE3312), my sincere apologies! If you still figured out where to go, thank you! However, further apologies about the discussion board. If you missed the tutorial because of this error, I will give you the credit for this week.
+                </p>
+                <p>
+                  Second, a TA change:
+                </p>
+                <p>
+                  Due to unforseen conflicts, Esther Kim will now be leading the Tuesday afternoon tutorials (after this week, Fahimeh will be leading tutorials on Wednesday). This does not affect your tutorial enrollment or anything else - please keep coming to the same place at the same time!
+                </p>  
+                <p>
+                  Thanks for understanding and bearing with these bumps as the course launches.
+                </p>
+              </div>
+            </li>
+            <li>
+              <button class="announceButton" style="margin-bottom: 0;">
+                July 1: Hello and welcome! (classes and tutorials start Tuesday!)
+              </button>
+              <div class="displayNoon">
+                <p>
+                  Hi! 👋
+                </p>
+                <p>
+                  I'm writing to welcome everyone to FAH101 - Monuments of Art History which begins tomorrow (Tuesday July 2).
+                </p>
+                
+                <p>
+                  The first tutorials start this Tuesday/Wednesday too! So please ensure you've registered for a tutorial section on ACORN.
+                </p>
+                
+                <p>
+                  If you haven't already, please take some time to look through the course syllabus, to familiarize yourselves with the nature of and guidelines for this course <a href="1.1.html#2">(a video walkthrough of the syllabus is available here</a>). Information about assignments and the first week's content is now live. This semester is going to zoom by, so I encourage you to get a good start!
+                </p>
+                <p>  
+                  Enjoy the rest of your long weekend! 
+                </p>
+                <cite>
+                  – Edward
+                </cite>
+              </div>
+            </li>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex exco">
+      <button class="CTA expander">
+        Expand all
+      </button>
+      <button class="CTA collapser">
+        Collapse all
+      </button>
+    </div>
+    
+    <!-- WHERE AND WHEN -->
+    <div class="pad" style="padding: 0; margin: 2rem 0;">
+      <button class="padB">
+        <h3>
+          What does this course consist of? Where and when does it take place?
+        </h3>
+        <h3 class="plus"> 
+          +
+        </h3>
+      </button>
+      <div class="displayNone">
+        <p>
+          This is an online-asynchronous course made up of 24 modular lessons plus six weekly tutorials.
+        </p>
+        <h4>
+          Modules
+        </h4>
+        <p>
+          In place of lectures, this course features online modules (lessons made up of short videos, texts, and images) which explore art objects and develop your art historical skills. A group of modules will be posted on the course site each Monday. You can work through them on your own time but should aim to complete them before that week’s tutorial.
+        </p>
+        <h4>
+          Tutorials
+        </h4>
+        <p>
+          Tutorials are a mandatory part of this course and occur each week. There, you will discuss course content, practice key art historical skills, and collaborate on activities with classmates. Attendance and completion of activities make up 15% of your final grade.
+        </p>
+        <ul class="list">
+          <li>
+            Please enrol in a tutorial section on ACORN and attend only that section - students are not allowed to swap between tutorials. 
+          </li>
+        </ul>
+        <p>
+          <strong>
+            Note:
+          </strong>
+          Neither the instructor nor TAs can alter your tutorial enrolments. 
+        </p>
+        
+        <h4>
+          Tutorial sections
+        </h4>
+        <ul class="grid">
+          <li class="dashedBox">
+            <strong>
+              TUT0201: 	
+            </strong>
+            Tuesday, 1-2 PM, OISE 3312 (Esther)
+          </li>
+          <li class="dashedBox">
+            <strong>
+              TUT0301: 	
+            </strong>
+            Tuesday, 2-3 PM, OISE 3312 (Esther)
+          </li>
+          <li class="dashedBox">
+            <strong>
+              TUT0101: 	
+            </strong>
+            Wednesday, 4-5 PM, Wilson Hall 2006 (Fahimeh)
+          </li>
+          <li class="dashedBox">
+            <strong>
+              TUT5101: 	
+            </strong>
+            Wednesday, 5-6 PM, Wilson Hall 2006 (Fahimeh)
+          </li>
+          <li class="dashedBox">
+            <strong>
+              TUT5201: 	
+            </strong>
+            Wednesday, 6-7 PM, Wilson Hall 2006 (Marina)
+          </li>
+          <li class="dashedBox">
+            <strong>
+              TUT5301: 	
+            </strong>
+            Wednesday, 7-8 PM, Wilson Hall 2006 (Marina)
+          </li>
+        </ul>
+        <hr>
+        <cite>
+          <strong>Distribution requirements:</strong>  Humanities 
+        </cite>
+        <cite>
+          <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) 
+        </cite>
+        <cite>
+          <strong>Exclusion:</strong> FAH101H5
+        </cite>
+      </div>    
+    </div>
+    
+    <!-- TEAM -->
+    <div class="pad" style="padding: 0;">
+      <button class="padB">
+        <h3>
+          Who teaches this course and how do I contact them?
+        </h3>
+        <h3 class="plus"> 
+          +
+        </h3>
+      </button>
+      <div class="displayNone">
+        <p>
+          This course is led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward designed and coded this website himself. Course content is based off the FAH101 course developed by Samantha Chang (her efforts in creating it are much appreciated!).
+        </p>
+        <p>
+          Throughout the semester, you will primarily be in contact with one of our teaching assistants, who are responsible for leading tutorials and grading assignments.
+        </p>
+        <h4>
+          Course Instructor
+        </h4>
+        <p>
+          Edward Bacal: <a href="mailto:edward.bacal@mail.utoronto.ca" target="_blank">edward.bacal@mail.utoronto.ca</a>
+        </p>
+        <p>
+          Office hours by appointment. You can schedule a 15-minute meeting     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+          <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardbacal'});return false;">here</a> or by email.
         </p>
         <cite>
-          – Edward
+          <strong>Note:</strong>
+          If you cannot make it to an office hours appointment, you have up to two hours to cancel, otherwise you will be penalized 1 mark (of 100).
         </cite>
+        <h4>
+          Teaching Assistants
+        </h4>
+        <ul class="list">
+          <li>
+            Marina Dumont-Gauthier: <a href="mailto:marina.dumontgauthier@mail.utoronto.ca" target="_blank">marina.dumontgauthier@mail.utoronto.ca</a>
+          </li>
+          <li>
+            Fahimeh Ghorbani: <a href="mailto:fahimeh.ghorbani@mail.utoronto.ca" target="_blank">fahimeh.ghorbani@mail.utoronto.ca</a>
+          </li>
+          <li>
+            Dongwon (Esther) Kim: <a href="mailto:de.kim@mail.utoronto.ca" target="_blank">de.kim@mail.utoronto.ca</a>
+          </li>
+        </ul>
+        <cite>
+          <strong>
+            Note:
+          </strong>
+          Teaching assistants do not have office hours
+        </cite>   
+      </div>    
+    </div>
+    
+    <!-- ABOUT -->
+    <div class="pad" style="padding: 0; margin: 2rem 0;" id="description">
+      <button class="padB" style="width: 100%; text-align: left; position: relative;">
+        <h3>
+          What is this course about?
+        </h3>
+        <h3 class="plus"> 
+          +
+        </h3>
+      </button>
+      <div class="displayNone">
+        <p>
+          Monuments of Art History examines key works of art and architecture from antiquity to the present and from across the globe, with emphasis on the cultural roles art has played throughout history. This broad selection of artworks corresponds to subject areas taught by U of T’s Art History faculty, offering a preview of many 200-400 level courses you can take through the Department of Art History.
+        </p>
+        <p>
+          We will pay special attention to developing foundational art historical skills, including the ability to observe, analyze, compare, and write about works of art and architecture. Tutorials will provide training in, and practice applying, the basic principles and vocabulary of art historical scholarship. Assignments are based on these skills and draw on course modules, tutorials, readings, and visits to local museums. 
+        </p>
+        <p>
+          No previous knowledge of art or architecture is required.
+        </p>
+      </div>
+    </div>
+    
+    <!-- GOALS -->
+    <div class="pad" style="padding: 0;">
+      <button class="padB">
+        <h3>
+          What skills will I gain from course?
+        </h3>
+        <h3 class="plus"> 
+          +
+        </h3>
+      </button>
+      <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
+        <h4 style="margin: 1.6rem 0;">
+          After successfully completing this course, you should be able to:
+        </h4>
+        <ul class="list">
+          <li>
+            Identify select monuments of art and understand how they fit into their historical period and context.
+          </li>
+          <li>
+            Nurture curiosity and creativity and to experience new connections to art and ideas.
+          </li>
+          <li>
+            Describe, formally analyze, and formulate a thesis about selected artworks.
+          </li>
+          <li>
+            Compare and contrast art objects by way of evidence-based arguments.  
+          </li>
+          <li>
+            Cultivate greater appreciation for geographically and historically diverse visual art forms through active looking and objective analysis.
+          </li>
+          <li>
+            Discuss major themes that influence particular works and genres of art and which run across the history of art.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-
-<div class="flex exco">
-  <button class="CTA expander">
-    Expand all
-  </button>
-  <button class="CTA collapser">
-    Collapse all
-  </button>
-</div>
-
-<!-- WHERE AND WHEN -->
-<div class="pad" style="padding: 0; margin: 2rem 0;">
-  <button class="padB">
-    <h3>
-      What does this course consist of? Where and when does it take place?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      This is an online-asynchronous course made up of 24 modular lessons plus six weekly tutorials.
-    </p>
-    <h4>
-      Modules
-    </h4>
-    <p>
-      In place of lectures, this course features online modules (lessons made up of short videos, texts, and images) which explore art objects and develop your art historical skills. A group of modules will be posted on the course site each Monday. You can work through them on your own time but should aim to complete them before that week’s tutorial.
-    </p>
-    <h4>
-      Tutorials
-    </h4>
-    <p>
-      Tutorials are a mandatory part of this course and occur each week. There, you will discuss course content, practice key art historical skills, and collaborate on activities with classmates. Attendance and completion of activities make up 15% of your final grade.
-    </p>
-    <ul class="list">
-      <li>
-        Please enrol in a tutorial section on ACORN and attend only that section - students are not allowed to swap between tutorials. 
-      </li>
-    </ul>
-    <p>
-      <strong>
-        Note:
-      </strong>
-      Neither the instructor nor TAs can alter your tutorial enrolments. 
-    </p>
-    
-    <h4>
-      Tutorial sections
-    </h4>
-    <ul class="grid">
-      <li class="dashedBox">
-        <strong>
-          TUT0201: 	
-        </strong>
-        Tuesday, 1-2 PM, OISE 3312 (Esther)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT0301: 	
-        </strong>
-        Tuesday, 2-3 PM, OISE 3312 (Esther)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT0101: 	
-        </strong>
-        Wednesday, 4-5 PM, Wilson Hall 2006 (Fahimeh)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5101: 	
-        </strong>
-        Wednesday, 5-6 PM, Wilson Hall 2006 (Fahimeh)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5201: 	
-        </strong>
-        Wednesday, 6-7 PM, Wilson Hall 2006 (Marina)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5301: 	
-        </strong>
-        Wednesday, 7-8 PM, Wilson Hall 2006 (Marina)
-      </li>
-    </ul>
-    <hr>
-    <cite>
-      <strong>Distribution requirements:</strong>  Humanities 
-    </cite>
-    <cite>
-      <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) 
-    </cite>
-    <cite>
-      <strong>Exclusion:</strong> FAH101H5
-    </cite>
-  </div>    
-</div>
-
-<!-- TEAM -->
-<div class="pad" style="padding: 0;">
-  <button class="padB">
-    <h3>
-      Who teaches this course and how do I contact them?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      This course is led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward designed and coded this website himself. Course content is based off the FAH101 course developed by Samantha Chang (her efforts in creating it are much appreciated!).
-    </p>
-    <p>
-      Throughout the semester, you will primarily be in contact with one of our teaching assistants, who are responsible for leading tutorials and grading assignments.
-    </p>
-    <h4>
-      Course Instructor
-    </h4>
-    <p>
-      Edward Bacal: <a href="mailto:edward.bacal@mail.utoronto.ca" target="_blank">edward.bacal@mail.utoronto.ca</a>
-    </p>
-    <p>
-      Office hours by appointment. You can schedule a 15-minute meeting     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardbacal'});return false;">here</a> or by email.
-    </p>
-    <cite>
-      <strong>Note:</strong>
-      If you cannot make it to an office hours appointment, you have up to two hours to cancel, otherwise you will be penalized 1 mark (of 100).
-    </cite>
-    <h4>
-      Teaching Assistants
-    </h4>
-    <ul class="list">
-      <li>
-        Marina Dumont-Gauthier: <a href="mailto:marina.dumontgauthier@mail.utoronto.ca" target="_blank">marina.dumontgauthier@mail.utoronto.ca</a>
-      </li>
-      <li>
-        Fahimeh Ghorbani: <a href="mailto:fahimeh.ghorbani@mail.utoronto.ca" target="_blank">fahimeh.ghorbani@mail.utoronto.ca</a>
-      </li>
-      <li>
-        Dongwon (Esther) Kim: <a href="mailto:de.kim@mail.utoronto.ca" target="_blank">de.kim@mail.utoronto.ca</a>
-      </li>
-    </ul>
-    <cite>
-      <strong>
-        Note:
-      </strong>
-      Teaching assistants do not have office hours
-    </cite>   
-  </div>    
-</div>
-
-<!-- ABOUT -->
-<div class="pad" style="padding: 0; margin: 2rem 0;" id="description">
-  <button class="padB" style="width: 100%; text-align: left; position: relative;">
-    <h3>
-      What is this course about?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      Monuments of Art History examines key works of art and architecture from antiquity to the present and from across the globe, with emphasis on the cultural roles art has played throughout history. This broad selection of artworks corresponds to subject areas taught by U of T’s Art History faculty, offering a preview of many 200-400 level courses you can take through the Department of Art History.
-    </p>
-    <p>
-      We will pay special attention to developing foundational art historical skills, including the ability to observe, analyze, compare, and write about works of art and architecture. Tutorials will provide training in, and practice applying, the basic principles and vocabulary of art historical scholarship. Assignments are based on these skills and draw on course modules, tutorials, readings, and visits to local museums. 
-    </p>
-    <p>
-      No previous knowledge of art or architecture is required.
-    </p>
-  </div>
-</div>
-
-<!-- GOALS -->
-<div class="pad" style="padding: 0;">
-  <button class="padB">
-    <h3>
-      What skills will I gain from course?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
-    <h4 style="margin: 1.6rem 0;">
-      After successfully completing this course, you should be able to:
-    </h4>
-    <ul class="list">
-      <li>
-        Identify select monuments of art and understand how they fit into their historical period and context.
-      </li>
-      <li>
-        Nurture curiosity and creativity and to experience new connections to art and ideas.
-      </li>
-      <li>
-        Describe, formally analyze, and formulate a thesis about selected artworks.
-      </li>
-      <li>
-        Compare and contrast art objects by way of evidence-based arguments.  
-      </li>
-      <li>
-        Cultivate greater appreciation for geographically and historically diverse visual art forms through active looking and objective analysis.
-      </li>
-      <li>
-        Discuss major themes that influence particular works and genres of art and which run across the history of art.
-      </li>
-    </ul>
-  </div>
-</div>
-</div>
 </section>
 
 <!-- ASSIGNMENTS -->
@@ -1264,7 +1351,7 @@
               Skills: Describing art objects and analyzing formal elements
             </h4>
           </div>
-          <span class="overlay"></span>
+          <span class="overlay" style="background: #817e19;"></span>
         </a>    
         
         <a href="2.2.html" style="background: url(./assets/02/2.2.jpg);">
@@ -1276,7 +1363,7 @@
               Monument: The Great Mosque of Damascus (Syria)
             </h4>
           </div>
-          <span class="overlay"></span>
+          <span class="overlay" style="background: #811971;"></span>
         </a>    
         
         <a href="2.3.html" style="background: url(./assets/02/2.3.jpg);">
@@ -1289,7 +1376,7 @@
             </h4>
             
           </div>
-          <span class="overlay"></span>
+          <span class="overlay" style="background: #1b1981;"></span>
         </a>   
         
         <a href="2.4.html" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
@@ -1301,7 +1388,7 @@
               Monument: Katsushika Hokusai's <em>The Great Wave off Kanagawa</em> (Japan)
             </h4>
           </div>
-          <span class="overlay"></span>
+          <span class="overlay" style="background: #338119;"></span>
         </a>   
         
         <li>
@@ -1331,7 +1418,7 @@
               3.1
             </h3>
             <h4>
-              Skills: Identifying and evaluating research sources
+              Skills: Identifying and Evaluating Research Sources
             </h4>
           </div>
           <span class="overlay"></span>
@@ -1598,7 +1685,7 @@
           <span class="overlay"span>
           </a> 
           
-          <li class="gridDub">
+          <li >
             <div>
               <h5>
                 Key dates
@@ -1624,12 +1711,68 @@
                 Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
               </p>
             </div>
-          </li>       
+          </li>      
+          <li class="inv" id="tutorial">
+            <div >
+              <h4 style="margin-top: 0;">
+                Tutorials
+              </h4>
+              
+              <p>
+                <strong>
+                  Week 1: 
+                </strong>
+                Welcome / describing and sketching artworks 
+                <a href="assets/FAH101H1S Tutorial 1 - welcome and sketch.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 2: 
+                </strong>
+                Formal analysis
+                <!-- <a href="#" target="_blank">(slides)</a> -->
+              </p>
+              
+              <p>
+                <strong>
+                  Week 3: 
+                </strong>
+                Formal analysis (continued
+                <!-- <a href="#" target="_blank">(slides)</a> -->
+              </p>
+              
+              <p>
+                <strong>
+                  Week 4: 
+                </strong>
+                Finding and evaluating research sources
+                <!-- <a href="#" target="_blank">(slides)</a> -->
+              </p>
+              
+              <p>
+                <strong>
+                  Week 5: 
+                </strong>
+                Compare and Contrast
+                <!-- <a href="#" target="_blank">(slides)</a> -->
+              </p>
+              
+              <p>
+                <strong>
+                  Week 6: 
+                </strong>
+                Methods / Exam prep
+                <!-- <a href="#" target="_blank">(slides)</a> -->
+              </p>
+              
+            </div>
+          </li> 
         </ul>
       </div>
     </section>
     <a class="down hide" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
-
+    
     
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="index.js"></script>

@@ -44,6 +44,8 @@ ol li > a,
 .flowButton2:focus,
 .transcriptButton:hover,
 .transcriptButton:focus,
+.announceButton:hover,
+.announceButton:focus,
 .endNavInv a:hover,
 .endNavInv a:focus,
 .inv,
@@ -166,7 +168,7 @@ nav button {
 
 a,
 .inv .secTitle a {
-  color: #2bb585;
+  color: #00c4ce;
   /* font-weight: 700; */
 }
 
@@ -352,7 +354,7 @@ header > div,
   max-width: none;
 } */
 .inv a {
-  color: #faeaff;
+  color: #00ffc8;
 }
 
 
@@ -638,7 +640,8 @@ a button {
 .CTA,
 .flowButton,
 .flowButton2,
-.transcriptButton {
+.transcriptButton,
+.announceButton {
   border: 1px solid #195181;
   border-radius: 1px;
   padding: 1rem 1.5rem;
@@ -656,7 +659,8 @@ a button {
 }
 
 .transcriptButton,
-.inv .transcriptButton {
+.inv .transcriptButton,
+.announceButton {
   font-size: 1rem;
   border: none;
   color: #195181;
@@ -801,7 +805,8 @@ footer button {
 
 
 /* JS CLASSES & ANIMATIONS */
-.displayNone {
+.displayNone,
+.displayNoon {
   display: none;
 }
 

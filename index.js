@@ -172,7 +172,7 @@ First day to select a Credit/No-Credit (CR/NCR) option for S courses
 
 <a href="#">
 <h4>
-3.1 Skills: Identifying and evaluating research sources
+3.1 Skills: Identifying and Evaluating Research Sources
 </h4>
 </a>
 
@@ -404,6 +404,10 @@ $(window).on('scroll', function() {
 
 $('.transcriptButton').on("click", function() {
   $(this).next(".displayNone").slideToggle();
+});
+
+$('.announceButton').on("click", function() {
+  $(this).next(".displayNoon").slideToggle();
 });
 
 
