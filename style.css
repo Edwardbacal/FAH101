@@ -42,6 +42,8 @@ ol li > a,
 .flowButton:focus,
 .flowButton2:hover,
 .flowButton2:focus,
+.flowButton3:hover,
+.flowButton3:focus,
 .transcriptButton:hover,
 .transcriptButton:focus,
 .announceButton:hover,
@@ -448,7 +450,7 @@ hr {
   padding: 0 1.5rem 1.5rem 0;
   border: .5rem;
   border-style: none inset inset none;
-  box-shadow: 5px 5px 12px #bdbdbd1a;
+  box-shadow: 10px 8px 12px #bdbdbd1a;
   hyphens: auto;
   border-color: #eee #faeaff #ecd2f4 #fff;
 }
@@ -595,7 +597,10 @@ ol li h3 span,
 .third,
 .thirdR,
 .chev,
-.flowButton2 {
+.flowButton2,
+.flowButton3,
+.carouselSlide, 
+.carouselSlide2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -640,6 +645,7 @@ a button {
 .CTA,
 .flowButton,
 .flowButton2,
+.flowButton3,
 .transcriptButton,
 .announceButton {
   border: 1px solid #195181;
@@ -670,12 +676,14 @@ a button {
 
 
 .inv .flowButton,
-.inv .flowButton2 {
+.inv .flowButton2,
+.inv .flowButton3 {
   animation: border2 1s ease-in alternate infinite; 
 }
 
 .flowButton,
-.flowButton2 {
+.flowButton2,
+.flowButton3 {
   animation: border 1s ease-in alternate infinite; 
 }
 
@@ -772,17 +780,22 @@ footer button {
 
 .inv .CTA,
 .inv .flowButton, 
-.inv .flowButton2 {
+.inv .flowButton2, 
+.inv .flowButton3 {
   background: #195181 !important;
   border-color: #fff;
 }
 
 /* .inv button:hover,
 .inv button:focus, */
+.inv .CTA:hover,
+.inv .CTA:focus,
 .inv .flowButton:hover,
 .inv .flowButton:focus,
 .inv .flowButton2:hover,
 .inv .flowButton2:focus,
+.inv .flowButton3:hover,
+.inv .flowButton3:focus,
 .endNavInv a:hover,
 .endNavInv a:focus {
   color: #195181 !important;
@@ -802,8 +815,6 @@ footer button {
   text-align: center;
 }
 
-
-
 /* JS CLASSES & ANIMATIONS */
 .displayNone,
 .displayNoon {
@@ -815,7 +826,51 @@ footer button {
   overflow: hidden;
 }
 
+.carousel-container {
+  width: 100%;
+  margin: 4rem auto;
+  overflow: hidden ;
+  /* max-height: 90vh; */
+  z-index: 9;
+}
 
+.carousel,
+.carousel2 {
+  display: flex;
+  transition: 0.5s ease-in;
+  width: 100%;
+}
+
+
+.carousel img,
+.carousel2 img {
+  padding: 2rem;
+  max-height: 47vh;
+}
+
+.carouselSlide,
+.carouselSlide2
+ {
+  flex: 0 0 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  padding: 2rem 10%;
+  max-height: 90vh;
+}
+
+.carouselSlide h4,
+.carouselSlide2 h4 {
+  margin: 0 0 2rem 0;
+}
+
+.carousel-container .CTA {
+  position: absolute;
+  top: -2rem;
+  z-index: 10;
+  border: .5px solid #19518112;
+}
 
 
 @keyframes inOut {
@@ -904,9 +959,11 @@ img {
   max-width: 100%;
 }
 
-.img {
+.img,
+.inv .carouselSlide .img,
+.inv .carouselSlide2 .img {
   width: 100%;
-  background-image: url("./assets/diagonal2.png");
+  background: url("./assets/diagonal2.png");
   background-size: 320px;  
   margin: 0 auto;
   flex-direction: column;
@@ -953,6 +1010,7 @@ li img{
   background: #fff;
 }
 
+
 .inv .img p,
 .inv .imgBox p,
 .inv .imgRow,
@@ -980,6 +1038,17 @@ li img{
 
 .img .imgBox {
   margin: 0 1rem;
+}
+
+.fleft {
+  float: left; 
+  margin: .5rem 2rem 1rem 0;
+  max-width: 500px;
+}
+.fright {
+  float: left; 
+  margin: .5rem 0 1rem 2rem;
+  max-width: 500px;
 }
 
 .pad {
@@ -1590,9 +1659,39 @@ button {
 
 .inv .CTA,
 .inv .flowButton,
-.inv .flowButton2 {
+.inv .flowButton2,
+.inv .flowButton3 {
   color: inherit
 }
+
+#prev,
+#next,
+#prev2,
+#next2 {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.inv #prev,
+.inv #next,
+.inv #prev2,
+.inv #next2 {
+  background: #fff !important;
+  color: #195181;
+}
+.inv #prev:hover,
+.inv #prev:focus,
+.inv #next:hover,
+.inv #next:focus,
+.inv #prev2:hover,
+.inv #prev2:focus,
+.inv #next2:hover,
+.inv #next2:focus {
+  background: #195181 !important;
+  color: #fff !important;
+}
+
+
 
 
 .inv h4,

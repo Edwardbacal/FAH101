@@ -37,6 +37,10 @@
       background: #195181 !important;
       color: #fff;
     }
+    #elementsBox,
+    #principlesBox {
+      display: none
+    }
   </style>
 </head>
 <body>
@@ -103,7 +107,9 @@
             Read modules 2.1-2.4 
           </li>
           <li>
-            Assignment 1: sketch an object from <a href="1.1.html#2" target="_blank">the options here</a> and start thinking about the formal analysis.
+            <p>
+              Assignment 1: sketch an object from <a href="1.1.html#2" target="_blank">the options here</a> and start thinking about the formal analysis.
+            </p>
           </li>
           <li>
             Attend your second tutorial.
@@ -166,8 +172,8 @@
       <p style="margin-bottom: 2rem;">
         The video below, Dr. Beth Harris and Dr. Steven Zucker outline the process of visually analyzing artworks. 
       </p>
-
-    
+      
+      
       
       <div class="video">
         <cite class="pad em flex">
@@ -240,13 +246,12 @@
           Other Elements
         </li>
       </ul>
-     
-      <div class="mapBox pad">
+      
+      <div class="mapBox pad flex">
         <cite class="flex">
           click on the boxes above to learn about each category
         </cite>
       </div>
-
       
       <hr class="break">
       
@@ -259,19 +264,309 @@
         </p>
         <ul class="gridCols">
           <li>
-            <a class='CTA' href='https://www.getty.edu/education/teachers/building_lessons/elements_art.pdf' target='_blank' style="margin: 0">
+            <a class='CTA' href='https://www.getty.edu/education/teachers/building_lessons/elements_art.pdf' target='_blank' style="margin: 0; font-size: 1rem;">
               <i class="fa-solid fa-file-arrow-down"></i>
               Elements of Art (PDF): This describes the building blocks used by artists to create a work of art.
             </a>
           </li>
           <li>
-            <a class='CTA' href='https://www.getty.edu/education/teachers/building_lessons/elements_art.pdf' target='_blank' style="margin: 0">
+            <a class='CTA' href='https://www.getty.edu/education/teachers/building_lessons/principles_design.pdf' target='_blank' style="margin: 0; font-size: 1rem;">
               <i class="fa-solid fa-file-arrow-down"></i>
               Principles of Design (PDF): This describes describe the ways artists use the elements of art.
             </a>
           </li>
         </ul>
+        
+        <ul class="grid">
+          <li class="flowButton3" id="elements">
+            Elements of Art
+          </li>
+          <li class="flowButton3" id="principles">
+            Principles of Design
+          </li>
+        </ul>
       </div>
+      
+      
+      <div class="carousel-container inv" style="position: relative;" id="elementsBox">
+        <button class="CTA" id="prev" style="left: 0">prev</button>
+        <button class="CTA" id="next" style="right: 0">next</button>  
+        <div class="carousel" >
+          <div class="carouselSlide">
+            <h4>
+              Line
+            </h4>
+            <div class="img">
+              <img src="./assets/02/miro.jpg"  alt="Image 1">
+              <p>
+                Joan Miró, <em>Harlequin's Carnival</em>, 1924-25
+              </p>
+            </div>
+            <p>
+              Line is a mark with greater length than width. Lines can be horizontal, vertical, or diagonal; straight or curved; thick or thin.
+            </p>
+          </div>
+          
+          <div class="carouselSlide">
+            <h4>
+              Shape
+            </h4>
+            <div class="img">
+              <img src="./assets/02/kelly.jpg"  alt="Image 1">
+              <p>
+                Ellsworth Kelly, <em>Meschers</em> 1951
+              </p>
+            </div>
+            <p>
+              Shape is a closed line. Shapes can be geometric, like squares and circles; or organic, like free-form or natural shapes. Shapes are flat and can express length and width.
+            </p>
+          </div>
+          
+          <div class="carouselSlide">
+            <h4>
+              Forms
+            </h4>
+            <div class="img">
+              <img src="./assets/02/smith.jpg"  alt="Image 1">
+              <p>
+                David Smith, <em>Australia</em>, 1951
+              </p>
+            </div>
+            <p>
+              Forms are three-dimensional shapes expressing length, width, and depth. Balls, cylinders, boxes, and pyramids are forms.
+            </p>
+          </div>
+          
+          <div class="carouselSlide">
+            <h4>
+              Space
+            </h4>
+            <div class="img">
+              <img src="./assets/02/hesse.jpg"  alt="Image 1">
+              <p>
+                Eva Hesse, <em>Hang-up</em>, 1966
+              </p>
+            </div>
+            <p>
+              Space is the area between and around objects. The space around objects is often called negative space; negative space has shape. Space can also refer to the feeling of depth. Real space is three-dimensional; in visual art, when we create the feeling or illusion of depth, we call it space.
+            </p>
+          </div>
+          
+          <div class="carouselSlide">
+            <h4>
+              Colour
+            </h4>
+            <div class="img">
+              <img src="./assets/02/pindell.jpg"  alt="Image 1">
+              <p>
+                Howardena Pindell <em>Untitled #4D</em>, 2009
+              </p>
+            </div>
+            <cite>
+              Scroll down to see full text
+            </cite>
+            <p>
+              Colour is light reflected off of objects. Colour has three main characteristics: hue (the name of the colour, such as red, green, blue, etc.), value (how light or dark it is), and intensity (how bright or dull it is).
+            </p>
+            <ul class="list" style="margin-top: -.5rem;">
+              <li>
+                White is pure light; black is the absence of light.
+              </li> 
+              <li>
+                Primary colours are the only true colours (red, blue, and yellow). All other
+              </li> colours are mixes of primary colours. 
+              <li>
+                Secondary colours are two primary colours mixed together (green, orange,
+              </li> violet). 
+              <li>
+                Intermediate colours, sometimes called tertiary colours, are made by mixing a primary and secondary colour together. Some examples of intermediate colours are yellow green, blue green, and blue violet. 
+              </li>
+              <li>
+                Complementary colours are located directly across from each other on the colour wheel (an arrangement of colours along a circular diagram to show how they are related to one another). Complementary pairs contrast because they share no common colours. For example, red and green are complements, because green is made of blue and yellow. When comple- mentary colours are mixed together, they neutralize each other to make brown.
+              </li>
+            </ul>
+          </div>
+          
+          <div class="carouselSlide">
+            <h4>
+              Texture
+            </h4>
+            <div class="img">
+              <img src="./assets/02/ligon.png"  alt="Image 1">
+              <p>
+                Glenn Ligon, <em>Stranger #90</em>, 2018
+              </p>
+            </div>
+            <p>
+              Texture is the surface quality that can be seen and felt. Textures can be rough or smooth, soft or hard. Textures do not always feel the way they look; for exam- ple, a drawing of a porcupine may look prickly, but if you touch the drawing, the paper is still smooth.
+            </p>
+         
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="carousel-container inv" style="position: relative;" id="principlesBox">
+        <button class="CTA" id="prev2" style="left: 0">prev</button>
+        <button class="CTA" id="next2" style="right: 0">next</button>  
+        <div class="carousel2">
+          
+          <div class="carouselSlide2">
+            <h4>
+              Emphasis
+            </h4>
+            <div class="img">
+              <img src="./assets/02/baldessari.jpg"  alt="Image 1">
+              <p>
+                John Baldessari, <em>Gavel</em>, 1987
+              </p>
+            </div>
+            <p>
+              Emphasis is the part of the design that catches the viewer’s attention. Usually the artist will make one area stand out by contrasting it with other areas. The area couldbe different in size, color, texture, shape, etc.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Balance
+            </h4>
+            <div class="img">
+              <img src="./assets/02/herrera.jpg"  alt="Image 1">
+              <p>
+                Carmen Herrera, <em>Amarillo “Dos”</em>, 1971
+              </p>
+            </div>
+            <cite>
+              Scroll down to see full text
+            </cite>
+            
+            <p>
+              Balance is the distribution of the visual weight of objects, colors, texture, and space. If the design was a scale, these elements should be balanced to make a design feel stable. In symmetrical balance, the elements used on one side of the design aresimilar to those on the other side; in asymmetrical balance, the sides are different but still look balanced. In radial balance, the elements are arranged around a centralpoint and may be similar. 
+            </p>             
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Movement
+            </h4>
+            <div class="img">
+              <img src="./assets/02/carra.jpg"  alt="Image 1">
+              <p>
+                Carlo Carrà, <em>Il Ciclista</em>, 1913
+              </p>
+            </div>
+            <p>
+              Movement is the path the viewer’s eye takes through the work of art, often to focal areas. Such movement can be directed along lines, edges, shape, and color within thework of art.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Pattern
+            </h4>
+            <div class="img">
+              <img src="./assets/02/bochner.jpg"  alt="Image 1">
+              <p>
+                Mel Bochner, <em>Blah, Blah, Blah</em>, 2012
+              </p>
+            </div>
+            <p>
+              Pattern is the repeating of an object or symbol all over the work of art.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Repetition
+            </h4>
+            <div class="img">
+              <img src="./assets/02/lee.jpg"  alt="Image 1">
+              <p>
+                Lee Ufan, <em>From Line</em>, 1979
+              </p>
+            </div>
+            <p>
+              Repetition works with pattern to make the work of art seem active. The repetitionof elements of design creates unity within the work of art.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Proportion
+            </h4>
+            <div class="img">
+              <img src="./assets/02/giacometti.jpg"  alt="Image 1">
+              <p>
+                Alberto Giacometti, <em>Walking Man I</em>, 1960
+              </p>
+            </div>
+            <p>
+              Proportion is the feeling of unity created when all parts (sizes, amounts, or number)
+              relate well with each other. When drawing the human figure, proportion can refer
+              to the size of the head compared to the rest of the body.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Rhythm
+            </h4>
+            <div class="img">
+              <img src="./assets/02/marsden.jpeg"  alt="Image 1" style="height: auto;">
+              <p>
+                Brice Marsden, <em>The Propitious Garden of Plane Image, Third Version</em>, 2000–2006
+              </p>
+            </div>
+            <p>
+              Rhythm is created when one or more elements of design are used repeatedly to
+              create a feeling of organized movement. Rhythm creates a mood like music or
+              dancing. To keep rhythm exciting and active, variety is essential.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Variety
+            </h4>
+            <div class="img">
+              <img src="./assets/02/pittman.jpeg"  alt="Image 1">
+              <p>
+                Lari Pittman, <em>Assembly</em>, 2011
+              </p>
+            </div>
+            <p>
+              Variety is the use of several elements of design to hold the viewer’s attention and
+              to guide the viewer’s eye through and around the work of art.
+            </p>
+          </div>
+          
+          <div class="carouselSlide2">
+            <h4>
+              Unity
+            </h4>
+            <div class="img">
+              <img src="./assets/02/martin.jpeg"  alt="Image 1">
+              <p>
+                Agnes Martin, <em>Summer</em>, 1964
+              </p>
+            </div>
+            <p>
+              Unity is the feeling of harmony between all parts of the work of art, which creates
+              a sense of completeness.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="moopBox pad inv" style="margin-top: 4rem;">
+        <cite>
+          Click on the boxes above to learn more about the Getty's Elements of Art and Principles of Design, with examples provided by me, Edward
+        </cite>
+      </div>
+      
+      
+      
     </div>
     <a href="#3" class="chev">
       <i class="fa-solid fa-chevron-down"></i>
@@ -280,7 +575,7 @@
   
   <section class="inv">
     <div>
-      <h3 class="secTitle">
+      <h3 class="secTitle" id="3">
         Analyzing Works of Art in Different Media
       </h3>
       <p>
@@ -310,7 +605,7 @@
         </li>
       </ul>
       
-      <div class="mapBox pad">
+      <div class="mapBox pad flex">
         <cite class="flex">
           click on the boxes above to learn about each category
         </cite>
@@ -583,7 +878,7 @@
   </section>
   
   <a class="down hide" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
-
+  
   <nav class="endNav">
     <a href="1.2.html">
       Previous module (1.2 The Ajanta Caves)
@@ -622,6 +917,8 @@
         }
       }
     });
+    
+    
     
     $('body').on("click", ".hotButts button", function() {
       const factor = $(this).attr("id");
@@ -930,6 +1227,84 @@
     </ul>
     `,
   }
+  
+  // elements
+  
+  const carousel = document.querySelector(".carousel");
+  const slides = document.querySelectorAll(".carouselSlide");
+  let currentIndex = 0;
+  
+  function showSlide(index) {
+    if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else if (index >= slides.length) {
+      currentIndex = 0;
+    }
+    
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+  
+  const nextButton = document.getElementById("next");
+  const prevButton = document.getElementById("prev");
+  
+  if (nextButton && prevButton) {
+    nextButton.addEventListener("click", () => {
+      currentIndex++;
+      showSlide(currentIndex);
+    });
+    
+    prevButton.addEventListener("click", () => {
+      currentIndex--;
+      showSlide(currentIndex);
+    });
+  }
+  
+  
+  // principles
+  
+  const carousel2 = document.querySelector(".carousel2");
+  const slides2 = document.querySelectorAll(".carouselSlide2");
+  let currentIndex2 = 0;
+  
+  function showSlide2(index) {
+    if (index < 0) {
+      currentIndex2 = slides2.length - 1;
+    } else if (index >= slides2.length) {
+      currentIndex2 = 0;
+    }
+    
+    carousel2.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+  }
+  
+  const nextButton2 = document.getElementById("next2");
+  const prevButton2 = document.getElementById("prev2");
+  
+  if (nextButton2 && prevButton2) {
+    nextButton2.addEventListener("click", () => {
+      currentIndex2++;
+      showSlide2(currentIndex2);
+    });
+    
+    prevButton2.addEventListener("click", () => {
+      currentIndex2--;
+      showSlide2(currentIndex2);
+    });
+  }
+  
+  $('#elements').on("click", function() {
+    $("#principlesBox").fadeOut()
+    $(".moopBox").fadeOut()
+    $("#elementsBox").fadeIn().css("display", "flex");
+  });
+  
+  $('#principles').on("click", function() {
+    $(".moopBox").fadeOut()
+    $("#elementsBox").fadeOut();
+    $("#principlesBox").fadeIn().css("display", "flex");
+  });
+  
+  
+  
 </script>
 
 </body>
