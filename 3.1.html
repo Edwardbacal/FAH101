@@ -106,10 +106,10 @@
             Read modules 3.1-3.5 
           </li>
           <li>
-            Assignment 1: complete your annotated sketch (if you haven't already) and start planning and writing your formal analysis.
+            Attend your third tutorial.
           </li>
           <li>
-            Attend your third tutorial.
+            Assignment 1: Submit your first assignment by Sunday, July 21, 11:59 PM 
           </li>
         </ul>
       </div>
@@ -493,347 +493,346 @@
           <p>
             Check out <a href="https://advice.writing.utoronto.ca/using-sources/" target="_blank" rel="noopener">writing advice on using sources</a> and instructions on <a href="https://guides.library.utoronto.ca/c.php?g=251039&amp;p=5138059#s-lg-box-16164873" target="_blank" rel="noopener">citing images</a>. Please remember to italicize the art object title!
           </p>
-          </div>
         </div>
-        
       </div>
-    </section>
-
-
-<nav class="endNavInv">
-  <a href="2.4.html" >
-    Previous module (2.4 The Great Wave)
-  </a>
-  <a href="2.1.html" >
-    Next module (3.2 Formal Analysis)
-  </a>
-</nav>
-
-
-
-<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-
-<script src="index.js"></script>
-
-<script>
-  $('body').on("click", ".flowButton", function() {
-    const time = $(this).attr("id");
-    const link = $('#vid').attr("src"); 
-    const boxy = $("#BOX");
-    $(".viddd").empty().append("<iframe width='560' height='315' src='https://www.youtube.com/embed/hMMoPteQuCQ?si=SltPG8CJFSSyfUHC&amp;start=" + time + "' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>")
-  });
+    </div>
+  </section>
   
-  $('body').on("click", ".flowButton", function() {
-    const factor = $(this).attr("id");
-    $(this).parent().parent().next(".mapBox").empty();
-    // location.href="#how"
-    for (let name in tabDescription) {
-      if  (factor === name) {
-        $(this).parent().parent().next(".mapBox").append((tabDescription[name]));
-        $(this).parent().parent().next(".mapBox").slideDown(400);
+  
+  <nav class="endNavInv">
+    <a href="2.4.html" >
+      Previous module (2.4 The Great Wave)
+    </a>
+    <a href="2.1.html" >
+      Next module (3.2 Ghent Altarpiece)
+    </a>
+  </nav>
+  
+  
+  
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+  
+  <script src="index.js"></script>
+  
+  <script>
+    $('body').on("click", ".flowButton", function() {
+      const time = $(this).attr("id");
+      const link = $('#vid').attr("src"); 
+      const boxy = $("#BOX");
+      $(".viddd").empty().append("<iframe width='560' height='315' src='https://www.youtube.com/embed/hMMoPteQuCQ?si=SltPG8CJFSSyfUHC&amp;start=" + time + "' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>")
+    });
+    
+    $('body').on("click", ".flowButton", function() {
+      const factor = $(this).attr("id");
+      $(this).parent().parent().next(".mapBox").empty();
+      // location.href="#how"
+      for (let name in tabDescription) {
+        if  (factor === name) {
+          $(this).parent().parent().next(".mapBox").append((tabDescription[name]));
+          $(this).parent().parent().next(".mapBox").slideDown(400);
+        }
       }
-    }
-  });
-  
-  $('body').on("click", ".flowButton2", function() {
-    const factor = $(this).attr("id");
-    $(this).parent().next(".mapBox").empty();
-    // location.href="#how"
-    for (let name in tabDescription) {
-      if  (factor === name) {
-        $(this).parent().next(".mapBox").append((tabDescription[name]));
-        $(this).parent().next(".mapBox").slideDown(400);
+    });
+    
+    $('body').on("click", ".flowButton2", function() {
+      const factor = $(this).attr("id");
+      $(this).parent().next(".mapBox").empty();
+      // location.href="#how"
+      for (let name in tabDescription) {
+        if  (factor === name) {
+          $(this).parent().next(".mapBox").append((tabDescription[name]));
+          $(this).parent().next(".mapBox").slideDown(400);
+        }
       }
+    });
+    
+    const tabDescription = { 
+      "people" : `
+      <div class="pad">
+        <h3>
+          Questions about People
+        </h3>
+        <p>
+          One range of questions focuses on the people involved in the creation, use, and viewing of the object&mdash;the patron, artist, and viewers:
+        </p>
+      </div>
+      
+      <ul class="grid boxList">
+        <li>
+          Who were the patron, artist(s), and viewers?
+        </li>
+        <li>
+          <ul class="list">
+            <li>Who was able to see the work? </li>
+            <li>Under what circumstances? </li>
+            <li>What was the response of contemporary viewers to this work?</li>
+          </ul>
+        </li>
+        <li class="gridDub">
+          <ul class="list">
+            <li>What sorts of records did the artist leave about the creation of this work? </li>
+            <li>Did the artist say anything about their intentions in creating the work? </li>
+            <li>Were other artists or workshop assistants involved?</li>
+          </ul>
+        </li>
+        <li class="gridDub">
+          <ul class="list">
+            <li>What were the patron&rsquo;s motives for sponsoring this work? </li>
+            <li>To what extent did the patron participate in its creation? </li>
+            <li>What does the contract for the work or correspondence about it reveal? </li>
+            <li>Was the patron acting individually, or on behalf of an institution?</li>
+          </ul>
+        </li>
+        
+      </ul>
+      `,
+      "object" : `
+      <div class="pad">
+        <h3>
+          Questions about the Object and Its Immediate Context
+        </h3>
+        <p>
+          Other questions for building a contextual analysis address the physical work of art, its location, and use:
+        </p>
+      </div>
+      
+      <ul class="grid boxList">
+        <li>
+          When was this work made?
+        </li>
+        <li>
+          Where was it originally located?
+        </li>
+        <li>
+          In what context was this work used or seen?
+        </li>
+        <li>
+          <ul class="list">
+            <li>Are the artist&rsquo;s techniques new or innovative in some way? </li>
+            <li>Was there any particular significance in the choice of techniques?</li>
+          </ul>
+        </li>
+        <li class="gridDub">
+          <ul class="list">
+            <li>Does the work make use of rare and/or costly materials? </li>
+            <li>Does it include materials that have either a ritual or symbolic value? </li>
+            <li>Are they new or innovative in some way?</li>
+          </ul>
+        </li>
+      </ul>
+      `,
+      "larger" : `
+      <div class="pad">
+        <h3>
+          Questions about the Larger Context
+        </h3>
+        <p>
+          Still, other contextually oriented questions address the <strong>larger social issues</strong> presented by the work of art:
+        </p>
+      </div>
+      
+      <ul class="grid boxList">
+        <li>
+          What was the political, religious, or social context in which this work was created?
+        </li>
+        <li>
+          <ul class="list">
+            <li>What is the subject? </li>
+            <li> Why would the artist, patron, or viewer be interested in a depiction of this subject?</li>
+          </ul>
+        </li>
+        <li>
+          <ul class="list">
+            <li>Was this a new or innovative artistic style? </li>
+            <li> If so, what prompted the change?</li>
+          </ul>
+        </li>
+        <li>
+          What political, religious, and/or social messages are being conveyed through the subject matter or artistic style of this work?
+        </li>
+        <li class="gridDub">
+          <ul class="list">
+            <li>Was this a new or innovative subject, or a new treatment of a familiar subject? </li>
+            <li>If so, what prompted the change? </li>
+            <li>If not, what was the motivation for conservatism?</li>
+          </ul>
+        </li>
+        <li class="gridDub">
+          <ul class="list">
+            <li> How has the object been displayed? </li>
+            <li> Is the object part of a museum collection? </li>
+            <li> When did the museum acquire it? </li>
+            <li> Has the object been a part of any exhibitions? </li>
+            <li> How have reproductions of the object been circulated (online or as physical reproductions such as postcards or merchandise)? </li>
+          </ul>
+        </li>
+      </ul>
+      `,
+      books : `
+      <h4>
+        Books
+      </h4>
+      <p>
+        There is an enormous literature in art history, and it may at times be overwhelming to try to make your way through it as you work on your paper. Because there is so much popular publishing about art, you want to be careful to evaluate your sources for their quality and relevance to your work. Although it is not an absolute guarantee of scholarly merit, look for exhibition catalogues published by major museums and books published by university presses. These have the highest scholarly standards and the most rigorous editorial process and so will probably be the best resources for your work.
+      </p>
+      <p>
+        There is no absolute standard cut-off for the dates of your sources or how old they are. There are classic works that still contain many insights that are forty or so years old&mdash;or even older. One general guideline for the quality of an older publication is to see how often it is cited. If you see it in lots of bibliographies, then you should probably take a look at it too. It is also absolutely essential to consult the most recent scholarship on a subject. If you are unsure about the scholarly merit of a book, you have several options. You can, of course, ask your instructor or a research librarian about it. You may also want to look up reviews of the work in major journals. I recommend looking up more than one review&mdash;you don't want your perspective on the book skewed by reading one review that happens to be unusually hostile or positive.
+      </p>
+      <p>
+        As you research, it is important to keep in mind the distinction between primary and <a href="https://onesearch.library.utoronto.ca/faq/what-are-secondary-sources" target="_blank">secondary sources</a>, because each gives you different kinds of information on your subject. Primary sources for historical research are those sources produced by people directly involved in the images, events, and period you are writing about. So, for example, the letters of Mary Cassatt (1845&ndash;1926) are a primary source for understanding her art. Secondary sources are by scholars and others commenting on or interpreting the images, events, and period you're writing about. The art historian Griselda Pollock's book <em>Mary Cassatt: Painter of Modern Women</em> (London: Thames and Hudson, 1998) is a secondary source about the artist. Many primary sources have been published&mdash;artists' letters and other writings, for example&mdash;and so will be readily available to you. Other primary sources are unpublished and will be inaccessible without going to the libraries, museums, and archives that house the original items. Instructors typically don't expect undergraduates to utilize unpublished primary sources in their research papers.
+      </p>
+      
+      <hr>
+      
+      <p>
+        There are many types of specialized publications within art history. These are a few that you may run across:
+      </p>
+      
+      <h4>Specialized Art-History Publications</h4>
+      
+      <ul class="gridCols boxList">
+        <li>
+          <h5>Exhibition catalogue</h5>
+          <p>
+            Catalogues often contain recent scholarship in the form of essays by leading scholars in the field. Over the past 20 years or so, exhibition catalogues produced by major museums have become important works of scholarship.
+          </p>    
+        </li>
+        
+        <li>
+          <h5>Monograph</h5>
+          <p>
+            This type of book focuses on a single subject or on the work of a single artist.
+          </p>
+        </li>
+        
+        <li>
+          <h5>Catalogue raisonn&eacute;</h5>
+          <p>
+            The complete catalogue of an artist's work, often including extensive entries on each work, tracing its collection history (provenance) and commenting on its significance.
+          </p>
+        </li>
+        
+        <li>
+          <h5>Festschrift</h5>
+          <p>
+            This German word meaning "festival writing" is used for a collection of essays celebrating a distinguished scholar (often upon retiring). Colleagues and students contribute essays that typically address or were inspired by the dedicatee's work.
+          </p>
+        </li>
+        
+        <li>
+          <h5>Corpus</h5>
+          <p>
+            This term (pl. corpora) comes from the Latin term for "body." A corpus publishes all the objects of a known type. One of the best known is the <em>Corpus Vasorum Antiquorum</em>, a multi-volume work that publishes images and catalogue information for all the known ancient Greek painted vases.
+          </p>
+        </li>
+      </tr>
+      `,
+      perioidicals : `
+      <h4>
+        Periodicals
+      </h4>
+      <p>
+        Periodical literature is important because this is often where scholars publish new ideas first. As with books, there are so many periodical publications on art that sorting them out can be a bewildering process. Glossy art magazines geared toward collectors, dealers, and interior designers are often very appealing, but they are typically written by professional journalists rather than art historians and so are somewhat limited as scholarly resources. While such periodicals can be useful (especially if you are writing about collecting practices, for example), your best bet is to work with scholarly journals for most subjects. Some of the most important scholarly journals in art history are listed below; these are the journals to consult first. These journals have a demanding review process for all the articles they publish and their authors are usually highly trained art historians.
+      </p>
+      <ul class="list grid">
+        <li>African Arts</li>
+        <li>American Art</li>
+        <li>American Indian Art</li>
+        <li>Apollo</li>
+        <li>Archives of Asian Art</li>
+        <li>ArtAsiaPacific</li>
+        <li>The Art Book</li>
+        <li>The Art Bulletin</li>
+        <li>Art Criticism</li>
+        <li>Artforum International</li>
+        <li>Art History</li>
+        <li>Art in America</li>
+        <li>Art Journal</li>
+        <li>ARTnews</li>
+        <li>Art Nexus</li>
+        <li>The Burlington Magazine</li>
+        <li>Gesta</li>
+        <li>History of Photography</li>
+        <li>Journal of Aesthetics and Art Criticism</li>
+        <li>The Metropolitan Museum of Art Bulletin</li>
+        <li>Orientations</li>
+        <li>Oxford Art Journal</li>
+        <li>Simiolus</li>
+      </ul>
+      `,
+      websites : `
+      <h4>
+        Websites
+      </h4>
+      <p>
+        A note of caution: The internet offers a lot of good material you may not find elsewhere, but you need to select very carefully. Remember, just about anyone can make a website. Not all the art-history information you will find on the internet, even on useful reference sites, will be accurate and up-to-date. In general, websites developed by museums, libraries, and universities are the more reliable resources&mdash;although, like any other source, the information they provide must be critically evaluated. Be skeptical of anything posted by an individual, unless you can verify that that person has credentials that make him or her a recognized authority on art history (such as a Ph.D. from a reputable university, a teaching position, a museum position, or a staff position at a major periodical).
+      </p>
+      <p>
+        Remember, too, that you will not be able to write an entire paper from research conducted exclusively on the Internet. There is a tremendous amount of valuable scholarly material that has not been put up on the web, and it may be years before this material is available online.
+      </p>
+      `,
+      reference : `
+      <h4>
+        Reference Works
+      </h4>
+      <p>
+        The <a href="https://guides.library.utoronto.ca/art" target="_blank">University of Toronto Art History Research Guide</a> lists a number of art-history reference works that may help you in your research. Dictionaries of artists or of symbols and subjects in art can be very helpful as you begin your research. I want to mention in particular <a href="http://www.oxfordartonline.com.myaccess.library.utoronto.ca/" target="_blank">Oxford Art Online</a>, which is an excellent resource, with articles written by major scholars in the field.
+      </p>
+      <p>
+        Keep in mind that references like the Encyclopedia Britannica are not usually acceptable resources for a university-level research paper because the articles are usually too general. You should feel free to consult a general encyclopedia if you need some background information on a particular topic. Your paper should be specific enough in its arguments, so the kind of material presented in a general encyclopedia is not something that you would need to quote.
+      </p>
+      `,
+      Accuracy :`
+      <h4>
+        Accuracy
+      </h4>
+      <ul class="list">
+        <li>The information should be based on verifiable facts.</li>
+        <li>There should be a bibliography or a list of references.</li>
+        <li>There should be no spelling or grammatical errors.</li>
+      </ul>
+      `,
+      Authority :`
+      <h4>
+        Authority
+      </h4>
+      <ul class="list">
+        <li>A specific author or team of authors should be listed.</li>
+        <li>These authors should work at an institution (such as a university or research institute) with a good reputation.</li>
+        <li>The authors' qualifications (Ph.D., research chair, etc) should be stated.</li>
+      </ul>
+      `,
+      Bias :`
+      <h4>
+        Bias
+      </h4>
+      <ul class="list">
+        <li>The information should be based on fact, not opinion.</li>
+        <li>There should be no obvious bias.</li>
+        <li>The authors should appeal to the reader's sense of logic, not emotion.</li>
+      </ul>
+      `,
+      Audience :`
+      <h4>
+        Audience
+      </h4>
+      <ul class="list">
+        <li>The source should be written for other experts or people who are familiar with the topic.</li>
+        <li>The language should be fairly technical, not simplistic.</li>
+      </ul>
+      `,
+      Currency :`
+      <h4>
+        Currency
+      </h4>
+      <ul class="list">
+        <li>In some disciplines, it is very important to use recent sources (within three or five years), but in others, it's OK to have older sources. Ask your TA or instructor if you're not sure what's too old.</li>
+      </ul>
+      `,
     }
-  });
+  </script>
   
-  const tabDescription = { 
-    "people" : `
-    <div class="pad">
-      <h3>
-        Questions about People
-      </h3>
-      <p>
-        One range of questions focuses on the people involved in the creation, use, and viewing of the object&mdash;the patron, artist, and viewers:
-      </p>
-    </div>
-    
-    <ul class="grid boxList">
-      <li>
-        Who were the patron, artist(s), and viewers?
-      </li>
-      <li>
-        <ul class="list">
-          <li>Who was able to see the work? </li>
-          <li>Under what circumstances? </li>
-          <li>What was the response of contemporary viewers to this work?</li>
-        </ul>
-      </li>
-      <li class="gridDub">
-        <ul class="list">
-          <li>What sorts of records did the artist leave about the creation of this work? </li>
-          <li>Did the artist say anything about their intentions in creating the work? </li>
-          <li>Were other artists or workshop assistants involved?</li>
-        </ul>
-      </li>
-      <li class="gridDub">
-        <ul class="list">
-          <li>What were the patron&rsquo;s motives for sponsoring this work? </li>
-          <li>To what extent did the patron participate in its creation? </li>
-          <li>What does the contract for the work or correspondence about it reveal? </li>
-          <li>Was the patron acting individually, or on behalf of an institution?</li>
-        </ul>
-      </li>
-      
-    </ul>
-    `,
-    "object" : `
-    <div class="pad">
-      <h3>
-        Questions about the Object and Its Immediate Context
-      </h3>
-      <p>
-        Other questions for building a contextual analysis address the physical work of art, its location, and use:
-      </p>
-    </div>
-    
-    <ul class="grid boxList">
-      <li>
-        When was this work made?
-      </li>
-      <li>
-        Where was it originally located?
-      </li>
-      <li>
-        In what context was this work used or seen?
-      </li>
-      <li>
-        <ul class="list">
-          <li>Are the artist&rsquo;s techniques new or innovative in some way? </li>
-          <li>Was there any particular significance in the choice of techniques?</li>
-        </ul>
-      </li>
-      <li class="gridDub">
-        <ul class="list">
-          <li>Does the work make use of rare and/or costly materials? </li>
-          <li>Does it include materials that have either a ritual or symbolic value? </li>
-          <li>Are they new or innovative in some way?</li>
-        </ul>
-      </li>
-    </ul>
-    `,
-    "larger" : `
-    <div class="pad">
-      <h3>
-        Questions about the Larger Context
-      </h3>
-      <p>
-        Still, other contextually oriented questions address the <strong>larger social issues</strong> presented by the work of art:
-      </p>
-    </div>
-    
-    <ul class="grid boxList">
-      <li>
-        What was the political, religious, or social context in which this work was created?
-      </li>
-      <li>
-        <ul class="list">
-          <li>What is the subject? </li>
-          <li> Why would the artist, patron, or viewer be interested in a depiction of this subject?</li>
-        </ul>
-      </li>
-      <li>
-        <ul class="list">
-          <li>Was this a new or innovative artistic style? </li>
-          <li> If so, what prompted the change?</li>
-        </ul>
-      </li>
-      <li>
-        What political, religious, and/or social messages are being conveyed through the subject matter or artistic style of this work?
-      </li>
-      <li class="gridDub">
-        <ul class="list">
-          <li>Was this a new or innovative subject, or a new treatment of a familiar subject? </li>
-          <li>If so, what prompted the change? </li>
-          <li>If not, what was the motivation for conservatism?</li>
-        </ul>
-      </li>
-      <li class="gridDub">
-        <ul class="list">
-          <li> How has the object been displayed? </li>
-          <li> Is the object part of a museum collection? </li>
-          <li> When did the museum acquire it? </li>
-          <li> Has the object been a part of any exhibitions? </li>
-          <li> How have reproductions of the object been circulated (online or as physical reproductions such as postcards or merchandise)? </li>
-        </ul>
-      </li>
-    </ul>
-    `,
-    books : `
-    <h4>
-      Books
-    </h4>
-    <p>
-      There is an enormous literature in art history, and it may at times be overwhelming to try to make your way through it as you work on your paper. Because there is so much popular publishing about art, you want to be careful to evaluate your sources for their quality and relevance to your work. Although it is not an absolute guarantee of scholarly merit, look for exhibition catalogues published by major museums and books published by university presses. These have the highest scholarly standards and the most rigorous editorial process and so will probably be the best resources for your work.
-    </p>
-    <p>
-      There is no absolute standard cut-off for the dates of your sources or how old they are. There are classic works that still contain many insights that are forty or so years old&mdash;or even older. One general guideline for the quality of an older publication is to see how often it is cited. If you see it in lots of bibliographies, then you should probably take a look at it too. It is also absolutely essential to consult the most recent scholarship on a subject. If you are unsure about the scholarly merit of a book, you have several options. You can, of course, ask your instructor or a research librarian about it. You may also want to look up reviews of the work in major journals. I recommend looking up more than one review&mdash;you don't want your perspective on the book skewed by reading one review that happens to be unusually hostile or positive.
-    </p>
-    <p>
-      As you research, it is important to keep in mind the distinction between primary and <a href="https://onesearch.library.utoronto.ca/faq/what-are-secondary-sources" target="_blank">secondary sources</a>, because each gives you different kinds of information on your subject. Primary sources for historical research are those sources produced by people directly involved in the images, events, and period you are writing about. So, for example, the letters of Mary Cassatt (1845&ndash;1926) are a primary source for understanding her art. Secondary sources are by scholars and others commenting on or interpreting the images, events, and period you're writing about. The art historian Griselda Pollock's book <em>Mary Cassatt: Painter of Modern Women</em> (London: Thames and Hudson, 1998) is a secondary source about the artist. Many primary sources have been published&mdash;artists' letters and other writings, for example&mdash;and so will be readily available to you. Other primary sources are unpublished and will be inaccessible without going to the libraries, museums, and archives that house the original items. Instructors typically don't expect undergraduates to utilize unpublished primary sources in their research papers.
-    </p>
-    
-    <hr>
-    
-    <p>
-      There are many types of specialized publications within art history. These are a few that you may run across:
-    </p>
-    
-    <h4>Specialized Art-History Publications</h4>
-    
-    <ul class="gridCols boxList">
-      <li>
-        <h5>Exhibition catalogue</h5>
-        <p>
-          Catalogues often contain recent scholarship in the form of essays by leading scholars in the field. Over the past 20 years or so, exhibition catalogues produced by major museums have become important works of scholarship.
-        </p>    
-      </li>
-      
-      <li>
-        <h5>Monograph</h5>
-        <p>
-          This type of book focuses on a single subject or on the work of a single artist.
-        </p>
-      </li>
-      
-      <li>
-        <h5>Catalogue raisonn&eacute;</h5>
-        <p>
-          The complete catalogue of an artist's work, often including extensive entries on each work, tracing its collection history (provenance) and commenting on its significance.
-        </p>
-      </li>
-      
-      <li>
-        <h5>Festschrift</h5>
-        <p>
-          This German word meaning "festival writing" is used for a collection of essays celebrating a distinguished scholar (often upon retiring). Colleagues and students contribute essays that typically address or were inspired by the dedicatee's work.
-        </p>
-      </li>
-      
-      <li>
-        <h5>Corpus</h5>
-        <p>
-          This term (pl. corpora) comes from the Latin term for "body." A corpus publishes all the objects of a known type. One of the best known is the <em>Corpus Vasorum Antiquorum</em>, a multi-volume work that publishes images and catalogue information for all the known ancient Greek painted vases.
-        </p>
-      </li>
-    </tr>
-    `,
-    perioidicals : `
-    <h4>
-      Periodicals
-    </h4>
-    <p>
-      Periodical literature is important because this is often where scholars publish new ideas first. As with books, there are so many periodical publications on art that sorting them out can be a bewildering process. Glossy art magazines geared toward collectors, dealers, and interior designers are often very appealing, but they are typically written by professional journalists rather than art historians and so are somewhat limited as scholarly resources. While such periodicals can be useful (especially if you are writing about collecting practices, for example), your best bet is to work with scholarly journals for most subjects. Some of the most important scholarly journals in art history are listed below; these are the journals to consult first. These journals have a demanding review process for all the articles they publish and their authors are usually highly trained art historians.
-    </p>
-    <ul class="list grid">
-      <li>African Arts</li>
-      <li>American Art</li>
-      <li>American Indian Art</li>
-      <li>Apollo</li>
-      <li>Archives of Asian Art</li>
-      <li>ArtAsiaPacific</li>
-      <li>The Art Book</li>
-      <li>The Art Bulletin</li>
-      <li>Art Criticism</li>
-      <li>Artforum International</li>
-      <li>Art History</li>
-      <li>Art in America</li>
-      <li>Art Journal</li>
-      <li>ARTnews</li>
-      <li>Art Nexus</li>
-      <li>The Burlington Magazine</li>
-      <li>Gesta</li>
-      <li>History of Photography</li>
-      <li>Journal of Aesthetics and Art Criticism</li>
-      <li>The Metropolitan Museum of Art Bulletin</li>
-      <li>Orientations</li>
-      <li>Oxford Art Journal</li>
-      <li>Simiolus</li>
-    </ul>
-    `,
-    websites : `
-    <h4>
-      Websites
-    </h4>
-    <p>
-      A note of caution: The internet offers a lot of good material you may not find elsewhere, but you need to select very carefully. Remember, just about anyone can make a website. Not all the art-history information you will find on the internet, even on useful reference sites, will be accurate and up-to-date. In general, websites developed by museums, libraries, and universities are the more reliable resources&mdash;although, like any other source, the information they provide must be critically evaluated. Be skeptical of anything posted by an individual, unless you can verify that that person has credentials that make him or her a recognized authority on art history (such as a Ph.D. from a reputable university, a teaching position, a museum position, or a staff position at a major periodical).
-    </p>
-    <p>
-      Remember, too, that you will not be able to write an entire paper from research conducted exclusively on the Internet. There is a tremendous amount of valuable scholarly material that has not been put up on the web, and it may be years before this material is available online.
-    </p>
-    `,
-    reference : `
-    <h4>
-      Reference Works
-    </h4>
-    <p>
-      The <a href="https://guides.library.utoronto.ca/art" target="_blank">University of Toronto Art History Research Guide</a> lists a number of art-history reference works that may help you in your research. Dictionaries of artists or of symbols and subjects in art can be very helpful as you begin your research. I want to mention in particular <a href="http://www.oxfordartonline.com.myaccess.library.utoronto.ca/" target="_blank">Oxford Art Online</a>, which is an excellent resource, with articles written by major scholars in the field.
-    </p>
-    <p>
-      Keep in mind that references like the Encyclopedia Britannica are not usually acceptable resources for a university-level research paper because the articles are usually too general. You should feel free to consult a general encyclopedia if you need some background information on a particular topic. Your paper should be specific enough in its arguments, so the kind of material presented in a general encyclopedia is not something that you would need to quote.
-    </p>
-    `,
-    Accuracy :`
-    <h4>
-      Accuracy
-    </h4>
-    <ul class="list">
-      <li>The information should be based on verifiable facts.</li>
-      <li>There should be a bibliography or a list of references.</li>
-      <li>There should be no spelling or grammatical errors.</li>
-    </ul>
-    `,
-    Authority :`
-    <h4>
-      Authority
-    </h4>
-    <ul class="list">
-      <li>A specific author or team of authors should be listed.</li>
-      <li>These authors should work at an institution (such as a university or research institute) with a good reputation.</li>
-      <li>The authors' qualifications (Ph.D., research chair, etc) should be stated.</li>
-    </ul>
-    `,
-    Bias :`
-    <h4>
-      Bias
-    </h4>
-    <ul class="list">
-      <li>The information should be based on fact, not opinion.</li>
-      <li>There should be no obvious bias.</li>
-      <li>The authors should appeal to the reader's sense of logic, not emotion.</li>
-    </ul>
-    `,
-    Audience :`
-    <h4>
-      Audience
-    </h4>
-    <ul class="list">
-      <li>The source should be written for other experts or people who are familiar with the topic.</li>
-      <li>The language should be fairly technical, not simplistic.</li>
-    </ul>
-    `,
-    Currency :`
-    <h4>
-      Currency
-    </h4>
-    <ul class="list">
-      <li>In some disciplines, it is very important to use recent sources (within three or five years), but in others, it's OK to have older sources. Ask your TA or instructor if you're not sure what's too old.</li>
-    </ul>
-    `,
-  }
-</script>
-
-
+  
 </body>
 </html>
 

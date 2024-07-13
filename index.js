@@ -170,31 +170,31 @@ First day to select a Credit/No-Credit (CR/NCR) option for S courses
 <span>3</span>July 15
 </h3>
 
-<a href="#">
+<a href="3.1.html">
 <h4>
 3.1 Skills: Identifying and Evaluating Research Sources
 </h4>
 </a>
 
-<a href="#">
+<a href="3.2.html">
 <h4>
 3.2 Monument: The Ghent Altarpiece
 </h4>
 </a>
 
-<a href="#">
+<a href="3.3.html">
 <h4>
 3.3 Monument: Altar de los Reyes
 </h4>
 </a>
 
-<a href="#">
+<a href="3.4.html">
 <h4>
 3.4 Monument: Series of Eight Figures
 </h4>
 </a>
 
-<a href="#">
+<a href="3.5.html">
 <h4>
 3.5 Monument: Abaporú
 </h4>

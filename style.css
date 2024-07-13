@@ -1046,7 +1046,7 @@ li img{
   max-width: 500px;
 }
 .fright {
-  float: left; 
+  float: right; 
   margin: .5rem 0 1rem 2rem;
   max-width: 500px;
 }
@@ -1169,8 +1169,8 @@ iframe {
 
 .row li img {
   width: auto;
-  max-height: 75vh;
-  max-width: 75vw;
+  max-height: 70vh;
+  max-width: 70vw;
   object-fit: scale-down;
   height: auto;
 }
@@ -1183,6 +1183,7 @@ iframe {
 
 .row p {
   filter: drop-shadow(0px 0px 1px #fff);
+  font-size: 1.1rem;
 }
 
 .row .pad {
@@ -1214,7 +1215,16 @@ iframe {
   border-radius: 100%;
 }
 
+.marg .row {
+  background: url(./assets/diagonal3.png); 
+  background-size: 320px
+}
 
+.marg .row i {
+  background: #fff;
+  border-radius: 100%;
+  color: #195181;
+}
 
 /* 
 
@@ -1458,7 +1468,7 @@ ol li > a:focus {
 a[href="#"] {
   cursor: default !important;
   cursor: not-allowed !important;
-  /* filter: saturate(.2); */
+  filter: saturate(.5);
   word-wrap: break-word;
 }
 
