@@ -1840,6 +1840,9 @@ button {
     margin: 4rem 0;
     padding: 2rem;
   }
+  .secTitle {
+    margin: 0 0 2rem -2rem;
+  }
 }
 
 @media (max-width: 475px) {
