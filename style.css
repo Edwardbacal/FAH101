@@ -1034,6 +1034,13 @@ img {
   margin: 0 auto;
   flex-direction: column;
 }
+.carouselSlide .img img {
+  height: auto;
+}
+.carouselSlide2 .img img {
+  height: auto;
+}
+
 
 .img img,
 li img{
