@@ -25,6 +25,10 @@ button {
   color: #195181;
 }
 
+.inv strong {
+  font-weight: 700;
+}
+
 ol li > a,
 .endNav a {
   color: #fff;
@@ -65,7 +69,8 @@ footer {
 .footnote:focus,
 footer span,
 .endNav a:hover,
-.endNav a:focus {
+.endNav a:focus,
+.inv .flipCard h5 {
   color: #195181 !important;
   background: #fff !important;
 }
@@ -600,7 +605,8 @@ ol li h3 span,
 .flowButton2,
 .flowButton3,
 .carouselSlide, 
-.carouselSlide2 {
+.carouselSlide2,
+.flip {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -870,6 +876,66 @@ footer button {
   top: -2rem;
   z-index: 10;
   border: .5px solid #19518112;
+}
+
+.flipCard {
+  cursor: pointer;
+}
+
+.flip {
+  font-size: 2rem;
+  background: url(./assets/diagonal3.png);
+  background-size: 300px;
+  color: #2E48A6;
+}
+.flip,
+.unFlip {
+  transition: .4s;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%; 
+  margin: 0 !important; 
+  z-index: 2;
+  min-height: 200px;
+}
+/* .flip span {
+  background: #fff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  border: 2px solid #195181;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+} */
+.flipCard {
+  position: relative;
+}
+.flip h5 {
+  background: #fff;
+  border-radius: .25rem;
+  border: 2px solid #195181;
+  padding: .75rem 1.5rem;
+}
+.unFlip {
+  transform: rotateY(90deg);
+  transition: .4s .3s;
+  z-index: 0;
+  background: #195181;
+  color: #fff;
+  position: absolute;
+  padding: 2rem;
+  flex-wrap: nowrap;
+}
+.unFlip li,
+.unFlip p {
+  margin: .5rem;
+}
+.inv .unFlip {
+  background: #fff;
+  color: #195181;
 }
 
 
