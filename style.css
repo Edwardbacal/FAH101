@@ -36,8 +36,8 @@ ol li > a,
 }
 
 .endNavInv a {
-  color: #fff;
-  background: #195181;
+  color: #195181 !important;
+  background: #fff !important;
 }
 
 .CTA:hover,

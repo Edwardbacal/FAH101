@@ -218,26 +218,26 @@ Assignment 1: Sketch with formal analysis due
 <span>4</span>July 22
 </h3>
 
-<a href="#">
+<a href="4.1.html">
 <h4>
 4.1 Skills: Comparing and contrasting art objects
 </h4>
 </a>
 
-<a href="#">
+<a href="4.2.html">
 <h4>
 4.2 Monuments: Tā Moko and Māori Portraits 
 </h4>
 </a>
 
-<a href="#">
+<a href="4.3.html">
 <h4>
 4.3 Monument: Painted Buffalo Robe
 </h4>
 </a>
 
 
-<a href="#">
+<a href="4.4.html">
 <h4>
 4.4 Monument: Ethiopia
 </h4>
