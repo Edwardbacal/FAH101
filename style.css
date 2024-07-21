@@ -249,7 +249,9 @@ section,
   justify-content: flex-start; 
   margin: 0 auto;
 }
-
+header {
+  padding: 12% 10% 10% 10%;
+}
 .ToDo {
   background-size: 20% !important;
   background-repeat: repeat !important;
@@ -623,7 +625,7 @@ ol li h3 span,
 
 /* Paragraph blocks */
 blockquote {
-  margin: 3rem 0 4rem 0;
+  margin: 3rem auto 4rem ;
   display: flex;
 }
 blockquote > span {
@@ -1122,6 +1124,13 @@ li img{
   float: right; 
   margin: .5rem 0 1rem 2rem;
   max-width: 500px;
+}
+
+.fleft img,
+.fright img {
+  width: 100%;
+  height: auto;
+  max-height: 95vh;
 }
 
 .pad {
