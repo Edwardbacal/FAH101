@@ -1478,8 +1478,6 @@ nav button:focus {
 }
 
 
-
-
 .endNav,
 .endNavInv {
   position: relative;
@@ -1496,8 +1494,6 @@ nav button:focus {
   font-size: 1.2rem;
   display: block;
 }
-
-
 
 .readings {
   margin: 0 0 0 200px;
