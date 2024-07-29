@@ -251,25 +251,25 @@ Assignment 1: Sketch with formal analysis due
 July 29
 </h3>
 
-<a href="#">
+<a href="5.1.html">
 <h4>
 5.1 Monument: Birthday
 </h4>
 </a>
 
-<a href="#">
+<a href="5.2.html">
 <h4>
 5.2 Monument: Creation of Birds
 </h4>
 </a>
 
-<a href="#">
+<a href="5.3.html">
 <h4>
 5.3 Monument: Rebellious Silence
 </h4>
 </a>
 
-<a href="#">
+<a href="5.4.html">
 <h4>
 5.4 Monument: Paradise Camp
 </h4>

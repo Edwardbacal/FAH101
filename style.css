@@ -608,7 +608,8 @@ ol li h3 span,
 .flowButton3,
 .carouselSlide, 
 .carouselSlide2,
-.flip {
+.flip,
+.pinkBox li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
