@@ -136,7 +136,7 @@ July 8
 
 <a href="2.3.html">
 <h4>
-2.3 Monument: Qingming Festival and The Great Wave off Kanagawa
+2.3 Monument: Qingming Festival
 </h4>
 </a>
 
