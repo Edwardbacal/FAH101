@@ -293,27 +293,27 @@ Last day to drop course
 <span>6</span>August 6
 </h3>
 
-<a href="#">
+<a href="6.1.html">
 <h4>
 6.1 Skills: Exploring Art History's methodologies
 </h4>
 </a>
 
-<a href="#">
+<a href="6.2.html">
 <h4>
 6.2 Monument: End of Empire
 </h4>
 </a>
 
-<a href="#">
+<a href="6.3.html">
 <h4>
 6.3 Monument: Mama Ray
 </h4>
 </a>
 
-<a href="#">
+<a href="6.4.html">
 <h4>
-6.4 Monument: TBD!
+6.4 Art Exhibitions to Look Out For
 </h4>
 </a>
 
