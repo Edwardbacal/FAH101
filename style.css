@@ -555,10 +555,6 @@ hr {
 }
 
 
-
-
-
-
 /* placed here for cascade reasons */
 li {
   list-style: none;
@@ -578,8 +574,7 @@ li {
 }
 
 /* .list li h5 {
-  font-size: inherit;
-} */
+
 header li a:hover, 
 header li a:focus {
   font-style: italic !important;
