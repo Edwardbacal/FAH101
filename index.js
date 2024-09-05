@@ -58,14 +58,14 @@ FAH101: Monuments of Art History
 </h2>
 <ol class="grid2">
 <li>
-<a class="closer" href="index.html">
+<a class="closer" href="windex.html">
 <h4>
 Home
 </h4>
 </a>
 </li>
 <li>
-<a class="closer" href="index.html#assignments">
+<a class="closer" href="windex.html#assignments">
 <h4>
 Assignments
 </h4>
@@ -91,13 +91,13 @@ Jump to class
 July 2
 </h3>
 
-<a href="1.1.html">
+<a href="preview1.1.html">
 <h4>
 1.1 Welcome / Skills: Thinking and working <em>Art Historically</em>
 </h4>
 </a>
 
-<a href="1.2.html">
+<a href="preview1.2.html">
 <h4>
 1.2 Monument: The Ajanta Caves
 </h4>
@@ -122,25 +122,25 @@ Civic holiday (university closed)
 July 8
 </h3>
 
-<a href="2.1.html">
+<a href="preview2.1.html">
 <h4>
 2.1 Skills: Describing art objects and analyzing formal elements
 </h4>
 </a>
 
-<a href="2.2.html">
+<a href="preview2.2.html">
 <h4>
 2.2 Monument: The Great Mosque of Damascus
 </h4>
 </a>
 
-<a href="2.3.html">
+<a href="preview2.3.html">
 <h4>
 2.3 Monument: Qingming Festival
 </h4>
 </a>
 
-<a href="2.4.html">
+<a href="preview2.4.html">
 <h4>
 2.4 Monument: The Great Wave off Kanagawa
 </h4>
@@ -170,31 +170,31 @@ First day to select a Credit/No-Credit (CR/NCR) option for S courses
 <span>3</span>July 15
 </h3>
 
-<a href="3.1.html">
+<a href="preview3.1.html">
 <h4>
 3.1 Skills: Identifying and Evaluating Research Sources
 </h4>
 </a>
 
-<a href="3.2.html">
+<a href="preview3.2.html">
 <h4>
 3.2 Monument: The Ghent Altarpiece
 </h4>
 </a>
 
-<a href="3.3.html">
+<a href="preview3.3.html">
 <h4>
 3.3 Monument: Altar de los Reyes
 </h4>
 </a>
 
-<a href="3.4.html">
+<a href="preview3.4.html">
 <h4>
 3.4 Monument: Series of Eight Figures
 </h4>
 </a>
 
-<a href="3.5.html">
+<a href="preview3.5.html">
 <h4>
 3.5 Monument: Abaporú
 </h4>
@@ -218,26 +218,26 @@ Assignment 1: Sketch with formal analysis due
 <span>4</span>July 22
 </h3>
 
-<a href="4.1.html">
+<a href="preview4.1.html">
 <h4>
 4.1 Skills: Comparing and contrasting art objects
 </h4>
 </a>
 
-<a href="4.2.html">
+<a href="preview4.2.html">
 <h4>
 4.2 Monuments: Tā Moko and Māori Portraits 
 </h4>
 </a>
 
-<a href="4.3.html">
+<a href="preview4.3.html">
 <h4>
 4.3 Monument: Painted Buffalo Robe
 </h4>
 </a>
 
 
-<a href="4.4.html">
+<a href="preview4.4.html">
 <h4>
 4.4 Monument: Ethiopia
 </h4>
@@ -251,25 +251,25 @@ Assignment 1: Sketch with formal analysis due
 July 29
 </h3>
 
-<a href="5.1.html">
+<a href="preview5.1.html">
 <h4>
 5.1 Monument: Birthday
 </h4>
 </a>
 
-<a href="5.2.html">
+<a href="preview5.2.html">
 <h4>
 5.2 Monument: Creation of Birds
 </h4>
 </a>
 
-<a href="5.3.html">
+<a href="preview5.3.html">
 <h4>
 5.3 Monument: Rebellious Silence
 </h4>
 </a>
 
-<a href="5.4.html">
+<a href="preview5.4.html">
 <h4>
 5.4 Monument: Paradise Camp
 </h4>
@@ -293,25 +293,25 @@ Last day to drop course
 <span>6</span>August 6
 </h3>
 
-<a href="6.1.html">
+<a href="preview6.1.html">
 <h4>
 6.1 Skills: Exploring Art History's methodologies
 </h4>
 </a>
 
-<a href="6.2.html">
+<a href="preview6.2.html">
 <h4>
 6.2 Monument: End of Empire
 </h4>
 </a>
 
-<a href="6.3.html">
+<a href="preview6.3.html">
 <h4>
 6.3 Monument: Mama Ray
 </h4>
 </a>
 
-<a href="6.4.html">
+<a href="preview6.4.html">
 <h4>
 6.4 Art Exhibitions to Look Out For
 </h4>
@@ -428,19 +428,19 @@ $('.defs > i').on("click", function() {
 const nav = `
 <div class="hide">
 <button>
-<a href="index.html">
+<a href="windex.html">
 Home
 </a>
 </button>
 
 <button>
-<a href="index.html#assignments" tabindex="1">
+<a href="windex.html#assignments" tabindex="1">
 Assignments
 </a>
 </button>
 
 <button>
-<a href="index.html#schedAnc" tabindex="1">
+<a href="windex.html#schedAnc" tabindex="1">
 Schedule
 </a>
 </button>
@@ -469,3 +469,20 @@ Site menu
 `
 
 
+// Password
+$(document).ready(function() {
+  $('.login').click(function(e) {
+    e.preventDefault();
+    if ($('input:password').val() == "Wave") {
+      $('#intro').remove();
+      // $('main').removeClass('hide');
+      window.location.href = "windex.html"
+      // location.href="#"
+    } else {
+      $('form').addClass('shake');
+      setTimeout(function () {
+        $("form").removeClass("shake");
+      },400);
+    }
+  });
+});
