@@ -823,6 +823,7 @@ footer button {
 .displayNone,
 .displayNoon {
   display: none;
+  transition: none;
 }
 
 .mapBox {
