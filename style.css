@@ -825,6 +825,7 @@ footer button {
   display: none;
   transition: none;
 }
+/* transition none to fix jumpy animation */
 
 .mapBox {
   margin-top: 2.5rem !important;
