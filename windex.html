@@ -76,39 +76,26 @@
     #sched ul {
       grid-template-columns: repeat( auto-fit, minmax(19rem, 1fr) );
       margin: 2rem 0;
-      aspect-ratio: 1 !important;
     }
     
     #sched a {
-      height: 0 !important;
-      padding-bottom: 100%;
-      border-radius: 2px;
-      background-size: cover !important;
-      background-position: center !important;
-      /* overflow: scroll !important; */
-      position: relative;
+      width: 100%;
+      height: 100%;
       cursor: pointer;
-      transition: .25s;
-      width: 100%;
       text-decoration: none !important;
-    }
-    #sched a > div {
-      width: 100%;
-      background: url("./assets/diag.png");
-      background-size: 150%;
-      padding: 20px;
-      z-index: 1;
       position: relative;
-      display: block;
-      text-decoration: none;
     }
     
     #sched a[href="#"] .overlay {
-      background: #0034ff;
-      
+      filter: saturate(0) !important;
+      pointer-events: none;
+    }
+    #sched a[href="#"] .overlay2 {
+      opacity: .5 !important;
+      background: #fff;
     }
     
-    #sched a h3 {
+    #sched li h3 {
       background: #fff;
       color: #195181;
       height: 3.5rem;
@@ -118,7 +105,7 @@
       align-items: center;
       margin: 0 0 1.5rem 0;
     }
-    #sched a h4 {
+    #sched li h4 {
       padding: .7rem;
       margin: .7rem 0;
       line-height: 1.5;
@@ -131,14 +118,16 @@
       justify-content: center;
       align-items: center;
       background: #fff;
+      aspect-ratio: 1;
+      position: relative;
     }
     
     #sched li div {
       padding: 2rem;
       width: 100%;
-      /* padding: 2rem 2rem calc(100% - 2rem) 2rem;
-      height: 0;
-      overflow: scroll; */
+      position: absolute;
+      top: 0;
+      z-index: 2;
     }
     
     #sched h5 {
@@ -150,17 +139,24 @@
       margin: 0 0 .5rem 0;
     }
     
-    .overlay {
-      height: 200%;
-      width: 100%;
+    .overlay,
+    .overlay2 {
       position: absolute;
       top: 0px;
       left: 0px;
-      transition: .25s;
+      height: 100%;
+      width: 100%;
+      filter: saturate(0);
+      transition: .1s;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+    
+    .overlay2 {
+      filter: saturate(1);
+      background: #24557e;
       mix-blend-mode: hard-light;
-      opacity: .5;
-      overflow: hidden;
-      pointer-events: none;
+      z-index: 1;
     }
     
     #tutorial a,
@@ -196,9 +192,11 @@
       margin: 0 0 1rem 0;
     }
     
-    @media (max-width: 749px) {
-      #sched a {
-        overflow: hidden !important;
+    
+    
+    @media (max-width: 1040px) {
+      .gridCols{
+        aspect-ratio: 1;
       }
     }
     
@@ -258,10 +256,10 @@
         <!-- ANNOUNCEMENTS -->
         
         <p>
-          Welcome to the course! This site features all the <em>content</em> for the course, including weekly modules, course information, and assignment details. The rest is available on <a href="https://q.utoronto.ca/courses/346676" target="_blank">Quercus.</a>
+          Welcome to the course! This site features all the <em>content</em> for the course, including weekly modules, course information, and tutorial slides. Information about the midterm and final exams will be posted closer to those dates. The rest is available on <a href="https://q.utoronto.ca/courses/346676" target="_blank">Quercus.</a>
         </p>
         <p>
-          A print-friendly PDF of the course syllabus is available here to <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" download>download <i class="fa-solid fa-file-arrow-down"></i></a> or <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2024.pdf" target="_blank">view <i class="fa-solid fa-file-arrow-down"></i></a>.
+          A print-friendly PDF of the course syllabus is available here to <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2025.pdf" download>download <i class="fa-solid fa-file-arrow-down"></i></a> or <a href="./assets/FAH101H1S_Syllabus_PrintVersion_Summer2025.pdf" target="_blank">view <i class="fa-solid fa-file-arrow-down"></i></a>.
         </p>
         <p>
           Click on the headings below to learn more about the course. 
@@ -271,623 +269,271 @@
         </h3>
         <div class="inv" style="margin: 1rem -1.5rem 0 -1.5rem; padding: 1.5rem">
           <h5>
-            Tips re: Research in assignment 2 / exam study sheet
+            Hi!
           </h5>
           <p>
             Hi everyone,
           </p>
-          <p>
-            Some things you might find helpful as you wrap up your compare-contrast essay and exam sheet&nbsp;
-          </p>
           
-          <hr>
-          
-          <h5>
-            Research in assignment 2
-          </h5>
-          
-          <p>
-            I wanted to clarify some things about the research component of assignment 2.
-          </p>
-          <p>
-            The purpose of it is, really, to demonstrate that you&rsquo;re able to find appropriate research sources and reference them in ways that make sense and use the right conventions. However, this isn&rsquo;t a research paper, so it&rsquo;s not obvious where you should fit those in. In short, you probably don&rsquo;t want to use it in your visual description - if it&rsquo;s something you can tell from just looking, it doesn&rsquo;t need references. You&rsquo;re more likely to use research to add in facts about the historical background, interpretations, or other information that illuminates your essay. For instance:
-          </p>
-          <p>
-            Bad example: &ldquo;As Edward Bacal notes, the painting primarily uses greens and blues to balance the composition&rdquo;.1
-          </p>
-          <p>
-            Good example: &ldquo;As Edward Bacal notes, the artist&rsquo;s colour palette is &nbsp;inspired by the landscape of her hometown, where the green hills under the blue sky made a striking impact on her.&rdquo;1
-          </p>
-          <p>
-            I would say, don&rsquo;t worry too much about finding the best sources - starting with chapters and articles on the course modules is a good start. You probably won&rsquo;t find many (or any) texts about the in-person works (here you probably want to broaden your search terms - eg articles about indigenous stone sculpture, rather than a specific work) but you don&rsquo;t necessarily have to include sources on those works to make up your 2 sources, though it doesn&rsquo;t hurt.&nbsp;
-          </p>
-          
-          <hr>
-          
-          <h5>
-            Exam
-          </h5>
-          <p>
-            First, please remember to bring your T-Card to the exam.&nbsp;
-          </p>
-          <p>
-            Here are answers to common questions about the exam study sheet:
-          </p>
-          <h5>
-            Yes!&nbsp;
-          </h5>
-          <ul class="list">
-            <li>
-              You can use both sides of the page.
-            </li>
-            <li>
-              You can write whatever you want! You can even make diagrams or sketches.
-            </li>
-            <li>
-              You can write in whichever language you want.
-            </li>
-          </ul>
-          
-          <h5>
-            No!&nbsp;
-          </h5>
-          <ul class="list">
-            <li>
-              You can&rsquo;t print out notes (this is not to be difficult, but to prevent people from copy and pasting whole swathes of course content at 6pt font). The only exception is if you use a tablet to write notes by hand and print those.
-            </li>
-          </ul>
-          
-          <hr>
-          
-          <p>
-            Ok, that&rsquo;s it for now. Congrats on making it to the end of class. See you at the exam!
-          </p>
-          <p>
-            Edward
-          </p>
         </div>
         
         
         <div class="marg" style="margin: 1rem -3rem 0 -3rem; padding: 1.5rem">
-          <ul class="pad" style="padding: 1.5rem;">
+          <!-- <ul class="pad" style="padding: 1.5rem;">
             <h5>
               Previous announcements
               <cite style="display: inline;">
                 Click to open/close
               </cite>
             </h5>
-            <li>
-              <button class="announceButton">
-                August 6: Last week!
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <p>
-                  Somehow we're already near the end of classes (and yet there's still so much to do...)
-                </p>
-                <p>
-                  Two things:
-                </p>
-                <p>
-                  First, I am sharing <a href="https://www.artsci.utoronto.ca/current/faculty-registrar/final-exams" target="_blank">U of T's exam toolkit</a> - this will tell you all you need to know about writing exams in the faculty of arts & sciences, and what to do is problems arise (e.g. if you can't attend, are late/sick, etc.)
-                </p>
-                
-                <p>
-                  Second, course evaluations are now available. If you had a good experience, let us know! If you didn't, tell us what we could do to change that.
-                </p>
-                <p>
-                  I personally read all evaluations, and take them in consideration when designing courses in the future. Believe it or not, there's a real human on the other end, who considers what you have to say. Your input (positive or negative) will help improve this and other courses for students like you.
-                </p>
-                
-                <p>
-                  Please keep feedback constructive. Remember, this isn't a yelp review for a restaurant. You're welcome to share complaints and negative experiences with the course, please just keep it respectful and professional.
-                </p>
-                
-                <p>
-                  There are two ways to access your course evaluations.
-                </p>
-                <ul class="list">
-                  <li>
-                    Via the personalized email link that you’ll receive from course.evaluations@utoronto.ca.
-                  </li>
-                  <li>
-                    On Quercus - look for the Course Evals page (click on your Account tab to find the link)
-                  </li>
-                </ul>
-                <p>
-                  Learn more about course evaluations <a href="https://teaching.utoronto.ca/course-evaluations/for-students/" target="_blank">here</a>
-                </p>
-              </div>        
-            </li>
-            <li>
-              <button class="announceButton">
-                August 1: Exam / Assignment 1
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <p>Save the date! Our exam is booked for <strong>Friday, August 16, 2-4PM</strong> in <strong>EX100</strong> (the exam centre building at 255 McCaul, just south of College).</p>
-                <p>What's more, you can see a preview of the exam itself <a href="./assets/exam preview aug 16 2024.pdf" target="_blank" rel="noopener">HERE</a></p>
-                <p>You will also notice the first assignment has been graded. Due to a small mistake, quercus lists the grade as being out of 10, rather than 100. So if you got a 7.3, that's 73% not 7.3%.</p>
-                <p>If you have questions or comments about your assignment, please speak to your TA. We don't usually check the comments on speed grader after they're posted, so if you write something there, there's a good chance it could be missed.</p>
-                <p>Edward</p>
-              </div>        
-            </li>
-            <li>
-              <button class="announceButton">
-                July 29: Welcome to week 5
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <p>
-                  Hi everyone! It's the second to last week(!). 
-                </p>
-                <p>
-                  This is a great opportunity to reflect on what has been working for you in the course. If you have thoughts, concerns, or constructive feedback for the teaching team, please feel free to email myself or speak to your TA so we ensure this last half of the semester works for you. 
-                </p>
-                <p>
-                  If you submitted your first assignments by the deadline, you can expect to get it back by the end of this week. Meanwhile, <a href="#as2">assignment 2</a> is due in less than 2 weeks. Please remember to review the assignment instructions and the rubric <em>before</em> you start.
-                </p>
-                <p>
-                  You can write on any of the main monuments for this assignment; however, if you choose one of the bigger/multi-work ones (the Ajanta Caves, The Great Mosque of Damascus, Paradise Camp) you will have to choose a specific part to focus on - check the <a href="#as2">assignment 2 instructions to confirm</a>
-                </p>
-                <p>
-                  You can also see the rubric for the ✨assignment 2 document template✨ (<a href="./assets/FAH101H1S_CompareAndContrast_Template_(YourNameGoesHere).docx" download="">.docx</a>) (<a href="./assets/FAH101H1S_CompareAndContrast_Template_(YourNameGoesHere).pages" download="">.pages</a>) (<a href="./assets/FAH101H1S_CompareAndContrast_Template_(YourNameGoesHere).pdf" target="_blank">.pdf</a>)
-                </p>
-                <p>
-                  And of course, this week's tutorial will be a good opportunity to talk about the assignment.
-                </p>
-                <hr style="margin: 2rem 0;">
-                <p>
-                  Due to certain quercus settings, the first few weeks of tutorial attendance/participation weren't visible to students right away. They now have been since last week - this means you have until the end of this week (Aug 4) to dispute tutorial attendance grades. 
-                </p>
-                <hr style="margin: 2rem 0;">
-                <p>
-                  The exam... is still far away. Not <em>that</em> far away, but far enough that your best course of action is to focus on assignment 2, attending tutorials, and taking your time reading the course modules.
-                </p>
-              </div>        
-            </li>
-            <li>
-              <button class="announceButton">
-                July 15: Welcome to week 3! (request for note-takers / free museum admission / tutorial attendance / corrections and notes)
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <h5>
-                  Welcome to week 4
-                </h5>
-                <p>
-                  Thank you for submitting your first assignment / working to finish your first assignment. 
-                </p>
-                <p>
-                  With assignment 1 passed, we'll be thinking about the compare and contrast skills you'll use in your final assignment. 
-                </p>
-                <p>
-                  The exam office is also in the process of scheduling our final exam - nothing confirmed yet, but it will probably happen early into the exam period. Right now, all the information there is to know about the exam is what's <a href="#exam">here</a>. The final tutorial (in two weeks) will focus on exam prep, as well. 
-                </p>
-              </div>        
-            </li>
-            <li>
-              <button class="announceButton">
-                July 15: Welcome to week 3! (request for note-takers / free museum admission / tutorial attendance / corrections and notes)
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <p>
-                  Hi everyone,
-                </p>
-                <p>
-                  Welcome to week 3 of class! This will be one of the busier weeks, what with assignment 1 due next Sunday, and a lot of content. But we're approaching the halfway point (!). Please see relevant updates<strong></strong><strong></strong> below!
-                </p>
-                
-                <hr style="margin: 2rem 0;">
-                
-                <h5>
-                  Need for volunteer note-taker
-                </h5>
-                <p>
-                  There is a request for a volunteer note-taker for this course. Given that this is an online asynchronous course, I would imagine this involves tutorial notes. If you are interested, <strong>please see the message in the box below</strong>, or jump straight to signing up <strong><a class="inline_disabled" href="https://clockwork.studentlife.utoronto.ca/custom/misc/home.aspx" target="_blank" rel="noopener noreferrer">here!</a></strong>
-                </p>
-                
-                <hr style="margin: 2rem 0;">
-                
-                <h5>
-                  Free museum admission options
-                </h5>
-                <p>
-                  I hope this isn't too late, but I want to share information on free museum admission:
-                </p>
-                <ul class="list">
-                  <li>
-                    There are many options for visiting the AGO free (see <a class="inline_disabled" href="https://ago.ca/visitor-information/visit-free" target="_blank" rel="noopener noreferrer">here</a>), including Wednesdays after 6, and free general admission for Ontario residents under 25.
-                  </li>
-                  <li>
-                    The ROM has free Tuesdays for post-secondary students (that includes you!), among other options (see <a class="inline_disabled" href="https://www.rom.on.ca/en/visit-us/admission-information" target="_blank" rel="noopener noreferrer">here)</a>
-                  </li>
-                  <li>
-                    The Aga Khan has free admission on Wednesdays after 4 (see <a class="inline_disabled" href="https://agakhanmuseum.org/plan-your-visit/" target="_blank" rel="noopener noreferrer">here)</a>
-                  </li>
-                  <li>
-                    I believe you can get free admission for all these museums (and many more places) via tpl:map (the Toronto Public Library's program for museum tickets - see <a class="inline_disabled" href="https://www.torontopubliclibrary.ca/map/" target="_blank" rel="noopener noreferrer">here)</a>
-                  </li>
-                </ul>
-                
-                <hr style="margin: 2rem 0;">
-                
-                <h5>
-                  Corrections and notes
-                </h5>
-                <ul class="list">
-                  <li>The announcement on the course page had a broken link for the assignment 1 template. It's now fixed. You can <a class="inline_disabled" title="Link" href="https://fah.lol/assets/FAH101H1S_SketchAndAnalysis_Template_(YourNameGoesHere).docx" target="_blank" rel="noopener noreferrer">download it here.</a></li>
-                  <li>In addition to updating the site, I have been publishing&nbsp;modules on quercus. If you prefer referring to modules there (e.g. via the canvas app) you can, but please be warned: <strong>official course content is on fah.lol, modules on quercus will contain out of date information, especially about assignments and dates. If there's a difference, always take fah.lol as the correct source.</strong></li>
-                </ul>
-                
-                <hr style="margin: 2rem 0;">
-                
-                <h5>
-                  Tutorials
-                </h5>
-                <p>
-                  As noted before, tutorial enrollment is proving tricky for anyone that got into this class recently. Please contact me to arrange tutorial attendance, I'll try to have someone help enroll you in a tutorial section.
-                </p>
-                
-                <div class="dashedBox">
-                  
-                  <p>
-                    Accessibility Services is seeking volunteer note takers for students in this class who are registered in Accessibility Services. By volunteering to take notes for students with disabilities, you are making a positive contribution to their academic success. By volunteering as a note-taker, you will benefit as well - It is an excellent way to improve your own note-taking skills and to maintain consistent class attendance.  At the end of term, we would be happy to provide a Certificate of Appreciation for your hard work. To request a Certificate of Appreciation please fill out the form at this link:  Certificate of Appreciation or email us at as.notetaking@utoronto.ca. You may also qualify for a Co-Curricular Record by registering your volunteer work on Folio before the end of June. We also have a draw for qualifying volunteers throughout the academic year.
-                  </p>
-                  
-                  
-                  <p>
-                    Steps to Register as a Volunteer :
-                  </p>
-                  <ul class="list">
-                    <li>
-                      Register Online as a Volunteer Note-Taker at: <a href="https://clockwork.studentlife.utoronto.ca/custom/misc/home.aspx" target="_blank" style="hyphens: auto;">https://clockwork.studentlife.utoronto.ca/custom/misc/home.aspx</a>  
-                    </li>
-                    <li>
-                      For a step-to-step guide please follow this link to the Volunteer Notetaking Portal Guide
-                    </li>
-                    <li>
-                      Click on Volunteer Notetakers, and sign in using your UTORid
-                    </li>
-                    <li>
-                      Select the course(s) you wish to take notes for. Please note: you do NOT need to upload sample notes or be selected as a volunteer to begin uploading your notes.
-                    </li>
-                    <li>
-                      Start uploading notes.
-                    </li>
-                    
-                    <li>
-                      Email us at as.notetaking@utoronto.ca if you have questions or require any assistance with uploading notes. If you are no longer able to upload notes for a course, please also let us know immediately .
-                    </li>
-                    
-                    <li>
-                      For more information about the Accessibility Services Peer Notetaking program, please visit Student Life Volunteer Note Taking .
-                    </li>
-                    
-                  </ul>
-                  <p>
-                    Thank you for your support and for making notes more accessible for our students.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <button class="announceButton">
-                July 12: Updates
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <h5>
-                  Assignment 1 
-                </h5>
-                <p>
-                  A student mentioned the <em>Beam with Nurat al-Sur </em>is not on view at the Aga Khan. My apologies! I'm pretty sure I saw it last May, and the website lists it as being on display, but these things happen, so in place of that, <strong>you are welcome to write on any one piece from <a class="inline_disabled" title="Link" href="https://collections.agakhanmuseum.org/collection/index.html?query=beam" target="_blank" rel="noopener noreferrer">this page</a> instead.</strong>
-                </p>
-                <p>
-                  I also updated the cover page template for assignment 1, since the formatting may have been messy (please use <a href="./assets/FAH101H1S_SketchAndAnalysis_Template_(YourNameGoesHere).docx" class="download" download>this document <i class="fa-solid fa-file-arrow-down"></i></a> for your first assignment - it includes a grading rubric you may find helpful). 
-                </p>
-                <h5>
-                  Tutorials
-                </h5>
-                <p>
-                  As noted, we expect you to attend the same tutorial section, but realize people may have gotten into the course late, when most sections were already filled, or may have schedule conflicts. In these cases, I'd rather you join another tutorial than miss the one you're enrolled in - that said,<strong></strong> I can't personally change your enrollments, so ask that you check in with me and your TA beforehand so we can keep a record of tutorial attendance (otherwise you may not get credit for a tutorial you attended!)
-                </p>
-                <h5>
-                  Correction
-                </h5>
-                <p>
-                  In module 2.1. the "Principles of Design PDF" link led to the wrong file. I added the correct link and, better yet, made a carousel with real examples on the course site (<a class="inline_disabled" title="Link" href="https://fah.lol/preview2.1.html#elements" target="_blank" rel="noopener noreferrer">you can see that here</a>).
-                </p>
-                <p>Thanks and have a great weekend ahead!</p>
-                <p>Edward</p>
-              </div>
-            </li>
-            <li>
-              <button class="announceButton">
-                July 7: Welcome to week 2
-              </button>
-              <div class="displayNoon" style="margin: 0 0 2rem 0;">
-                <p>
-                  Hi everyone! Welcome to Week 2 There's a lot to cover, including formal analysis skills (these are crucial for your first assignment), Syrian mosques, Chinese handscrolls, and Japanese prints. 
-                </p>
-                <ul class="list">
-                  <li>
-                    PDFs of tutorial slides can be found <a href="#tutorial">at the end of this page</a> - look out for them each week.
-                  </li>
-                  <li>
-                    A friendly reminder to visit <a href="preview1.1.html#6">one of these art works</a> for your assingment and to work on your sketch, if you haven't already. You'll be hearing more about the second part of the first assignment in this week's tutorial. 
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </li>
-          <li>
-            <button class="announceButton">
-              July 2: Tutorials - corrections and changes (For Tutoral sections 5301 and 0301)
-            </button>
-            <div class="displayNoon">
-              <p>
-                Hi everyone,
-              </p>
-              <p>
-                First, a correction:
-              </p>
-              <p>
-                There was a mistake on the course site, which listed TUT5301 twice, which meant TUT0301 was not stated, and that the tutorial discussion board for TUT0301 was not shared (it is now available). If you were confused about the location of the tutorial (Tuesday 2-3PM in OISE3312), my sincere apologies! If you still figured out where to go, thank you! However, further apologies about the discussion board. If you missed the tutorial because of this error, I will give you the credit for this week.
-              </p>
-              <p>
-                Second, a TA change:
-              </p>
-              <p>
-                Due to unforseen conflicts, Esther Kim will now be leading the Tuesday afternoon tutorials (after this week, Fahimeh will be leading tutorials on Wednesday). This does not affect your tutorial enrollment or anything else - please keep coming to the same place at the same time!
-              </p>  
-              <p>
-                Thanks for understanding and bearing with these bumps as the course launches.
-              </p>
-            </div>
-          </li>
-          <li>
-            <button class="announceButton" style="margin-bottom: 0;">
-              July 1: Hello and welcome! (classes and tutorials start Tuesday!)
-            </button>
-            <div class="displayNoon">
-              <p>
-                Hi! 👋
-              </p>
-              <p>
-                I'm writing to welcome everyone to FAH101 - Monuments of Art History which begins tomorrow (Tuesday July 2).
-              </p>
-              
-              <p>
-                The first tutorials start this Tuesday/Wednesday too! So please ensure you've registered for a tutorial section on ACORN.
-              </p>
-              
-              <p>
-                If you haven't already, please take some time to look through the course syllabus, to familiarize yourselves with the nature of and guidelines for this course <a href="preview1.1.html#2">(a video walkthrough of the syllabus is available here</a>). Information about assignments and the first week's content is now live. This semester is going to zoom by, so I encourage you to get a good start!
-              </p>
-              <p>  
-                Enjoy the rest of your long weekend! 
-              </p>
-              <cite>
-                – Edward
-              </cite>
-            </div>
-          </li>
-        </ul>
+          </ul> -->
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="flex exco">
-  <button class="CTA expander">
-    Expand all
-  </button>
-  <button class="CTA collapser">
-    Collapse all
-  </button>
-</div>
-
-<!-- WHERE AND WHEN -->
-<div class="pad" style="padding: 0; margin: 2rem 0;">
-  <button class="padB">
-    <h3>
-      What does this course consist of? Where and when does it take place?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      This is an online-asynchronous course made up of 24 modular lessons plus six weekly tutorials.
-    </p>
-    <h4>
-      Modules
-    </h4>
-    <p>
-      In place of lectures, this course features online modules (lessons made up of short videos, texts, and images) which explore art objects and develop your art historical skills. A group of modules will be posted on the course site each Monday. You can work through them on your own time but should aim to complete them before that week’s tutorial.
-    </p>
-    <h4>
-      Tutorials
-    </h4>
-    <p>
-      Tutorials are a mandatory part of this course and occur each week. There, you will discuss course content, practice key art historical skills, and collaborate on activities with classmates. Attendance and completion of activities make up 15% of your final grade.
-    </p>
-    <ul class="list">
-      <li>
-        Please enrol in a tutorial section on ACORN and attend only that section - students are not allowed to swap between tutorials. 
-      </li>
-    </ul>
-    <p>
-      <strong>
-        Note:
-      </strong>
-      Neither the instructor nor TAs can alter your tutorial enrolments. 
-    </p>
-    
-    <h4>
-      Tutorial sections
-    </h4>
-    <ul class="grid">
-      <li class="dashedBox">
-        <strong>
-          TUT0201: 	
-        </strong>
-        Tuesday, 1-2 PM, OISE 3312 (Esther)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT0301: 	
-        </strong>
-        Tuesday, 2-3 PM, OISE 3312 (Esther)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT0101: 	
-        </strong>
-        Wednesday, 4-5 PM, Wilson Hall 2006 (Fahimeh)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5101: 	
-        </strong>
-        Wednesday, 5-6 PM, Wilson Hall 2006 (Fahimeh)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5201: 	
-        </strong>
-        Wednesday, 6-7 PM, Wilson Hall 2006 (Marina)
-      </li>
-      <li class="dashedBox">
-        <strong>
-          TUT5301: 	
-        </strong>
-        Wednesday, 7-8 PM, Wilson Hall 2006 (Marina)
-      </li>
-    </ul>
-    <hr>
-    <cite>
-      <strong>Distribution requirements:</strong>  Humanities 
-    </cite>
-    <cite>
-      <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) 
-    </cite>
-    <cite>
-      <strong>Exclusion:</strong> FAH101H5
-    </cite>
-  </div>    
-</div>
-
-<!-- TEAM -->
-<div class="pad" style="padding: 0;">
-  <button class="padB">
-    <h3>
-      Who teaches this course and how do I contact them?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      This course is led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward designed and coded this website himself. Course content is based off the FAH101 course developed by Samantha Chang (her efforts in creating it are much appreciated!).
-    </p>
-    <p>
-      Throughout the semester, you will primarily be in contact with one of our teaching assistants, who are responsible for leading tutorials and grading assignments.
-    </p>
-    <h4>
-      Course Instructor
-    </h4>
-    <p>
-      Edward Bacal: <a href="mailto:edward.bacal@mail.utoronto.ca" target="_blank">edward.bacal@mail.utoronto.ca</a>
-    </p>
-    <p>
-      Office hours by appointment. You can schedule a 15-minute meeting <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-      <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardbacal'});return false;">here</a> or by email.
-    </p>
-    <cite>
-      <strong>Note:</strong>
-      If you cannot make it to an office hours appointment, you have up to two hours to cancel, otherwise you will be penalized 1 mark (of 100).
-    </cite>
-    <h4>
-      Teaching Assistants
-    </h4>
-    <ul class="list">
-      <li>
-        Marina Dumont-Gauthier: <a href="mailto:marina.dumontgauthier@mail.utoronto.ca" target="_blank">marina.dumontgauthier@mail.utoronto.ca</a>
-      </li>
-      <li>
-        Fahimeh Ghorbani: <a href="mailto:fahimeh.ghorbani@mail.utoronto.ca" target="_blank">fahimeh.ghorbani@mail.utoronto.ca</a>
-      </li>
-      <li>
-        Dongwon (Esther) Kim: <a href="mailto:de.kim@mail.utoronto.ca" target="_blank">de.kim@mail.utoronto.ca</a>
-      </li>
-    </ul>
-    <cite>
-      <strong>
-        Note:
-      </strong>
-      Teaching assistants do not have office hours
-    </cite>   
-  </div>    
-</div>
-
-<!-- ABOUT -->
-<div class="pad" style="padding: 0; margin: 2rem 0;" id="description">
-  <button class="padB" style="width: 100%; text-align: left; position: relative;">
-    <h3>
-      What is this course about?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone">
-    <p>
-      Monuments of Art History examines key works of art and architecture from antiquity to the present and from across the globe, with emphasis on the cultural roles art has played throughout history. This broad selection of artworks corresponds to subject areas taught by U of T’s Art History faculty, offering a preview of many 200-400 level courses you can take through the Department of Art History.
-    </p>
-    <p>
-      We will pay special attention to developing foundational art historical skills, including the ability to observe, analyze, compare, and write about works of art and architecture. Tutorials will provide training in, and practice applying, the basic principles and vocabulary of art historical scholarship. Assignments are based on these skills and draw on course modules, tutorials, readings, and visits to local museums. 
-    </p>
-    <p>
-      No previous knowledge of art or architecture is required.
-    </p>
+  
+  <div class="flex exco">
+    <button class="CTA expander">
+      Expand all
+    </button>
+    <button class="CTA collapser">
+      Collapse all
+    </button>
   </div>
-</div>
-
-<!-- GOALS -->
-<div class="pad" style="padding: 0;">
-  <button class="padB">
-    <h3>
-      What skills will I gain from course?
-    </h3>
-    <h3 class="plus"> 
-      +
-    </h3>
-  </button>
-  <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
-    <h4 style="margin: 1.6rem 0;">
-      After successfully completing this course, you should be able to:
-    </h4>
-    <ul class="list">
-      <li>
-        Identify select monuments of art and understand how they fit into their historical period and context.
-      </li>
-      <li>
-        Nurture curiosity and creativity and to experience new connections to art and ideas.
-      </li>
-      <li>
-        Describe, formally analyze, and formulate a thesis about selected artworks.
-      </li>
-      <li>
-        Compare and contrast art objects by way of evidence-based arguments.  
-      </li>
-      <li>
-        Cultivate greater appreciation for geographically and historically diverse visual art forms through active looking and objective analysis.
-      </li>
-      <li>
-        Discuss major themes that influence particular works and genres of art and which run across the history of art.
-      </li>
-    </ul>
+  
+  <!-- ABOUT -->
+  <div class="pad" style="padding: 0; margin: 2rem 0;" id="description">
+    <button class="padB" style="width: 100%; text-align: left; position: relative;">
+      <h3>
+        What is this course about?
+      </h3>
+      <h3 class="plus"> 
+        +
+      </h3>
+    </button>
+    <div class="displayNone">
+      <p>
+        Monuments of Art History examines key works of art and architecture from antiquity to the present and from across the globe, with emphasis on the cultural roles art has played throughout history. You will learn about a broad selection of artworks, both classics and deep cuts, which corresponds to subject areas taught by U of T's Art History faculty, offering a preview of many 200-400 level courses you can take through the Department of Art History.
+      </p>
+      <p>
+        We will pay special attention to developing foundational art historical skills, including the ability to observe, analyze, compare, and interpret works of art and architecture. Tutorials will provide training in, and practice applying, the basic principles and vocabulary of art historical scholarship. Exams and assignments are based on these skills and draw on course modules, tutorials, readings, and visits to local museums.
+      </p>
+      <p>
+        No previous knowledge of art or architecture is required. 
+      </p>
+    </div>
   </div>
-</div>
+  
+  <!-- GOALS -->
+  <div class="pad" style="padding: 0;">
+    <button class="padB">
+      <h3>
+        What skills will I gain from course?
+      </h3>
+      <h3 class="plus"> 
+        +
+      </h3>
+    </button>
+    <div class="displayNone" style="padding: 0 3rem 3rem 3rem ;">
+      <h4 style="margin: 1.6rem 0;">
+        After successfully completing this course, you should be able to:
+      </h4>
+      <ul class="list">
+        <li>
+          Identify select monuments of art and understand how they fit into their historical period and context.
+        </li>
+        <li>
+          Describe, formally analyze, and formulate a thesis about selected artworks.
+        </li>
+        <li>
+          Compare and contrast art objects by way of evidence-based arguments.  
+        </li>
+        <li>
+          Discuss major themes that influence particular works and genres of art from across the history of art.
+        </li>
+        <li>
+          Understand and apply conventions for writing art historical texts.
+        </li>
+      </ul>
+      
+      <p>
+        This course is also meant to encourage curiosity and enthusiasm around art and art history. We hope to cultivate greater appreciation for geographically and historically diverse art forms through active looking and objective analysis.
+      </p>
+      
+    </div>
+  </div>
+  
+
+  <!-- TEAM -->
+  <div class="pad" style="padding: 0; margin: 2rem 0;">
+    <button class="padB">
+      <h3>
+        Who teaches this course and how do I contact them?
+      </h3>
+      <h3 class="plus"> 
+        +
+      </h3>
+    </button>
+    <div class="displayNone">
+      <p>
+        This course is led by Edward Bacal, a Sessional Lecturer and PhD grad from U of T’s Art History Department. In addition to overseeing this course, Edward designed and coded this website himself. Course content is based off the FAH101 course developed by Samantha Chang (her efforts in creating it are much appreciated!).
+      </p>
+      <p>
+        Throughout the semester, you will primarily be in contact with one of our teaching assistants, who are responsible for leading tutorials and grading assignments.
+      </p>
+      <h4>
+        Course Instructor
+      </h4>
+      <p>
+        Edward Bacal: <a href="mailto:edward.bacal@mail.utoronto.ca" target="_blank">edward.bacal@mail.utoronto.ca</a>
+      </p>
+      <p>
+        Office hours on zoom, by appointment. You can schedule a 15-minute meeting <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"><script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/edwardbacal'});return false;">here</a> or by email.
+      </p>
+      <cite>
+        <strong>Note:</strong>
+        Please inform me if you cannot make it to an appointment. Missing an appointment without providing  at least an hour's notice will result in a deduction of one mark from your final grade.
+      </cite>
+      <h4>
+        Teaching Assistants
+      </h4>
+      <ul class="list">
+        <li>
+          Matt Coleman <a href="mailto:matt.coleman@mail.utoronto.ca" target="_blank">matt.coleman@mail.utoronto.ca</a>
+        </li>
+        <li>
+          Hend Elsayed<a href="mailto:Elsayed hend.elsayed@utoronto.ca" target="_blank">hend.elsayed@utoronto.ca</a>
+        </li>
+        <li>
+          Fahimeh Ghorbani <a href="mailto:Fahimeh.ghorbani@mail.utoronto.ca" target="_blank">fahimeh.ghorbani@mail.utoronto.ca</a>
+        </li>
+        <li>
+          Wenyi Qian <a href="mailto:Wenyi.qian@mail.utoronto.ca" target="_blank">wenyi.qian@mail.utoronto.ca</a>
+        </li>
+        <li>
+          Ashley Raghubir <a href="mailto:Ashley.raghubir@mail.utoronto.ca" target="_blank">ashley.raghubir@mail.utoronto.ca</a>
+        </li>
+        <li>
+          Lina Weng <a href="mailto:lina.weng@mail.utoronto.ca" target="_blank">lina.weng@mail.utoronto.ca</a>
+        </li>
+      </ul>
+      <cite>
+        <strong>
+          Note:
+        </strong>
+        Teaching assistants do not have office hours
+      </cite>   
+    </div>    
+  </div>
+
+  <!-- WHERE AND WHEN -->
+  <div class="pad" style="padding: 0;">
+    <button class="padB">
+      <h3>
+        What does this course consist of? Where and when does it take place?
+      </h3>
+      <h3 class="plus"> 
+        +
+      </h3>
+    </button>
+    <div class="displayNone">
+      <p>
+        This is an online-asynchronous course made up of 24 modular lessons plus six weekly tutorials.
+      </p>
+      <h4>
+        Modules
+      </h4>
+      <p>
+        In place of lectures, this course features online modules (lessons made up of short videos, texts, and images) which explore art objects and illustrate art historical skills. A set of modules will be posted on the course site each Monday. You can work through them on your own time but should aim to complete them before that week's tutorial.
+      </p>
+      <h4>
+        Tutorials
+      </h4>
+      <p>
+        Tutorials take place weekly, in two hour sessions, during which you can expect to discuss course content, practice key art historical skills, and complete activities with classmates. Tutorials are not add-ons but are where the real learning happens, as such, it is essential that you attend all of them.  
+      </p>
+      <ul class="list">
+        <li>
+          Attendance and participation count toward 10% of your final grade.
+        </li>
+        <li>
+          In-tutorial assignments count toward 20% of final grade.  
+        </li>
+        <li>
+          There is <strong>no make-up option</strong> for missed tutorials or tutorial assignments (no, you can't submit them by email). Make-up tutorials are for tiktok, so make sure you can make it to each session.
+        </li>
+      </ul>
+      
+      <h4>
+        Tutorial sections
+      </h4>
+      <p>
+        Please enrol in a tutorial section on ACORN and attend only that section. 
+      </p>
+      <p>
+        <strong>
+          Note: 
+        </strong>
+        Neither the instructor nor TAs can change your tutorial enrolment.
+      </p>
+      
+      <ul class="grid">
+        <li class="dashedBox">
+          <strong>
+            TUT0101: 	
+          </strong>
+          Tuesday, 1-3 p.m., Wilson Hall 2006 (Fahimeh)
+        </li>
+        <li class="dashedBox">
+          <strong>
+            TUT0201: 	
+          </strong>
+          Tuesday, 2-4 p.m., Westmore Hall 69 (Hend)
+        </li>
+        <li class="dashedBox">
+          <strong>
+            TUT0301: 	
+          </strong>
+          Wednesday, 3-5 p.m., Wilson Hall 2006 (Wenyi)
+        </li>
+        <li class="dashedBox">
+          <strong>
+            TUT0401: 	
+          </strong>
+          Wednesday, 4-6 p.m., Westmore Hall 69 (Lina)
+        </li>
+        <li class="dashedBox">
+          <strong>
+            TUT5101: 	
+          </strong>
+          Wednesday, 5-7 p.m., Wilson Hall 2006 (Matt)
+        </li>
+        <li class="dashedBox">
+          <strong>
+            TUT5201: 	
+          </strong>
+          Wednesday, 6-8 p.m., Westmore Hall 69 (Ashley)
+        </li>
+      </ul>
+      <hr>
+      <h4>
+        Course credit information
+      </h4>
+      <cite>
+        <strong>Distribution requirements:</strong>  Humanities 
+      </cite>
+      <cite>
+        <strong>Breadth requirements:</strong>  Creative and Cultural Representations (1) 
+      </cite>
+      <cite>
+        <strong>Exclusion:</strong> FAH101H5
+      </cite>
+    </div>    
+  </div>
+  
+
+  
 </div>
 </section>
 
@@ -908,18 +554,27 @@
         </p>  
         <ul class="list">
           <li>
-            Visit an artwork (one from a list of options) from a local museum, create a detailed sketch of it, and write a 600-700 word analysis of that work's visual qualities.
+            Write an in-person midterm exam. 
           </li>
           <li>
-            Write a 900-1100 word analysis comparing the same artwork with one of the monuments from class. 
+            Attend and actively participate in at least 5 tutorials.
           </li>
           <li>
-            Attend and actively participate in tutorials, including completion of short activities.
+            Complete at least 4 in-tutorial assignments.  
           </li>
           <li>
-            Write an in-person exam.
+            Write an in-person final exam.
           </li>
         </ul>
+        <p>
+          Note, this course emphasizes in-person, handwritten assignments, which are designed to develop your writing skills along with your comprehension of texts.  
+        </p>
+        <p>
+          This approach is in response to the proliferation of generative AI, which has thrown the undergrad essay into a kind of existential crisis. It is not only important to preempt the academic integrity violations that AI enables, it is crucial to advance the educational foundations of the humanities, including the forms of critical thinking, analysis, comprehension, and expression that we hone through the process of original writing. Yes, it is possible that you may graduate into a world where essay writing is seen as obsolete; however, that makes it all the more vital to possess the organic intelligence we all need to think for ourselves, to think critically, and discern information from mis/dis-information. This ability comes from a grasp of well-exercised linguistic communication and expression that, while it may be difficult and slow, enriches our experience of the world as thinking, feeling beings.
+        </p>
+        <p>
+          For these reasons, this course is built around assignments that cannot be artificially generated. Many of these emphasize conventional reading and writing skills, others emphasize different forms of creative communication. In all cases, the intention is to support you in developing your voice as a writer and your fluency in reading and analyzing texts. We do not expect you to enter this course as a fully proficient writer, and are not here to judge you on how polished your writing is. We are here to help exercise your communication and comprehension skills in real time, a skill that will serve you regardless of how and what you write.
+        </p>
       </div>
     </div>
     
@@ -927,7 +582,7 @@
     <div class="pad" style="padding: 0; margin: 2rem 0;"> 
       <button class="padB" style="width: 100%; text-align: left; position: relative;">
         <h3>
-          Tutorial Attendance and Participation <span>worth 15%, </span>
+          Tutorial Attendance and Participation <span>worth 10%</span>
         </h3>
         <h3 class="plus"> 
           +
@@ -935,21 +590,18 @@
       </button>
       <div class="displayNone">
         <p>
-          Active participation in tutorials, including completion of short activities, is essential to your success in the course. As such, each tutorial* counts to 3% of your final mark. 
+          Active participation in tutorials is one of the best ways to exercise what you've learned. As such, each tutorial counts toward 2% of your final mark: 1% for just showing up, 1% taking part in discussions and activities.
         </p>
         <p>
           <strong>
-            *
+            Note: 
           </strong>
           <span class="em">
             You can miss <strong>one</strong> tutorial without losing marks;</span> i.e. you have to attend 5 of the 6 tutorials to receive full marks.
           </p>
           
           <p>
-            If you cannot make it to a tutorial, you can receive partial marks by completing that week's activity<a href="https://q.utoronto.ca/courses/346676/discussion_topics" target="_blank"> online</a>, within 48 hours of your tutorial meeting.
-          </p>
-          <p>
-            Please check <a href="https://q.utoronto.ca/courses/346676/gradebook" target="_blank">Quercus</a> to confirm your tutorial attendance is entered - you will not be able to dispute attendance grades after 2 weeks of each tutorial - however, please allow 48 hours for these grades to be entered.
+            Please check <a href="https://q.utoronto.ca/courses/346676/gradebook" target="_blank">Quercus</a> to confirm your tutorial attendance is entered - you will not be able to dispute attendance grades after 2 weeks - however, please allow 48 hours for these grades to be entered.
           </p>
         </div>
       </div>
@@ -959,7 +611,7 @@
         
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Assignment 1: Annotated Sketch + Formal Analysis <span>worth 20%, due Sunday, July 21, 11:59 PM</span>
+            In-tutorial assignments <span>worth 20%, due Sunday, July 21, 11:59 PM</span>
           </h3>
           <h3 class="plus"> 
             +
@@ -1639,7 +1291,7 @@
       <div class="pad" style="padding: 0; margin: 2rem 0;"> 
         <button class="padB" style="width: 100%; text-align: left; position: relative;">
           <h3>
-            Academic Resources
+            Academic Resources <span>(Not so relevant for this course, but good to know about!)</span>
           </h3>
           <h3 class="plus"> 
             +
@@ -1665,7 +1317,7 @@
             Chicago Manual of Style
           </h4>
           <p>
-            Footnotes and bibliography entries for this course follow the <a href="https://librarysearch.library.utoronto.ca/permalink/01UTORONTO_INST/14bjeso/alma991106655356706196" target="_blank">Chicago Manual of Style (CMoS)</a>. A <a href="https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html" target="_blank">Quick Guide</a> is available publicly online.
+            In art history, footnotes and bibliography entries follow the <a href="https://librarysearch.library.utoronto.ca/permalink/01UTORONTO_INST/14bjeso/alma991106655356706196" target="_blank">Chicago Manual of Style (CMoS)</a>. A <a href="https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html" target="_blank">Quick Guide</a> is available publicly online.
           </p>
           <h4>
             Library Resources
@@ -1700,595 +1352,658 @@
         Weekly modules will be made available each Monday.
       </p>
     </div>
-    <ul class="grid">
+    <ul class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
       <li>
         <div>
           <h2>
             <span>
               1
             </span>
-            July 2
+            May 5
           </h2>
           <h5>
             Key dates
           </h5>
           <p>
             <strong>
-              July 1:
+              May 5:
             </strong>
-            Civic holiday (university closed)
+            First day of classes
           </p>
-        </div>
-      </li>
-      
-      <a href="preview1.1.html" style="background: url(./assets/skills1.jpg);">
-        <div>
-          <h3>
-            1.1
-          </h3>
-          <h4>
-            Welcome to the course
-          </h4>
-          <h4>
-            Skills: Thinking and working <em>Art Historically</em>
-          </h4>
-        </div>
-        <span class="overlay" style="background: #195181;"></span>
-      </a>    
-      
-      <a href="preview1.2.html" style="background: url(./assets/01/1.2.jpg);">
-        <div>
-          <h3>
-            1.2
-          </h3>
-          <h4>
-            Monument: The Ajanta Caves (India)
-          </h4>
-        </div>
-        <span class="overlay" style="background: #198159;"></span>
-      </a>    
-      
-      <li>
-        <div>
-          <h2>
-            <span>2</span>
-            July 8</h2>
-            <h5>
-              Key dates
-            </h5>
-            <p>
-              <strong>
-                July 8:
-              </strong>
-              Last day to enrol in S courses
-            </p>
-            <p>
-              <strong>
-                July 9:
-              </strong>
-              First day to select a Credit/No-Credit (CR/NCR) option for S courses
-            </p>
-          </div>
         </li>
         
-        <a href="preview2.1.html" style="background: url(./assets/skills2.jpg);">
-          <div>
-            <h3>
-              2.1
-            </h3>
-            <h4>
-              Skills: Describing art objects and analyzing formal elements
-            </h4>
-          </div>
-          <span class="overlay" style="background: #817e19;"></span>
-        </a>    
-        
-        <a href="preview2.2.html" style="background: url(./assets/02/2.2.jpg);">
-          <div>
-            <h3>
-              2.2
-            </h3>
-            <h4>
-              Monument: The Great Mosque of Damascus (Syria)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #811971;"></span>
-        </a>    
-        
-        <a href="preview2.3.html" style="background: url(./assets/02/2.3.jpg);">
-          <div>
-            <h3>
-              2.3
-            </h3>
-            <h4>
-              Monument: Zhang Zeduan's <em>Along the River during Qingming Festival</em> (China) 
-            </h4>
-            
-          </div>
-          <span class="overlay" style="background: #1b1981;"></span>
-        </a>   
-        
-        <a href="preview2.4.html" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);">
-          <div>
-            <h3>
-              2.4
-            </h3>
-            <h4>
-              Monument: Katsushika Hokusai's <em>The Great Wave off Kanagawa</em> (Japan)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #338119;"></span>
-        </a>   
+        <li>
+          <a href="preview1.1.html" >
+            <div>
+              <h3>
+                1.1
+              </h3>
+              <h4>
+                Welcome to the course
+              </h4>
+              <h4>
+                Skills: Thinking and working <em>Art Historically</em>
+              </h4>
+            </div>
+            <span class="overlay2"></span>
+            <span class="overlay" style="background: url(./assets/skills1.jpg);"></span>
+          </a>    
+        </li>
         
         <li>
-          <div>
-            <h2>
-              <span>
-                3
-              </span>
-              July 15
-            </h2>
-            <h5>
-              Key dates
-            </h5>
-            <p>
-              <strong>
-                July 21:
-              </strong>
-              Assignment 1: Annotated sketch + formal analysis due
-            </p>
-          </div>
+          <a href="preview1.2.html">
+            <div>
+              <h3>
+                1.2
+              </h3>
+              <h4>
+                Monument: The Ajanta Caves (India)
+              </h4>
+            </div>
+            <span class="overlay2"></span>
+            <span class="overlay" style="background: url(./assets/01/1.2.jpg);"></span>
+          </a>    
         </li>
         
         
-        <a href="preview3.1.html" style="background: url(./assets/skills3.jpg);">
-          <div>
-            <h3>
-              3.1
-            </h3>
-            <h4>
-              Skills: Identifying and Evaluating Research Sources
-            </h4>
-          </div>
-          <span class="overlay" style="background: #ff7c1e;"></span>
-        </a>  
-        
-        <a href="preview3.2.html" style="background: url(./assets/03/3.2.jpg);">
-          <div>
-            <h3>
-              3.2
-            </h3>
-            <h4>
-              Monument: Jan van Eyck's <em>Ghent Altarpiece</em> (Belgium)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #811919;"></span>
-        </a>    
-        
-        <a href="preview3.3.html" style="background: url(./assets/03/3.3.jpg);">
-          <div>
-            <h3>
-              3.3
-            </h3>
-            <h4>
-              Monument: Jerónimo de Balbós' <em>Altar de los Reyes</em> (Mexico) 
-            </h4>
-          </div>
-          <span class="overlay" style="background: #107dc1;"></span>
-        </a>    
-        
-        <a href="preview3.4.html" style="background: url(./assets/03/3.4.jpg);">
-          <div>
-            <h3>
-              3.4
-            </h3>
-            <h4>
-              Monument: Albert Eckhout's <em>Series of Eight Figures</em> (Netherlands/Brazil)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #198146;"></span>
-        </a>    
-        
-        <a href="preview3.5.html" style="background: url(./assets/03/3.5.jpg);">
-          <div>
-            <h3>
-              3.5
-            </h3>
-            <h4>
-              Monument: Tarsila do Amaral's <em>Abaporú</em> (Brazil)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #9c0063;"></span>
-        </a>    
-        
         <li>
           <div>
             <h2>
-              <span>
-                4
-              </span>
-              July 22
-            </h2>
-          </div>
-        </li> 
+              <span>2</span>
+              May 12</h2>
+              <h5>
+                Key dates
+              </h5>
+              <p>
+                <strong>
+                  May 12
+                </strong>
+                First day to select a Credit/No-Credit (CR/NCR) option for F and Y courses
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  2.1
+                </h3>
+                <h4>
+                  Skills: Describing art objects and analyzing formal elements
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/skills2.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  2.2
+                </h3>
+                <h4>
+                  Monument: The Great Mosque of Damascus (Syria)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/02/2.2.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  2.3
+                </h3>
+                <h4>
+                  Monument: Zhang Zeduan's <em>Along the River during Qingming Festival</em> (China) 
+                </h4>
+                
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/02/2.3.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  2.4
+                </h3>
+                <h4>
+                  Monument: Katsushika Hokusai's <em>The Great Wave off Kanagawa</em> (Japan)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/02/Hokusai-Great-Wave.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <div>
+              <h2>
+                <span>
+                  3
+                </span>
+                May 19
+              </h2>
+              <h5>
+                Key dates
+              </h5>
+              <p>
+                <strong>
+                  May 19:
+                </strong>
+                Victoria Day - University closed; no classes
+              </p>
+            </div>
+          </li>
+          
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  3.1
+                </h3>
+                <h4>
+                  Skills: Identifying and Evaluating Research Sources
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/skills3.jpg);"></span>
+            </a>  
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  3.2
+                </h3>
+                <h4>
+                  Monument: Jan van Eyck's <em>Ghent Altarpiece</em> (Belgium)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/03/3.2.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  3.3
+                </h3>
+                <h4>
+                  Monument: Jerónimo de Balbós' <em>Altar de los Reyes</em> (Mexico) 
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/03/3.3.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  3.4
+                </h3>
+                <h4>
+                  Monument: Albert Eckhout's <em>Series of Eight Figures</em> (Netherlands/Brazil)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/03/3.4.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  3.5
+                </h3>
+                <h4>
+                  Monument: Tarsila do Amaral's <em>Abaporú</em> (Brazil)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/03/3.5.jpg);"></span>
+            </a>    
+          </li>
+          
+          <li>
+            <div>
+              <h2>
+                <span>
+                  4
+                </span>
+                May 26
+              </h2>
+            </div>
+          </li> 
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  4.1
+                </h3>
+                <h4>
+                  Skills: Comparing and contrasting art objects
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/skills4.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  4.2
+                </h3>
+                <h4>
+                  Monuments: Gottfried Lindauer's <em>Tā Moko</em> and Māori Portraits (New Zealand/Aotearoa)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/04/4.2.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  4.3
+                </h3>
+                <h4>
+                  Monuments: Two Guns (Sarcee)'s <em>Painted Buffalo Robe</em>
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/04/4.3.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  4.4
+                </h3>
+                <h4>
+                  Monument: Hanna Ryggen's <em>Ethiopia</em> (Norway)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/04/4.4.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <div>
+              <h2>
+                <span>
+                  5
+                </span>
+                June 2
+              </h2>
+              <h5>
+                Key dates
+              </h5>
+              <p>
+                <strong>
+                  June 2:
+                </strong>
+                Last day to drop course
+              </p>
+            </div>
+          </li> 
+          
+          <li>
+            <a href="##">
+              <div>
+                <h3>
+                  5.1
+                </h3>
+                <h4>
+                  Monument: Dorothea Tanning's <em>Birthday</em> (US)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/05/5.2.jpg); background-position-y: 0 !important;"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  5.2
+                </h3>
+                <h4>
+                  Monument: Remedios Varo's <em>Creation of Birds</em> (Mexico)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/05/5.3.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  5.3
+                </h3>
+                <h4>
+                  Monument: Shirin Neshat's <em>Rebellious Silence</em> (Iran)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/05/5.4.jpg);"></span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  5.4
+                </h3>
+                <h4>
+                  Monument: Yuki Kihara's <em>Paradise Camp</em> (Samoa)
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url(./assets/05/paradise.jpg);"></span>
+            </a>   
+          </li>
+          
+          <li>
+            <div>
+              <h2>
+                <span>
+                  6
+                </span>
+                June 9
+              </h2>
+            </div>
+          </li> 
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  6.1
+                </h3>
+                <h4>
+                  Skills: Exploring Art History's Methodologies
+                </h4>
+              </div>
+              <span  class="overlay2" ></span>
+              <span  class="overlay" style="background: url(./assets/skills2.jpg);"></span>
+            </a> 
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  6.2
+                </h3>
+                <h4>
+                  Monument: Yinka Shonibare's <em>End of Empire</em> (Nigeria/UK)
+                </h4>
+              </div>
+              <span  class="overlay2"></span>
+              <span  class="overlay" style="background: url(./assets/06/6.2.jpg);"></span>
+            </a> 
+          </li>
+          
+          <li>
+            <a href="#" >
+              <div>
+                <h3>
+                  6.3
+                </h3>
+                <h4>
+                  Monument: Wangechi Mutu's <em>Mama Ray</em> (Kenya/US)
+                </h4>
+              </div>
+              <span  class="overlay2"></span>
+              <span  class="overlay" style="background: url(./assets/06/6.3.jpg);"></span>
+            </a> 
+          </li>
+          
+          <li>
+            <a href="#">
+              <div>
+                <h3>
+                  6.4
+                </h3>
+                <h4>
+                  Art Exhibitions to Look Out For
+                </h4>
+              </div>
+              <span class="overlay2"></span>
+              <span class="overlay" style="background: url('https://ago.ca/sites/default/files/styles/image_large/public/2024-06/AGO.170158-1200px-72dpi.jpg');"></span>
+            </a> 
+          </li>
+          
+          <li class="inv">
+            <div>
+              <h2>
+                Final Exam
+              </h2>
+              
+              <h4 class="secTitle">
+                Date TBD (ca. June 19-24)
+              </h4>
+            </div>
+          </li> 
+        </ul>
+        <ul class="gridCols" style="gap: 2.5rem;">
+          <li>
+            <div>
+              <h5>
+                Key dates
+              </h5>
+              <p>
+                <strong>
+                  June 17:
+                </strong>
+                Deadline to request Late Withdrawal (LWD) at College Registrar's Office <br>
+                + Last day to add or remove a CR/NCR option in F courses
+              </p>
+              <p>
+                <strong>
+                  June 19-24:
+                </strong>
+                Exam period
+              </p>
+              <p>
+                <strong>
+                  July 9:
+                </strong>
+                Last day to submit a petition in S and Y courses <br>
+                + Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
+              </p>
+            </div>
+          </li>      
+          <li class="inv" id="tutorial">
+            <div>
+              <h4 style="margin-top: 0;" class="inv">
+                Tutorials
+              </h4>
+              
+              <p>
+                <strong>
+                  Week 1: 
+                </strong>
+                Welcome / describing and sketching artworks 
+                <a href="assets/FAH101H1S Tutorial 1 - welcome and sketch.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 2: 
+                </strong>
+                Formal analysis
+                <a href="assets/FAH101H1S Tutorial 2 - formal analysis I.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 3: 
+                </strong>
+                Formal analysis (continued
+                <a href="assets/FAH101H1S Tutorial 3 - formal analysis II.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 4: 
+                </strong>
+                Finding and evaluating research sources
+                <a href="assets/FAH101H1S Tutorial 4 - research.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 5: 
+                </strong>
+                Compare and Contrast
+                <a href="assets/FAH101H1S Tutorial 5 - compare contrast.pdf" target="_blank">(slides)</a>
+              </p>
+              
+              <p>
+                <strong>
+                  Week 6: 
+                </strong>
+                Methods / Exam prep
+                <a href="assets/FAH101H1S Tutorial 6 - review and exam prep.pdf" target="_blank">(slides)</a>
+              </p>
+              
+            </div>
+          </li> 
+        </ul>
+      </div>
+    </section>
+    <a class="down hide" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
+    
+    
+    <!-- <div class="modal inv flex">
+      <div>
+        <h3>
+          Your input matters!
+        </h3>
         
-        <a href="preview4.1.html" style="background: url(./assets/skills4.jpg);">
-          <div>
-            <h3>
-              4.1
-            </h3>
-            <h4>
-              Skills: Comparing and contrasting art objects
-            </h4>
-          </div>
-          <span class="overlay" style="background: #311981;"></span>
-        </a>   
+        <p>
+          As we wrap up the course, I would appreciate if you took a few minutes to fill out course evaluations. ✍️🙏
+        </p>
+        <p>
+          If you had a good experience, let us know! 🙌  If you didn't, tell us what we could do to change that. 🛠
+        </p>
+        <p>
+          I personally read all evaluations, and take them in consideration when designing courses in the future. Believe it or not, there's a real human on the other end, who considers what you have to say. Your input (positive or negative) will help improve this and other courses for students like you. 🌟 🌟 🌟 🌟 🌟 🧑‍🎓 💯
+        </p>
         
-        <a href="preview4.2.html" style="background: url(./assets/04/4.2.jpg);">
-          <div>
-            <h3>
-              4.2
-            </h3>
-            <h4>
-              Monuments: Gottfried Lindauer's <em>Tā Moko</em> and Māori Portraits (New Zealand/Aotearoa)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #811946;"></span>
-        </a>   
+        <p>
+          Please keep feedback constructive. Remember, this isn't a yelp review for a restaurant. You're welcome to share complaints and negative experiences with the course, but please keep it respectful and professional 😊
+        </p>
         
-        <a href="preview4.3.html" style="background: url(./assets/04/4.3.jpg);">
-          <div>
-            <h3>
-              4.3
-            </h3>
-            <h4>
-              Monuments: Two Guns (Sarcee)'s <em>Painted Buffalo Robe</em>
-            </h4>
-          </div>
-          <span class="overlay" style="background: #01c10a;"></span>
-        </a>   
+        <hr>
         
-        <a href="preview4.4.html" style="background: url(./assets/04/4.4.jpg);">
-          <div>
-            <h3>
-              4.4
-            </h3>
-            <h4>
-              Monument: Hanna Ryggen's <em>Ethiopia</em> (Norway)
-            </h4>
-          </div>
-          <span class="overlay" style="background: #bc8607;"></span>
-        </a>   
+        <p>
+          There are two ways to access your course evaluations.
+        </p>
+        <ul class="list">
+          <li>
+            Via the personalized email link that you’ll receive from course.evaluations@utoronto.ca.
+          </li>
+          <li>
+            On Quercus - look for the Course Evals page (click on your Account tab to find the link)
+          </li>
+        </ul>
+        <p>
+          Learn more about course evaluations <a href="https://teaching.utoronto.ca/course-evaluations/for-students/" target="_blank">here</a>
+        </p>
         
-        <li>
-          <div>
-            <h2>
-              <span>
-                5
-              </span>
-              July 29
-            </h2>
-            <h5>
-              Key dates
-            </h5>
-            <p>
-              <strong>
-                July 29:
-              </strong>
-              Last day to drop course
-            </p>
-          </div>
-        </li> 
+        <button id="modBut">
+          X
+        </button>
         
-        <a href="preview5.1.html" style="background: url(./assets/05/5.2.jpg); background-position-y: 0 !important;">
-          <div>
-            <h3>
-              5.1
-            </h3>
-            <h4>
-              Monument: Dorothea Tanning's <em>Birthday</em> (US)
-            </h4>
-          </div>
-          <span class="overlay"  style="background: #610566;"></span>
-        </a>   
         
-        <a href="preview5.2.html" style="background: url(./assets/05/5.3.jpg);">
-          <div>
-            <h3>
-              5.2
-            </h3>
-            <h4>
-              Monument: Remedios Varo's <em>Creation of Birds</em> (Mexico)
-            </h4>
-          </div>
-          <span class="overlay"  style="background: #95c334;"></span>
-        </a>   
+      </div>
+    </div> -->
+    
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="index.js"></script>
+    <script>
+      $(window).on('scroll', function() {
+        const y_scroll_pos = window.pageYOffset;
+        const scroll_pos_test = 700;             // set to whatever you want it to be
         
-        <a href="preview5.3.html" style="background: url(./assets/05/5.4.jpg);">
-          <div>
-            <h3>
-              5.3
-            </h3>
-            <h4>
-              Monument: Shirin Neshat's <em>Rebellious Silence</em> (Iran)
-            </h4>
-          </div>
-          <span class="overlay"  style="background: #6a1981;"></span>
-        </a>
-        
-        <a href="preview5.4.html" style="background: url(./assets/05/paradise.jpg);">
-          <div>
-            <h3>
-              5.4
-            </h3>
-            <h4>
-              Monument: Yuki Kihara's <em>Paradise Camp</em> (Samoa)
-            </h4>
-          </div>
-          <span class="overlay"  style="background: #750e3a;"></span>
-        </a>   
-        
-        <li>
-          <div>
-            <h2>
-              <span>
-                6
-              </span>
-              August 6
-            </h2>
-            <h5>
-              Key dates
-            </h5>
-            <p>
-              <strong>
-                August 5: 
-              </strong>
-              Civic holiday (university closed)
-            </p>
-            <p>
-              <strong>
-                August 12:
-              </strong>
-              Last day of classes
-            </p> 
-          </div>
-        </li> 
-        
-        <a href="preview6.1.html" style="background: url(./assets/skills2.jpg);">
-          <div>
-            <h3>
-              6.1
-            </h3>
-            <h4>
-              Skills: Exploring Art History's Methodologies
-            </h4>
-          </div>
-          <span  class="overlay" style="background: #690f30;"></span>
-        </a> 
-        
-        <a href="preview6.2.html" style="background: url(./assets/06/6.2.jpg);">
-          <div>
-            <h3>
-              6.2
-            </h3>
-            <h4>
-              Monument: Yinka Shonibare's <em>End of Empire</em> (Nigeria/UK)
-            </h4>
-          </div>
-          <span  class="overlay" style="background: #065e5c;"></span>
-        </a> 
-        
-        <a href="preview6.3.html" style="background: url(./assets/06/6.3.jpg);">
-          <div>
-            <h3>
-              6.3
-            </h3>
-            <h4>
-              Monument: Wangechi Mutu's <em>Mama Ray</em> (Kenya/US)
-            </h4>
-          </div>
-          <span  class="overlay" style="background: #691981;"></span>
-        </a> 
-        
-        <a href="preview6.4.html" style="background: url('https://ago.ca/sites/default/files/styles/image_large/public/2024-06/AGO.170158-1200px-72dpi.jpg');">
-          <div>
-            <h3>
-              6.4
-            </h3>
-            <h4>
-              Art Exhibitions to Look Out For
-            </h4>
-          </div>
-          <span class="overlay" style="background: #195181;"></span>
-        </a> 
-        
-        <li >
-          <div>
-            <h5>
-              Key dates
-            </h5>
-            <p>
-              <strong>
-                August 13:
-              </strong>
-              Deadline to request Late Withdrawal (LWD) at College Registrar's Office <br>
-              Last day to add or remove a CR/NCR option in S and Y courses
-            </p>
-            <p>
-              <strong>
-                August 15-30:
-              </strong>
-              Exam period
-            </p>
-            <p>
-              <strong>
-                August 30:
-              </strong>
-              Last day to submit a petition in S and Y courses <br>
-              Last day for instructors to accept late term work without needing to submit a petition to the Faculty.
-            </p>
-          </div>
-        </li>      
-        <li class="inv" id="tutorial">
-          <div >
-            <h4 style="margin-top: 0;">
-              Tutorials
-            </h4>
-            
-            <p>
-              <strong>
-                Week 1: 
-              </strong>
-              Welcome / describing and sketching artworks 
-              <a href="assets/FAH101H1S Tutorial 1 - welcome and sketch.pdf" target="_blank">(slides)</a>
-            </p>
-            
-            <p>
-              <strong>
-                Week 2: 
-              </strong>
-              Formal analysis
-              <a href="assets/FAH101H1S Tutorial 2 - formal analysis I.pdf" target="_blank">(slides)</a>
-            </p>
-            
-            <p>
-              <strong>
-                Week 3: 
-              </strong>
-              Formal analysis (continued
-              <a href="assets/FAH101H1S Tutorial 3 - formal analysis II.pdf" target="_blank">(slides)</a>
-            </p>
-            
-            <p>
-              <strong>
-                Week 4: 
-              </strong>
-              Finding and evaluating research sources
-              <a href="assets/FAH101H1S Tutorial 4 - research.pdf" target="_blank">(slides)</a>
-            </p>
-            
-            <p>
-              <strong>
-                Week 5: 
-              </strong>
-              Compare and Contrast
-              <a href="assets/FAH101H1S Tutorial 5 - compare contrast.pdf" target="_blank">(slides)</a>
-            </p>
-            
-            <p>
-              <strong>
-                Week 6: 
-              </strong>
-              Methods / Exam prep
-              <a href="assets/FAH101H1S Tutorial 6 - review and exam prep.pdf" target="_blank">(slides)</a>
-            </p>
-            
-          </div>
-        </li> 
-      </ul>
-    </div>
-  </section>
-  <a class="down hide" href="#top"><i class="fa-solid fa-circle-up"></i></a> 
+        if(y_scroll_pos > scroll_pos_test) {
+          $(".mobileNav").css("top", "0");
+        }
+        else {
+          $(".mobileNav").css("top", "-3rem");
+        }
+      });
+      
+      // h2 typing effect
+      
+      // delay
+      setTimeout(doSomething, 800);
+      
+      // animation  
+      function doSomething() {
+        function printLetterByLetter(destination, message, speed){
+          var i = 0;
+          var interval = setInterval(function(){
+            document.getElementById(destination).innerHTML += message.charAt(i);
+            i++;
+            if (i > message.length){
+              clearInterval(interval);
+            }
+          }, speed);
+        }
+        printLetterByLetter("destination", "Monuments of Art History", 80);
+      }
+      
+      $("#sched a").on({
+        mouseenter: function () {
+          $(this).find('.overlay2').css({opacity: "0"});
+          $(this).find('.overlay').css({filter: "saturate(1)"});
+        },
+        mouseleave: function () {
+          $('.overlay').css({filter: "saturate(0)"});
+          $('.overlay2').css({opacity: "1"});
+          // $('#sched a').animate({scrollTop:0}, 300);
+        }
+      });
+      
+      $('#modBut').on('click', function() {
+        $('.modal').addClass("modalUp")
+      });
+      
+      
+      
+      
+    </script>
+  </body>
   
-  
-  <!-- <div class="modal inv flex">
-    <div>
-      <h3>
-        Your input matters!
-      </h3>
-      
-      <p>
-        As we wrap up the course, I would appreciate if you took a few minutes to fill out course evaluations. ✍️🙏
-      </p>
-      <p>
-        If you had a good experience, let us know! 🙌  If you didn't, tell us what we could do to change that. 🛠
-      </p>
-      <p>
-        I personally read all evaluations, and take them in consideration when designing courses in the future. Believe it or not, there's a real human on the other end, who considers what you have to say. Your input (positive or negative) will help improve this and other courses for students like you. 🌟 🌟 🌟 🌟 🌟 🧑‍🎓 💯
-      </p>
-      
-      <p>
-        Please keep feedback constructive. Remember, this isn't a yelp review for a restaurant. You're welcome to share complaints and negative experiences with the course, but please keep it respectful and professional 😊
-      </p>
-      
-      <hr>
-      
-      <p>
-        There are two ways to access your course evaluations.
-      </p>
-      <ul class="list">
-        <li>
-          Via the personalized email link that you’ll receive from course.evaluations@utoronto.ca.
-        </li>
-        <li>
-          On Quercus - look for the Course Evals page (click on your Account tab to find the link)
-        </li>
-      </ul>
-      <p>
-        Learn more about course evaluations <a href="https://teaching.utoronto.ca/course-evaluations/for-students/" target="_blank">here</a>
-      </p>
-      
-      <button id="modBut">
-        X
-      </button>
-      
-      
-    </div>
-  </div> -->
-  
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-  <script src="index.js"></script>
-  <script>
-    $(window).on('scroll', function() {
-      const y_scroll_pos = window.pageYOffset;
-      const scroll_pos_test = 700;             // set to whatever you want it to be
-      
-      if(y_scroll_pos > scroll_pos_test) {
-        $(".mobileNav").css("top", "0");
-      }
-      else {
-        $(".mobileNav").css("top", "-3rem");
-      }
-    });
-    
-    // h2 typing effect
-    
-    // delay
-    setTimeout(doSomething, 800);
-    
-    // animation  
-    function doSomething() {
-      function printLetterByLetter(destination, message, speed){
-        var i = 0;
-        var interval = setInterval(function(){
-          document.getElementById(destination).innerHTML += message.charAt(i);
-          i++;
-          if (i > message.length){
-            clearInterval(interval);
-          }
-        }, speed);
-      }
-      printLetterByLetter("destination", "Monuments of Art History", 80);
-    }
-    
-    $("#sched a").on({
-      mouseenter: function () {
-        $(this).find('.overlay').css({opacity: "0"});
-      },
-      mouseleave: function () {
-        $('.overlay').css({opacity: ".5"});
-        $('#sched a').animate({scrollTop:0}, 300);
-      }
-    });
-    
-    $('#modBut').on('click', function() {
-      $('.modal').addClass("modalUp")
-    });
-    
-    
-    
-    
-  </script>
-</body>
-
-</html>  
+  </html>  

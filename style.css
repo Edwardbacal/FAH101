@@ -14,7 +14,7 @@ html {
 *,
 button {
   font-family: 'Urbanist', 'helvetica', 'arial';
-  transition: .15s;
+  /* transition: .15s; */
 }
 
 .inv .pad *,
@@ -964,7 +964,7 @@ footer button {
     color: #000;
   }
   100% {
-    color: #6a0040;
+    color: #4452e1;
   }
 }
 
@@ -1548,12 +1548,12 @@ a[href="#"] {
   word-wrap: break-word;
 }
 
-.sched a[href="#"] {
+/* .sched a[href="#"] {
   border: 1px dashed #195181;
   background: #fff;
   color: #195181 !important;
   filter: saturate(1);
-}
+} */
 
 
 
